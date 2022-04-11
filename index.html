@@ -1,0 +1,330 @@
+<!doctype html>
+<html lang="zh-Hant" class="no-js">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>創育加速計畫線上申審補助系統</title>
+    <!--[if lt IE 9]>
+    <script src="js/html5shiv.js"></script>
+    <script src="js/respond.min.js"></script>
+    <![endif]-->
+    <!-- hyUI -->
+    <link rel="stylesheet" href="css/hyui.css">
+    <style>
+        .demo_wrap {
+            max-width: 1000px;
+            margin: 0em auto 1em;
+            padding: 15px 15px 3em;
+            clear: both;
+            background: #FFF
+        }
+        .demo_wrap h1 {
+            display: block;
+            margin: 0px auto;
+            max-width: 300px;
+            float: left;
+            margin-right: 1em;
+            margin-bottom: 1em;
+        }
+        @media screen and (max-width:545px) {
+            .demo_wrap h1 {
+                max-width: 100%;
+                float: none;
+                text-align: center
+            }
+        }
+        .demo_wrap h1 img { width: 260px }
+        .num { width: 12% }
+        body { counter-reset: num }
+        table { margin-bottom: 1em }
+        table caption {
+            text-align: left;
+            font-weight: bold;
+            font-size: 1.25em;
+            padding: .5em 0;
+            color: #ff5050
+        }
+        tbody tr td:first-child:before {
+            counter-increment: num;
+            display: block;
+            text-align: center;
+            content: counters(num, ".") " "
+        }
+        tbody tr td:nth-child(2) { width: 20% }
+        .btn_grp{ text-align: right; }
+
+        @media screen and (max-width:545px) {
+           .btn_grp{ text-align: center; }
+        }
+    </style>
+</head>
+<body>
+    <div class="demo_wrap">
+        <h1><img src="images/logo-moe.png" alt=""></h1>
+        <div class="btn_grp">
+            <a href="https://drive.google.com/file/d/1ktdcu5j_cbSjCF8PSc1ROtkDJRkdV7sS/view?usp=sharing" class="btn">切版檔案更新請按此下載</a>
+        </div>
+        <hr>
+        <div class="table_wrapper">
+            <table>
+              <caption>111年擴充</caption>
+                <thead>
+                    <tr>
+                        <th class="num">編號</th>
+                        <th>頁面名稱</th>
+                        <th>檔案名稱</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td></td>
+                        <td>複審機制</td>
+                        <td>
+                            <ul>
+                                <li>1-1. 會員端：計畫申請條列頁 <a href="member_pList.html" target="_blank"></a></li>
+                                <li>1-2. 會員端：計畫申請－複審資料管理/檢視頁 <a href="member_reviewEdit.html" target="_blank"></a> / <a href="member_reviewView.html" target="_blank"></a></li>
+                                <li>1-3. 繳交通知信(僅限管理端設定書審通過、必須繳交資料者)：3天前/1天前 <a href="mailTemp_reviewupcoming.html" target="_blank"></a></li>
+                                <li>2-1. 管理端：案件管理條列頁 <a href="admin_projectList.html" target="_blank"></a></li>
+                                <li>2-2. 管理端：案件管理詳目頁－複審資料繳交審查(預審) <a href="admin_projectEdit.html" target="_blank"></a></li>
+                                <li>2-3. 管理端：複審資料繳交/補件日期起迄區間設定 <a href="admin_announceEdit.html" target="_blank"></a></li>
+                            </ul>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>管理端與功能優化</td>
+                        <td>
+                            <ul>
+                                <li>3-1. 管理端：案件管理－計畫核定擴充 <a href="admin_projectEdit.html" target="_blank"></a>
+                                <ol>
+                                    <li>核定創育坊轉組鎖定與隱藏判斷，並可修改「身份別」與控制「轉組設定」</li>
+                                    <li>新增計畫核定時需可單獨修改「身份別」。延續申請時需應用新設定的身分</li>
+                                    <li>核定可單獨設定「加值項目」單獨審核，並依設定控制延續案判斷條件</li>
+                                </ol>
+                                </li>
+                                <li>3-2. 會員端：新增聯盟身份設定與附件上傳機制 <a href="#" target="_blank"></a></li>
+                                <li>3-3. 管理端：因應3-2調整管理端呈現 <a href="#" target="_blank"></a></li>
+                            </ul>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td> 新增全新計畫申請模組(企業加速器)</td>
+                        <td>
+                            <ul>
+                                <li>4-1. 會員端： <a href="#" target="_blank"></a></li>
+                            </ul>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td> 匯出匯入機制</td>
+                        <td>
+                            <ul>
+                                <li>5-1. 管理端：案件管理－批次核定功能 <a href="admin_projectList_approve.html" target="_blank"></a></li>
+                            </ul>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="table_wrapper">
+            <table>
+              <caption>110年擴充(待補上原版本)</caption>
+                <thead>
+                    <tr>
+                        <th class="num">編號</th>
+                        <th>頁面名稱</th>
+                        <th>檔案名稱</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td></td>
+                        <td>會員端</td>
+                        <td>
+                          <b style="color: #ff5050;">*已依需求調整頁面</b><br>
+                          1-1. 計畫清單（登入後首頁，擴充延續計畫申請按鈕）：<a href="member_pList.html" target="_blank"></a><br>
+                          1-2. 延續計畫申請範例：<a href="member_pAddstep2_Y2.html" target="_blank"></a><br>
+                          <hr>
+                          <b style="color: #ff5050;">*已依需求調整</b><br>
+                          通知信範本：<br>
+                          申請即將到期提醒通知信：<a href="mailTemp_upcoming.html" target="_blank"></a><br>
+                          申請送出通知信／補件送出通知信：<a href="mailTemp_success.html" target="_blank"></a><br>
+                          資格審結果統一通知：<a href="mailTemp_results.html" target="_blank"></a>｜核定結果統一通知：<a href="mailTemp_finalresults.html" target="_blank"></a>
+                          <hr>
+                          原有頁面：<br>
+                          新增計畫申請（step1）：<a href="member_pAdd.html" target="_blank"></a>｜<br>
+                          新增計畫申請送出(檢查)：<a href="member_pAddend.html" target="_blank"></a><br>
+                          帳號管理：<a href="member_accountEdit.html" target="_blank"></a><br>
+                          <hr>
+                          <b style="color: #ff5050;">*已依需求調整頁面</b><br>
+                          新增計畫申請（step2）-頁籤計畫欄位：<br><a href="member_pAddstep2.html" target="_blank"></a>｜
+                          青創坊：<a href="member_pAddstep2_update.html" target="_blank"></a><br>
+                          計畫管理（檢視）：<a href="member_pView.html" target="_blank"></a><br>
+                          計畫管理（補件編修｜可回第一步）：<a href="member_pEdit.html" target="_blank"></a>｜<a href="member_pEditstep1.html" target="_blank"></a><br>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>管理端 – 初審(統一更名資格審)</td>
+                        <td>
+                          <b style="color: #ff5050;">*已依需求調整頁面</b><br>
+                          資格審清單(擴充顯示申請帳號與查詢條件)：<a href="admin_preliminaryList.html" target="_blank"></a><br>
+                          資格審詳目(擴充控制補件是否可編修第一步、二年度進度)：<a href="admin_preliminaryEdit.html" target="_blank"></a>
+                          <hr>
+                        </td>
+                    </tr>
+                   <tr>
+                        <td></td>
+                        <td>管理端 – 案件管理</td>
+                        <td>
+                          <b style="color: #ff5050;">*新增頁面</b><br>
+                          委員申請重審管理：<a href="admin_reviewApplytList.html" target="_blank"></a><br>
+                          <hr>
+                          <b style="color: #ff5050;">*已依需求調整頁面</b><br>
+                          原有功能頁面：<br>
+                          案件清單：<a href="admin_projectList.html" target="_blank"></a><br>
+                          案件詳目：<a href="admin_projectEdit.html" target="_blank"></a><br>
+                          <!--案件匯出範本(申請人匯出)：<a href="匯出報表3_計畫申請_update.xlsx" target="_blank"></a><br>
+                          案件審查意見匯出範本(案件審查匯出)：<a href="匯出報表1_ by案件彙整委員意見_update.xlsx" target="_blank"></a>-->
+                        </td>
+                    </tr>
+                   <tr>
+                        <td></td>
+                        <td>管理端 – 系統管理</td>
+                        <td>
+                          <b style="color: #ff5050;">*已依需求調整</b><br>
+                          計畫(申請補件核定)日期設定：<a href="admin_announceEdit.html" target="_blank"></a><br>
+                          委員年度模組檢視日期設定：<a href="admin_reviewdateList.html" target="_blank"></a> | <a href="admin_reviewdateEdit.html" target="_blank"></a><br>
+                          <b style="color: #ff5050;">*已依需求調整</b><br>
+                          會員帳號管理（清單/管理）：<a href="admin_memberList.html" target="_blank"></a> | <a href="admin_memberView.html" target="_blank"></a><br>
+                          管理端帳號/權限管理（清單/管理）：<a href="admin_accountList.html" target="_blank"></a> | <a href="admin_accountEdit.html" target="_blank"></a><br>
+                          <hr>
+                          原有功能頁面：<br>
+                          審查委員資料庫（清單/管理）：<a href="admin_judgesList.html" target="_blank"></a> | <a href="admin_judgesEdit.html" target="_blank"></a><br>
+                          個人帳號設定（一般/委員）：<a href="admin_myAccountEdit.html" target="_blank"></a>
+                        </td>
+                    </tr>
+                   <tr>
+                        <td></td>
+                        <td>管理端 – 線上評審(統一更名書審)</td>
+                        <td>
+                          <b style="color: #ff5050;">*已依需求調整頁面</b><br>
+                          書審清單(擴充申請重審篩選)：<a href="admin_scoreList.html" target="_blank"></a><br>
+                          詳目擴充計畫檔案線上檢視／申請重審：<a href="admin_scoreEdit_Review.html" target="_blank"></a><br>
+                          <hr>
+                          原有功能頁面：<br>
+                          線上評審書審詳目：<a href="admin_scoreEdit.html" target="_blank"></a><br>
+                          線上評審書審詳目-青創坊：<a href="admin_scoreEdit_M5.html" target="_blank"></a><br>
+                          分派案件評審通知信：<a href="mailTemp_toJudes.html" target="_blank"></a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+
+        </div>
+        <div class="table_wrapper">
+            <table>
+              <caption>109年：GUI頁面(待補上原版本)</caption>
+                <thead>
+                    <tr>
+                        <th class="num">編號</th>
+                        <th>頁面名稱</th>
+                        <th>檔案名稱</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td></td>
+                        <td>登入前頁面</td>
+                        <td>
+                          1-1. 會員登入（RWD、無障礙）：<a href="loginNew.html" target="_blank"></a><br>
+                          1-2. 會員註冊（RWD、無障礙）：<a href="registerNew.html" target="_blank"></a><br>
+                          1-3. 忘記密碼：<a href="forgetPW.html" target="_blank"></a> | <a href="resetPW.html" target="_blank"></a><br>
+                          1-4. 驗證啟動成功頁：<a href="registerDone.html" target="_blank"></a> (驗證成功/密碼變更成功)<br>
+                          1-5. 帳號驗證啟動信：<a href="mailTemp_register.html" target="_blank"></a><br>
+                          1-6. 404頁：<a href="404.htm" target="_blank"></a><br>
+                          [會員端／管理端共用] 登入鎖定頁：<a href="loginLock.html" target="_blank"></a><br>
+                          [會員端／管理端共用] 定期更換密碼頁：<a href="resetPW_datecheck.html" target="_blank"></a><br>
+                          <!--b style="color: #ff5050;">*新增</b> [會員端／管理端共用] 更換密碼成功頁：<a href="pwChangeDone.html" target="_blank"></a-->
+                        </td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>會員端</td>
+                        <td>
+                          2-1. 計畫清單（登入後首頁）：<a href="member_pList.html" target="_blank"></a><br>
+                          <b style="color: #ff5050;">*調整</b> 2-2. 新增計畫申請（step1）：<a href="member_pAdd.html" target="_blank"></a><br>
+                          2-3. 新增計畫申請（step2）-頁籤計畫欄位：<br><a href="member_pAddstep2.html" target="_blank"></a> | <a href="member_pAddend.html" target="_blank"></a><br>
+                          <b style="color: #ff5050;">*新增</b> 2-3. 新增計畫申請（step2）-青創坊：<a href="member_pAddstep2_update.html" target="_blank"></a><br>
+                          <b style="color: #ff5050;">*調整</b> 2-4. 計畫管理（草稿/補件/檢視）：<a href="member_pEdit.html" target="_blank"></a> | <a href="member_pView.html" target="_blank"></a><br>
+                          2-5. 帳號管理：<a href="member_accountEdit.html" target="_blank"></a><br>
+                          2-6. 審核結果/補件通知信：<a href="mailTemp_results.html" target="_blank"></a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>管理端 – 初審(統一更名資格審)</td>
+                        <td>
+                          3-0-1. 管理端登入：<a href="loginAdmin.html" target="_blank"></a><br>
+                          3-0-2. 登入後預設靜態首頁：<a href="admin_home.html" target="_blank"></a><br>
+                          3-1. 資格審清單：<a href="admin_preliminaryList2.html" target="_blank"></a><br>
+                          3-2. 資格審詳目：<a href="admin_preliminaryEdit2.html" target="_blank"></a>
+                        </td>
+                    </tr>
+                   <tr>
+                        <td></td>
+                        <td>管理端 – 案件管理</td>
+                        <td>
+                          4-1. 案件清單：<a href="admin_projectList.html" target="_blank"></a><br>
+                          4-2. 案件詳目：<a href="admin_projectEdit.html" target="_blank"></a><br>
+                          4-3. 案件匯出範本(申請人匯出)：<a href="匯出報表3_計畫申請_update.xlsx" target="_blank"></a><br>
+                          4-4. 案件審查意見匯出範本(案件審查匯出)：<a href="匯出報表1_ by案件彙整委員意見_update.xlsx" target="_blank"></a>
+                        </td>
+                    </tr>
+                   <tr>
+                        <td></td>
+                        <td>管理端 – 系統管理</td>
+                        <td>
+                          5-1. 審查委員資料庫（清單/管理）：<a href="admin_judgesList.html" target="_blank"></a> | <a href="admin_judgesEdit.html" target="_blank"></a><br>
+                          5-2. 帳號/權限管理（清單/管理）：<a href="admin_accountList.html" target="_blank"></a> | <a href="admin_accountEdit.html" target="_blank"></a><br>
+                          5-3. 個人帳號設定（一般/委員）：<a href="admin_myAccountEdit.html" target="_blank"></a>
+                        </td>
+                    </tr>
+                   <tr>
+                        <td></td>
+                        <td>管理端 – 線上評審(統一更名書審)</td>
+                        <td>
+                          6-1. 線上評審書審清單：<a href="admin_scoreList.html" target="_blank"></a><br>
+                          6-2. 線上評審書審詳目：<a href="admin_scoreEdit.html" target="_blank"></a><br>
+                          <b style="color: #ff5050;">*調整</b> 6-2. 線上評審書審詳目-青創坊：<a href="admin_scoreEdit_M5.html" target="_blank"></a><br>
+                          6-3. 分派案件評審通知信：<a href="mailTemp_toJudes.html" target="_blank"></a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+
+        </div>
+
+
+    </div>
+    <a href="javascript:;" class="scrollToTop" >回頁首</a>
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="vendor/jquery.easing.min.js"></script>
+    <script src="js/hyui.js"></script>
+    <script src="js/customize.js"></script>
+    <script>
+    $(function() {
+        $('tbody').find('a').each(function(index, el) {
+            var Link = $(this).attr('href');
+            $(this).text(Link);
+        });
+    })
+    </script>
+</body>
+
+</html>
