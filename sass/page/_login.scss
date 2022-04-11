@@ -1,0 +1,240 @@
+/////////////////////////////////////////////////////////以下為demo範例///
+// login 首頁區塊設定
+#login{
+    // background: $primaryColor;
+    background: url(../images/bg-login-hand.png) right 8% top 0 no-repeat,#3d83b8;
+    // background-size: cover;
+
+    @include screen('notebook') {
+        background: url(../images/bg-login-hand.png) right -8% top 0 no-repeat,#3d83b8;
+    }
+    @include screen('tablet') {
+        background: url(../images/bg-login-hand.png) right -50% top 0 no-repeat,#3d83b8;
+    }
+    @include screen('mobile') {
+        background: #3d83b8;
+    }
+
+    .container{ max-width: 1000px; }
+
+    .header {
+        background: none;
+        // padding: .75em 0;
+        >.container {
+            .sidebarCtrl, .searchCtrl{ display: none !important; }
+        }
+
+        a.back{ padding: .75em 2em; }
+
+        @include screen('tablet') {
+            background: #3d83b9;
+        }
+    }
+
+    footer{
+        .footer_info { color: #fff;}
+    }
+
+    // 登入、註冊共用
+    .login, .registe{
+        color: darken($primaryColor, 15);
+        .container{
+            background: rgba(255,255,255, .75 );
+            border-radius: 5px;
+            padding: 3.5em 1.5em;
+
+            @media screen and (max-width: 1000px) {
+                padding: 2.25em 2.5em;
+                width: calc( 100% - 2em);
+            }
+        }
+
+        a{
+            color: darken($primaryColor, 15);
+            transition: background .4s ease-in-out, padding .4s ease-in-out;
+
+            &:hover, &:focus{
+                background: $primaryColor;
+                color: #fff;
+            }
+        }
+
+        h2{
+            text-align: center;
+            color: #fff;
+            font-size: 1.5em;
+            font-size: 2em;
+            font-weight: 400;
+            letter-spacing: .15em;
+            border-bottom: solid 1px #fff;
+            width: 260px;
+            margin: 0.5em auto 1em;
+            padding: .5em 0;   
+        }
+
+        .form_grp{
+            label{ font-size: 1.125em; }
+            margin-bottom: 1.25em;
+        }
+
+        .robert{
+            width: 100%;
+            max-height: 90px;
+            margin-top: 1em;
+            text-align: center;
+            img{
+                max-height: 90px;
+                max-width: 100%;
+            }
+        }
+    }
+
+    // 登入
+    .login{
+        // color: darken($primaryColor, 15);
+
+        // .container{
+        //     background: rgba(255,255,255, .75 );
+        //     border-radius: 5px;
+        //     padding: 3.5em 1.5em;
+
+        //     @media screen and (max-width: 1000px) {
+        //         padding: 2.25em 2.5em;
+        //         width: calc( 100% - 2em);
+        //     }
+        // }
+
+        .left, .right{ padding: 0 2.5em; }
+
+        .left{
+            box-shadow: inset -2px 0px 0px 0px #b8d3e8;
+
+            [type^="text"],
+            [type^="password"]{
+                padding: .75em .5em .75em 3em;
+            }
+
+            [type^="text"]{
+                background: url(../images/icon/icon_user.svg) 10px 50% no-repeat, #fff;
+                background-size: 30px 30px;
+            }
+            [type^="password"]{
+                background: url(../images/icon/icon_locked.svg) 10px 50% no-repeat, #fff;
+                background-size: 30px 30px;
+            }
+
+            // .form_grp{
+            //     label{ font-size: 1.125em; }
+            //     margin-bottom: .75em;
+            // }
+
+            // .robert{
+            //     width: 100%;
+            //     max-height: 90px;
+            //     margin-top: 1em;
+            //     text-align: center;
+            //     img{
+            //         max-height: 90px;
+            //         max-width: 100%;
+            //     }
+            // }
+        }
+        .right{
+            // box-shadow: inset 2px 0px 0px 0px #b8d3e8;
+            ul{
+                @include li-reset;
+                margin-bottom: 2.5em;
+                li{
+                    font-size: 1.5em;
+                    line-height: normal;
+                    border-bottom: solid 1px $primaryColor;
+                    a{
+                        display: block;
+                        padding: .5em 0;
+                        &:hover, &:focus{ padding: .5em 1.5em; }
+                    }
+                }
+            }
+            p{
+                span{
+                    display: inline-block;
+                    padding: 0 .5em;
+                }
+                a{
+                    &:hover, &:focus{ padding: 0 .75em; }
+                }
+            }
+        }
+
+        .notic{ text-align: center; }
+
+        @include screen('mobile') {
+            .left, .right{ padding: 0 0; }
+            .left{
+                box-shadow: none;
+                padding-bottom: 2em;
+            }
+        }
+    }
+
+    // 註冊
+    .registe{
+        .notic{
+            padding: .5em 1.25em;
+            &.uncheck{
+                color: #4e4e4e;
+            }
+            &.checked{
+                color: green;
+            }
+        }
+        .checkbox{
+            text-align: center;
+            width: 100%;
+            padding-top: 1.5em;
+            input{
+                width: 1.75em;
+                height: 1.75em;
+                margin-right: .5em;
+            }
+            a{
+                text-decoration: underline;
+            }
+        }
+        .form_grid{
+            display: flex;
+            flex-flow: row wrap;
+
+            border-top: 0;
+
+            .form_grp{
+                flex:1 1 50%;
+
+                border-bottom: 0;
+                padding: 0 1.5em;   
+            }
+
+            .btn_grp{ flex:1 1 100%; }
+        }
+        .go_login{
+            text-align: center;
+            box-shadow: inset 0px 1px 0px 0px rgba(255,255,255,1);
+            padding-top: 2.5em;
+            a{
+                padding: 1em 3em;
+                // background: #333;
+                font-size: 1.75em;
+                display: block;
+                width: max-content;
+                margin: auto;
+                box-shadow: inset 0px 0px 0px 2px $primaryColor;
+            }
+        }
+
+        @include screen('mobile') {
+            .form_grid{
+                .form_grp{ flex:1 1 100%; }
+            }
+        }
+    }
+}
