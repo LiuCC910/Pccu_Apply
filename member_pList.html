@@ -96,7 +96,7 @@
             <div class="container">
                 <h2 class="title">計畫清單</h2>
                 <div class="btn-position">
-                    <!--規則：判斷啟迄權限，每年只能同時出現一個-->
+                    <!--規則：判斷類型的模組啟迄權限，以及是否已存在同年度計畫，-->
                     <input type="button" class="btn btn-addition" value="延續計畫申請" id="openInfo">
                     <input type="button" class="btn btn-addition" value="新增計畫申請" onclick="javascript:location.href='member_pAdd.html'">
                 </div>
@@ -111,6 +111,7 @@
                             <li><a href="#" class="processing">資格審待補件</a></li>
                             <li><a href="#" class="processing">資格審不通過／撤案</a></li>
                             <li><a href="#" class="processing">書審中(資格審通過)</a></li><br>
+                            <!--新增複審資料上傳用的狀態-->
                             <li><a href="#" class="processing">複審待送件</a></li>
                             <li><a href="#" class="processing">複審待補件</a></li>
                             <li><a href="#" class="processing">複審審核中(資格審通過)</a></li>
@@ -144,6 +145,7 @@
                             <th>計畫狀態</th>
                             <th>評等</th>
                             <th>計畫申請</th>
+                            <!--新增複審資料上傳操作功能-->
                             <th>複審上傳</th>
                         </tr>
                         <tr>
@@ -161,6 +163,7 @@
                             </td>
                             <td>
                                 <div class="btn_grp">
+                                    <!--判斷模組複審上傳/補件起迄時間、且狀態為待送件/待補件時可進行複審檔案上傳作業-->
                                     <input type="button" class="btn btn-primary" value="管理" onclick="javascript:location.href='member_reviewEdit.html'">
                                 </div>
                             </td>
@@ -179,6 +182,7 @@
                             </td>
                             <td>
                                 <div class="btn_grp">
+                                    <!--判斷模組複審上傳/補件起迄時間、且狀態為待送件/待補件時可進行複審檔案上傳作業-->
                                     <input type="button" class="btn btn-primary" value="管理" onclick="javascript:location.href='member_reviewEdit.html'">
                                 </div>
                             </td>
@@ -197,6 +201,7 @@
                             </td>
                             <td>
                                 <div class="btn_grp">
+                                    <!--非上傳/補件起迄期時、且尚未上傳過檔案者顯示-->
                                     <input type="button" class="btn btn-primary" value="管理" onclick="javascript:location.href='#'" disabled>
                                 </div>
                             </td>
@@ -215,6 +220,7 @@
                             </td>
                             <td>
                                 <div class="btn_grp">
+                                    <!--已上傳檔案顯示-->
                                     <input type="button" class="btn btn-normal" value="檢視" onclick="javascript:location.href='member_reviewView.html'">
                                 </div>
                             </td>

@@ -169,6 +169,7 @@
                         <!--先暫時兩個按鈕，後續看是否需請設計師改成下拉-->
                         <div class="btn_grp">
                             <!--label>匯出：</label-->
+                            <!--調整按鈕名稱-->                            
                             <input type="button" class="btn btn-export" value="案件清單匯出" onclick="window.open('https://drive.google.com/file/d/1B3SwCdFwN0fmVQ1d0CGzGrsw1RHlIkP7/view?usp=sharing')">
                             <input type="button" class="btn btn-export" value="下載計畫附件" onclick="confirm1();alert1();">
                             <input type="button" class="btn btn-export" value="下載複審資料" onclick="">
@@ -187,10 +188,12 @@
                         </div>
                     </section>
 
+                    <!--新增批次與匯出/匯入按鈕-->
                     <div class="btn_grp" style="text-align: left;">
-                        <!--label>匯出：</label-->
                         <input type="button" class="btn btn-branch" value="批次核定" onclick="" disabled>
+                        <input type="button" class="btn btn-branch" value="匯出複審資料" onclick="">
                         <input type="button" class="btn btn-branch" value="匯入複審資料" onclick="">
+                        <input type="button" class="btn btn-branch" value="匯出核定資料" onclick="">
                         <input type="button" class="btn btn-branch" value="匯入核定資料" onclick="">
                     <div class="notice_info">批次核定僅可針對「待核定」狀態的資料。批次核定與匯入資料後皆無法回復，執行前請務必確認資料正確性。</div>
                     </div>
