@@ -919,7 +919,7 @@
                         </div>
                     </section>
                 </div>
-                <!-- 線上評審結果，複審資料繳交設定 -->
+                <!-- 調整線上評審結果，增加是否需要繳交複審資料設定 -->
                 <div class="filter_box">
                     <h3 class="title opened">評審線上評分</h3>
                     <section>
@@ -1091,7 +1091,7 @@
                                 <input type="button" class="btn btn-primary" value="書審通過">
                                 <input type="button" class="btn btn-secondary" value="書審不通過">
                                 <div class="notice_info">是否通過複審、備註皆不會顯示在會員端；但設定通過並需繳交資料者，會於繳交期限到期前以Mail通知會員。</div>
-                                <!--評分尚未完成或已決定後按鈕readonly-->
+                                <!--修正按鈕名稱-->
                                 <!--input type="button" class="btn btn-primary" value="進入複審" readonly>
                                 <input type="button" class="btn btn-secondary" value="書審不通過" readonly-->
                             </div>
@@ -1099,7 +1099,7 @@
                         </form>
                     </section>
                 </div>
-                <!-- 複審資料審核 -->
+                <!-- 增加一整組複審資料繳交審核 -->
                 <div class="filter_box">
                     <h3 class="title opened">複審資料審核(預審)</h3>
                     <section>
@@ -1253,6 +1253,7 @@
                     </section>
                 </div>
                 <!-- 5 -->
+                <!--核定資訊的修正皆不可以異動到原申請欄位。只有延續計畫產生時，需帶入核定的資訊-->
                 <div class="filter_box">
                     <h3 class="title opened">核定資訊管理</h3>
                     <section>
@@ -1261,24 +1262,25 @@
                                 <label for="" class="form_title">計畫經費核定(新增計畫 or 延續計畫)</label>
                                 <div class="form_content">
                                     <div class="form_grp">
-                                        <!--核定資訊管理僅顯現第一年即可：0.-->
+                                        <!--核定資訊管理僅顯現一年，新增計畫顯示第一年、延續計畫顯示第二年-->
                                         <div class="form_content mix-4-col">
                                             <div class="form_grp">
                                                 <label for="username">提案核定金額：</label>
-                                                <input name="username" type="text" value="2,500,000" placeholder="預設帶入第一年申請金額"><span>元</span>
+                                                <input name="username" type="text" value="2,500,000" placeholder="預設帶入當年申請金額"><span>元</span>
                                             </div>
+                                            <!--加值設為不通過者，加值核定帶入0-->
                                             <div class="form_grp">
                                                 <label for="username">加值核定金額：</label>
-                                                <input name="username" type="text" value="0" placeholder="預設帶入第一年加值金額"><span>元</span>
+                                                <input name="username" type="text" value="0" placeholder="預設帶入當年加值金額"><span>元</span>
                                             </div>
                                             <div class="form_grp">
                                                 <label for="username">自籌款總計：</label>
                                                 <!--自籌款也調整成可調整，但不可影響原來申請的填寫值-->
-                                                <input name="username" type="text"  value="2,500,000" placeholder="預設帶入第一年自籌款總計"><span>元</span>
+                                                <input name="username" type="text"  value="2,500,000" placeholder="預設帶入當年自籌款總計"><span>元</span>
                                             </div>
                                             <div class="form_grp">
                                                 <label for="username">新增/延續計畫總經費：</label>
-                                                <input name="username" type="text" value="5,000,000" readonly="" placeholder="第一年自動加總"><span>元</span>
+                                                <input name="username" type="text" value="5,000,000" readonly="" placeholder="當年自動加總"><span>元</span>
                                             </div>
                                         </div>
                                         <!--div class="form_content mix-4-col">
@@ -1312,13 +1314,14 @@
                                    </div>
                                 </div>
                             </div>
+                            <!--新增單獨核定加值是否通過-->
                             <div class="form_grp">
                                 <legend class="form_title">加值是否通過</legend>
                                 <div class="form_content">
                                     <div class="radio_grp form_inline">
                                         <label><input type="radio" name="sampleRadio22" value="" checked="">是</label>
                                         <label><input type="radio" name="sampleRadio22" value="">否</label>
-                                        <!--未申請加值者不出現。當延續計畫加值未通過時，隔年申請延續計畫的第一步是否申請加值要改設為否-->
+                                        <!--未申請加值者不出現此項。原有申請加值、但核定不通過，當延續計畫加值未通過時，隔年申請延續計畫的第一步是否申請加值要改設為否-->
                                     </div>
                                 </div>
                             </div>
@@ -1387,6 +1390,7 @@
                                         <label><input type="radio" name="sampleRadio9" value="">學校</label>
                                     </div>
                                 </div>
+                                <!--核定變更計畫申請身分者，隔年延續計畫需變更為核定的身分，包括對應欄位條件。-->
                             </div>
                             <div class="form_grp">
                                 <label for="selectSample" class="form_title">核定日期</label>
