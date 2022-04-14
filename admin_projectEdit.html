@@ -1271,7 +1271,7 @@
                                             <!--加值設為不通過者，加值核定帶入0-->
                                             <div class="form_grp">
                                                 <label for="username">加值核定金額：</label>
-                                                <input name="username" type="text" value="0" placeholder="預設帶入當年加值金額"><span>元</span>
+                                                <input name="username" type="text" value="0" placeholder="預設帶入當年加值金額" disabled><span>元</span>
                                             </div>
                                             <div class="form_grp">
                                                 <label for="username">自籌款總計：</label>
@@ -1319,9 +1319,10 @@
                                 <legend class="form_title">加值是否通過</legend>
                                 <div class="form_content">
                                     <div class="radio_grp form_inline">
-                                        <label><input type="radio" name="sampleRadio22" value="" checked="">是</label>
-                                        <label><input type="radio" name="sampleRadio22" value="">否</label>
-                                        <!--未申請加值者不出現此項。原有申請加值、但核定不通過，當延續計畫加值未通過時，隔年申請延續計畫的第一步是否申請加值要改設為否-->
+                                        <label><input type="radio" name="sampleRadio22" value="">是</label>
+                                        <!--原申請加值計畫、預設帶入是，管理者圈選否時，同時將「加值核定金額」設定為0並disabled-->
+                                        <label><input type="radio" name="sampleRadio22" value="" checked="">否</label>
+                                        <!--未申請加值者不出現此項。原有申請加值、但被核定不通過，當延續計畫加值未通過時，隔年申請延續計畫的第一步是否申請加值要改設為否-->
                                     </div>
                                 </div>
                             </div>
