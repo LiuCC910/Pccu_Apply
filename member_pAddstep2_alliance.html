@@ -150,7 +150,7 @@
                     <!-- <h3>申請基本資料</h3> -->
                     <div class="tabSet">
                         <section class="tabs example-1">
-                            <h2 class="tabItem"><a href="#"><!--onclick="confirm4()"-->1. 主導單位資訊</a></h2>
+                            <h2 class="tabItem active"><a href="#"><!--onclick="confirm4()"-->1. 主導單位資訊</a></h2>
                             <!--選到的頁籤項目 active-->
                             <div class="tabContent"><!--頁籤一，申請單位-->
                                 <h3>申請單位資訊</h3>
@@ -616,14 +616,23 @@
                             <h2 class="tabItem"><a href="#"><!--onclick="confirm4()"-->3. 工作進度表</a></h2>
                             <div class="tabContent"><!--頁籤三，工作進度表-->
                                 <h3>工作進度表</h3>
-                                <form action="" class="form_grid">
+                                <script type="text/javascript"> 
+                                    $(function(){
+                                        $('#copy').click(function(){
+                                            var newform2=$('#form1').clone();
+                                            newform2.filter('form').prop('id', 'form2');
+                                            $('#form2').replaceWith(newform2);
+                                        });
+                                    });
+                                </script>
+                                <form action="" class="form_grid" id="form1">
                                     <!-- 1 -->
                                     <section class="fill_in">
                                         <!--注意：新增計畫會有二年度的填寫，延續計畫只會有第二年度的填寫、且資料要存在第二年度-->
                                         <h3 class="title">新增計畫</h3>
                                         <section>
                                             <h4 class="title">模組必設指標 (50%)</h4>
-                                            <!-- input 1 -->
+                                            <!-- input 1 ，copy form第一二input name命名修改-->
                                             <div class="form_grp">
                                                 <label for="" class="form_title"><abbr class="necessary" title="為必填(選)欄位,不能為空白。">*</abbr>建立1個主題式企業加速器(個)</label>
                                                 <div class="form_content">
@@ -632,39 +641,39 @@
                                                             <div class="form_grp">
                                                                 <div class="form_content mix-2-col">
                                                                     <div class="form_grp">
-                                                                        <label for="username">全年預估成果：</label>
-                                                                        <input name="username" type="text" value="1" placeholder="請輸入" min="1"><span>個</span>
+                                                                        <label for="a1">全年預估成果：</label>
+                                                                        <input name="a1" type="text" value="1" placeholder="請輸入" min="1"><span>個</span>
                                                                         <div class="notic">至少需1個</div>
                                                                     </div>
                                                                     <div class="form_grp">
-                                                                        <label for="username">&nbsp;</label>
-                                                                        <input name="username" type="text" value="10" placeholder="占比" readonly=""><span>%</span>
+                                                                        <label for="a1p">&nbsp;</label>
+                                                                        <input name="a1p" type="text" value="10" placeholder="占比" readonly=""><span>%</span>
                                                                     </div>
                                                                 </div>
                                                             </div>
                                                             <div class="form_grp">
                                                                 <div class="form_content mix-2-col">
                                                                     <div class="form_grp">
-                                                                        <label for="username">期中查核點：</label>
-                                                                        <input name="username" type="text" value="0" placeholder="請輸入" min="0"><span>個</span>
+                                                                        <label for="a2">期中查核點：</label>
+                                                                        <input name="a2" type="text" value="0" placeholder="請輸入" min="0"><span>個</span>
                                                                     </div>
                                                                     <div class="form_grp">
-                                                                        <label for="username">&nbsp;</label>
+                                                                        <label for="a2p">&nbsp;</label>
                                                                         <!--計算公式為期中單項佔比要X全年佔比，小數點二位後無條件捨去-->
-                                                                        <input name="username" type="text" value="0" placeholder="占比" readonly=""><span>%</span>
+                                                                        <input name="a2p" type="text" value="0" placeholder="占比" readonly=""><span>%</span>
                                                                     </div>
                                                                 </div>
                                                             </div>
                                                             <div class="form_grp">
                                                                 <div class="form_content mix-2-col">
                                                                     <div class="form_grp">
-                                                                        <label for="username">期末查核點：</label>
+                                                                        <label for="a3">期末查核點：</label>
                                                                         <!--自動帶入全年預估所輸入-->
-                                                                        <input name="username" type="text" value="1" placeholder="input" readonly><span>個</span>
+                                                                        <input name="a3" type="text" value="1" placeholder="input" readonly><span>個</span>
                                                                     </div>
                                                                     <div class="form_grp">
-                                                                        <label for="username">&nbsp;</label>
-                                                                        <input name="username" type="text" value="10" placeholder="占比" readonly=""><span>%</span>
+                                                                        <label for="a3p">&nbsp;</label>
+                                                                        <input name="a3p" type="text" value="10" placeholder="占比" readonly=""><span>%</span>
                                                                     </div>
                                                                 </div>
                                                             </div>
@@ -681,38 +690,38 @@
                                                             <div class="form_grp">
                                                                 <div class="form_content mix-2-col">
                                                                     <div class="form_grp">
-                                                                        <label for="username">全年預估成果：</label>
-                                                                        <input name="username" type="text" value="8" placeholder="請輸入" min="5"><span>式</span>
+                                                                        <label for="b1">全年預估成果：</label>
+                                                                        <input name="b1" type="text" value="8" placeholder="請輸入" min="5"><span>式</span>
                                                                     </div>
                                                                     <div class="form_grp">
-                                                                        <label for="username">&nbsp;</label>
-                                                                        <input name="username" type="text" value="10" placeholder="占比" readonly=""><span>%</span>
+                                                                        <label for="b1p">&nbsp;</label>
+                                                                        <input name="b1p" type="text" value="10" placeholder="占比" readonly=""><span>%</span>
                                                                     </div>
                                                                 </div>
                                                             </div>
                                                             <div class="form_grp">
                                                                 <div class="form_content mix-2-col">
                                                                     <div class="form_grp">
-                                                                        <label for="username">期中查核點：</label>
-                                                                        <input name="username" type="text" value="4" placeholder="請輸入" min="1"><span>式</span>
+                                                                        <label for="b2">期中查核點：</label>
+                                                                        <input name="b2" type="text" value="4" placeholder="請輸入" min="1"><span>式</span>
                                                                     </div>
                                                                     <div class="form_grp">
-                                                                        <label for="username">&nbsp;</label>
+                                                                        <label for="b2p">&nbsp;</label>
                                                                         <!--計算公式為期中單項佔比要X全年佔比，小數點二位後無條件捨去-->
-                                                                        <input name="username" type="text" value="5.00" placeholder="占比" readonly=""><span>%</span>
+                                                                        <input name="b2p" type="text" value="5.00" placeholder="占比" readonly=""><span>%</span>
                                                                     </div>
                                                                 </div>
                                                             </div>
                                                             <div class="form_grp">
                                                                 <div class="form_content mix-2-col">
                                                                     <div class="form_grp">
-                                                                        <label for="username">期末查核點：</label>
+                                                                        <label for="b3">期末查核點：</label>
                                                                         <!--自動帶入全年預估所輸入-->
-                                                                        <input name="username" type="text" value="8" placeholder="input" readonly><span>式</span>
+                                                                        <input name="b3" type="text" value="8" placeholder="input" readonly><span>式</span>
                                                                     </div>
                                                                     <div class="form_grp">
-                                                                        <label for="username">&nbsp;</label>
-                                                                        <input name="username" type="text" value="10" placeholder="占比" readonly=""><span>%</span>
+                                                                        <label for="b3p">&nbsp;</label>
+                                                                        <input name="b3p" type="text" value="10" placeholder="占比" readonly=""><span>%</span>
                                                                     </div>
                                                                 </div>
                                                             </div>
@@ -721,8 +730,8 @@
                                                     </div>
                                                 </div>
                                             </div>
-                                            <!-- input 3 ，警示效果只以紅字提示 -->
-                                            <div class="form_grp"><!-- warn"--><!--添加warn於標題警示效果移除-->
+                                            <!-- input 3 ，警示效果以紅字notice提示 -->
+                                            <div class="form_grp"><!-- warn"--><!--添加warn於標題警示效果移除，以紅字顯示提示文案-->
                                                 <label for="" class="form_title"><abbr class="necessary" title="為必填(選)欄位,不能為空白。">*</abbr>導入企業投資基金(自有或鏈結)金額(千元)</label>
                                                 <div class="form_content">
                                                     <div class="form_grp">
@@ -730,39 +739,39 @@
                                                             <div class="form_grp">
                                                                 <div class="form_content mix-2-col">
                                                                     <div class="form_grp">
-                                                                        <label for="username">全年預估成果：</label>
-                                                                        <input name="username" type="text" placeholder="請輸入" value="0"><!--class="this"--><span>千元</span>
+                                                                        <label for="c1">全年預估成果：</label>
+                                                                        <input name="c1" type="text" placeholder="請輸入" value="10000"><!--class="this"--><span>千元</span>
                                                                         <div class="notic">必須 >= 1</div>
                                                                     </div>
                                                                     <div class="form_grp">
-                                                                        <label for="username">&nbsp;</label>
-                                                                        <input name="username" type="text" value="10" placeholder="佔比" readonly=""><span>%</span>
+                                                                        <label for="c1p">&nbsp;</label>
+                                                                        <input name="c1p" type="text" value="10" placeholder="佔比" readonly=""><span>%</span>
                                                                     </div>
                                                                 </div>
                                                             </div>
                                                             <div class="form_grp">
                                                                 <div class="form_content mix-2-col">
                                                                     <div class="form_grp">
-                                                                        <label for="username">期中查核點：</label>
-                                                                        <input name="username" type="text" value="0" placeholder="請輸入" min="0"><span>千元</span>
+                                                                        <label for="c2">期中查核點：</label>
+                                                                        <input name="c2" type="text" value="3500" placeholder="請輸入" min="0"><span>千元</span>
                                                                     </div>
                                                                     <div class="form_grp">
-                                                                        <label for="username">&nbsp;</label>
+                                                                        <label for="c2p">&nbsp;</label>
                                                                         <!--計算公式為期中單項佔比要X全年佔比，小數點二位後無條件捨去-->
-                                                                        <input name="username" type="text" value="0.00" placeholder="占比" readonly=""><span>%</span>
+                                                                        <input name="c2p" type="text" value="3.50" placeholder="占比" readonly=""><span>%</span>
                                                                     </div>
                                                                 </div>
                                                             </div>
                                                             <div class="form_grp">
                                                                 <div class="form_content mix-2-col">
                                                                     <div class="form_grp">
-                                                                        <label for="username">期末查核點：</label>
+                                                                        <label for="c3">期末查核點：</label>
                                                                         <!--自動帶入全年預估所輸入-->
-                                                                        <input name="username" type="text" value="0" placeholder="input" readonly><span>千元</span>
+                                                                        <input name="c3" type="text" value="0" placeholder="input" readonly><span>千元</span>
                                                                     </div>
                                                                     <div class="form_grp">
-                                                                        <label for="username">&nbsp;</label>
-                                                                        <input name="username" type="text" value="10" placeholder="占比" readonly=""><span>%</span>
+                                                                        <label for="c3p">&nbsp;</label>
+                                                                        <input name="c3p" type="text" value="10" placeholder="占比" readonly=""><span>%</span>
                                                                     </div>
                                                                 </div>
                                                             </div>
@@ -771,7 +780,7 @@
                                                     </div>
                                                 </div>
                                             </div>
-                                            <!--有幾組指標要依所選擇的模組的指標條件-->
+                                            <!-- input 4 ，有幾組指標要依所選擇的模組的指標條件-->
                                             <div class="form_grp">
                                                 <label for="" class="form_title"><abbr class="necessary" title="為必填(選)欄位,不能為空白。">*</abbr>以入選即投資或贊助模式，策略性投資新創企業至少5家(家)</label>
                                                 <div class="form_content">
@@ -780,38 +789,38 @@
                                                             <div class="form_grp">
                                                                 <div class="form_content mix-2-col">
                                                                     <div class="form_grp">
-                                                                        <label for="username">全年預估成果：</label>
-                                                                        <input name="username" type="text" value="10" placeholder="請輸入" min="5"><span>家</span>
+                                                                        <label for="d1">全年預估成果：</label>
+                                                                        <input name="d1" type="text" value="10" placeholder="請輸入" min="5"><span>家</span>
                                                                     </div>
                                                                     <div class="form_grp">
-                                                                        <label for="username">&nbsp;</label>
-                                                                        <input name="username" type="text" value="10" placeholder="占比" readonly=""><span>%</span>
+                                                                        <label for="d1p">&nbsp;</label>
+                                                                        <input name="d1p" type="text" value="10" placeholder="占比" readonly=""><span>%</span>
                                                                     </div>
                                                                 </div>
                                                             </div>
                                                             <div class="form_grp">
                                                                 <div class="form_content mix-2-col">
                                                                     <div class="form_grp">
-                                                                        <label for="username">期中查核點：</label>
-                                                                        <input name="username" type="text" value="3" placeholder="請輸入" min="0"><span>家</span>
+                                                                        <label for="d2">期中查核點：</label>
+                                                                        <input name="d2" type="text" value="3" placeholder="請輸入" min="0"><span>家</span>
                                                                     </div>
                                                                     <div class="form_grp">
-                                                                        <label for="username">&nbsp;</label>
+                                                                        <label for="d2p">&nbsp;</label>
                                                                         <!--計算公式為期中單項佔比要X全年佔比，小數點二位後無條件捨去-->
-                                                                        <input name="username" type="text" value="3.00" placeholder="占比" readonly=""><span>%</span>
+                                                                        <input name="d2p" type="text" value="3.00" placeholder="占比" readonly=""><span>%</span>
                                                                     </div>
                                                                 </div>
                                                             </div>
                                                             <div class="form_grp">
                                                                 <div class="form_content mix-2-col">
                                                                     <div class="form_grp">
-                                                                        <label for="username">期末查核點：</label>
+                                                                        <label for="d3">期末查核點：</label>
                                                                         <!--自動帶入全年預估所輸入-->
-                                                                        <input name="username" type="text" value="10" placeholder="input" readonly><span>家</span>
+                                                                        <input name="d3" type="text" value="10" placeholder="input" readonly><span>家</span>
                                                                     </div>
                                                                     <div class="form_grp">
-                                                                        <label for="username">&nbsp;</label>
-                                                                        <input name="username" type="text" value="10" placeholder="占比" readonly=""><span>%</span>
+                                                                        <label for="d3p">&nbsp;</label>
+                                                                        <input name="d3p" type="text" value="10" placeholder="占比" readonly=""><span>%</span>
                                                                     </div>
                                                                 </div>
                                                             </div>
@@ -820,6 +829,7 @@
                                                     </div>
                                                 </div>
                                             </div>
+                                            <!-- input 5 -->
                                             <div class="form_grp">
                                                 <label for="" class="form_title"><abbr class="necessary" title="為必填(選)欄位,不能為空白。">*</abbr>辦理企業加速器廣宣作業1式(式)</label>
                                                 <div class="form_content">
@@ -828,38 +838,38 @@
                                                             <div class="form_grp">
                                                                 <div class="form_content mix-2-col">
                                                                     <div class="form_grp">
-                                                                        <label for="username">全年預估成果：</label>
-                                                                        <input name="username" type="text" value="2" placeholder="請輸入" min="1"><span>式</span>
+                                                                        <label for="e1">全年預估成果：</label>
+                                                                        <input name="e1" type="text" value="2" placeholder="請輸入" min="1"><span>式</span>
                                                                     </div>
                                                                     <div class="form_grp">
-                                                                        <label for="username">&nbsp;</label>
-                                                                        <input name="username" type="text" value="10" placeholder="占比" readonly=""><span>%</span>
+                                                                        <label for="e1p">&nbsp;</label>
+                                                                        <input name="e1p" type="text" value="10" placeholder="占比" readonly=""><span>%</span>
                                                                     </div>
                                                                 </div>
                                                             </div>
                                                             <div class="form_grp">
                                                                 <div class="form_content mix-2-col">
                                                                     <div class="form_grp">
-                                                                        <label for="username">期中查核點：</label>
-                                                                        <input name="username" type="text" value="1" placeholder="請輸入" min="0"><span>式</span>
+                                                                        <label for="e2">期中查核點：</label>
+                                                                        <input name="e2" type="text" value="1" placeholder="請輸入" min="0"><span>式</span>
                                                                     </div>
                                                                     <div class="form_grp">
-                                                                        <label for="username">&nbsp;</label>
+                                                                        <label for="e2p">&nbsp;</label>
                                                                         <!--計算公式為期中單項佔比要X全年佔比，小數點二位後無條件捨去-->
-                                                                        <input name="username" type="text" value="5.00" placeholder="占比" readonly=""><span>%</span>
+                                                                        <input name="e2p" type="text" value="5.00" placeholder="占比" readonly=""><span>%</span>
                                                                     </div>
                                                                 </div>
                                                             </div>
                                                             <div class="form_grp">
                                                                 <div class="form_content mix-2-col">
                                                                     <div class="form_grp">
-                                                                        <label for="username">期末查核點：</label>
+                                                                        <label for="e3">期末查核點：</label>
                                                                         <!--自動帶入全年預估所輸入-->
-                                                                        <input name="username" type="text" value="2" placeholder="input" readonly><span>式</span>
+                                                                        <input name="e3" type="text" value="2" placeholder="input" readonly><span>式</span>
                                                                     </div>
                                                                     <div class="form_grp">
-                                                                        <label for="username">&nbsp;</label>
-                                                                        <input name="username" type="text" value="10" placeholder="占比" readonly=""><span>%</span>
+                                                                        <label for="e3p">&nbsp;</label>
+                                                                        <input name="e3p" type="text" value="10" placeholder="占比" readonly=""><span>%</span>
                                                                     </div>
                                                                 </div>
                                                             </div>
@@ -873,7 +883,7 @@
                                             <!--當模組有圈選物聯網特色加值時，自設指標需自動出現物聯網指標-->
 
                                             <!--自設指標至少一組，佔比與物聯網共用；自訂指標的位置在物聯網上方-->
-                                            <!--自設指標樣式一，先新增一組指標與單位，再開始填寫-->
+                                            <!--自設指標樣式一，先新增一組指標與單位，再開始填寫。至少一組最多十組-->
                                             <div class="form_grp">
                                                 <label for="" class="form_title"><abbr class="necessary" title="為必填(選)欄位,不能為空白。">*</abbr>請輸入指標與指標單位</label>
                                                 <div class="form_content">
@@ -882,7 +892,7 @@
                                                             <div class="form_grp">
                                                                 <div class="form_content mix-1-col">
                                                                     <div class="form_grp">
-                                                                        <input name="username" type="text" placeholder="請輸入指標名稱" class="this">
+                                                                        <input name="addonename" type="text" placeholder="請輸入指標名稱" class="this">
                                                                         <div class="notic">自設指標至少需要一組</div>
                                                                     </div>
                                                                 </div>
@@ -890,13 +900,14 @@
                                                             <div class="form_grp">
                                                                 <div class="form_content mix-1-col">
                                                                     <div class="form_grp">
-                                                                        <input name="username" type="text" placeholder="請輸入指標單位" class="" class="this">
+                                                                        <input name="addoneunit" type="text" placeholder="請輸入指標單位" class="" class="this">
                                                                     </div>
                                                                 </div>
                                                             </div>
                                                             <button type="button" class="btn btn-addition">新增一組</button>
                                                         </div>
                                                         <div class="notice_info">
+                                                            <!--調整文案內容-->
                                                             請依推動機制、工作項目內容、鏈結資源及申請金額自設績效指標。<br>
                                                             請注意，自設指標至少需要一組。請先輸入指標名稱與計量單位(例如：家／千元)後、點選新增一組<br>
                                                             指標名稱限60字以內、指標單位限3字以內
@@ -904,47 +915,47 @@
                                                     </div>
                                                 </div>
                                             </div>
+                                            <!--自訂 1-->
                                             <div class="form_grp">
-                                                <label for="" class="form_title"><abbr class="necessary" title="為必填(選)欄位,不能為空白。">*</abbr>用戶所輸入的自設指標標題(家<!--用戶輸入的單位-->)</label>
+                                                <label for="" class="form_title"><abbr class="necessary" title="為必填(選)欄位,不能為空白。">*</abbr>顯示自設指標標題(家)<!--用戶輸入的名稱和單位--></label>
                                                 <div class="form_content">
                                                     <div class="form_grp">
                                                         <div class="form_content flex-3-col">
                                                             <div class="form_grp">
                                                                 <div class="form_content mix-2-col">
                                                                     <div class="form_grp">
-                                                                        <label for="username">全年預估成果：</label>
-                                                                        <!--需請設計師改成number，目前number會跑版-->
-                                                                        <input name="username" type="text" value="10" placeholder="請輸入" min="1"><span>家</span>
+                                                                        <label for="add1-1">全年預估成果：</label>
+                                                                        <input name="add1-1" type="text" value="10" placeholder="請輸入" min="1"><span>家</span>
                                                                     </div>
                                                                     <div class="form_grp">
-                                                                        <label for="username">&nbsp;</label>
-                                                                        <input name="username" type="text" value="30" placeholder="占比"><span>%</span>
+                                                                        <label for="add1-1p">&nbsp;</label>
+                                                                        <input name="add1-1p" type="text" value="30" placeholder="占比"><span>%</span>
                                                                     </div>
                                                                 </div>
                                                             </div>
                                                             <div class="form_grp">
                                                                 <div class="form_content mix-2-col">
                                                                     <div class="form_grp">
-                                                                        <label for="username">期中查核點：</label>
-                                                                        <input name="username" type="text" value="2" placeholder="請輸入" min="1"><span>家</span>
+                                                                        <label for="add1-2">期中查核點：</label>
+                                                                        <input name="add1-2" type="text" value="2" placeholder="請輸入" min="1"><span>家</span>
                                                                     </div>
                                                                     <div class="form_grp">
-                                                                        <label for="username">&nbsp;</label>
+                                                                        <label for="add1-2p">&nbsp;</label>
                                                                         <!--計算公式為期中單項佔比要X全年佔比，小數點二位後無條件捨去-->
-                                                                        <input name="username" type="text" value="6.00" placeholder="占比" readonly=""><span>%</span>
+                                                                        <input name="add1-2p" type="text" value="6.00" placeholder="占比" readonly=""><span>%</span>
                                                                     </div>
                                                                 </div>
                                                             </div>
                                                             <div class="form_grp">
                                                                 <div class="form_content mix-2-col">
                                                                     <div class="form_grp">
-                                                                        <label for="username">期末查核點：</label>
+                                                                        <label for="add1-3">期末查核點：</label>
                                                                         <!--自動帶入全年預估所輸入-->
-                                                                        <input name="username" type="text" value="1" placeholder="input" readonly><span>家</span>
+                                                                        <input name="add1-3" type="text" value="1" placeholder="input" readonly><span>家</span>
                                                                     </div>
                                                                     <div class="form_grp">
-                                                                        <label for="username">&nbsp;</label>
-                                                                        <input name="username" type="text" value="30" placeholder="占比" readonly=""><span>%</span>
+                                                                        <label for="add1-3p">&nbsp;</label>
+                                                                        <input name="add1-3p" type="text" value="30" placeholder="占比" readonly=""><span>%</span>
                                                                     </div>
                                                                 </div>
                                                             </div>
@@ -953,21 +964,21 @@
                                                     </div>
                                                 </div>
                                             </div>
+                                            <!--自訂 2-->
                                             <div class="form_grp">
-                                                <label for="" class="form_title"><abbr class="necessary" title="為必填(選)欄位,不能為空白。">*</abbr>用戶所輸入的自設指標標題(千元<!--用戶輸入的單位-->)</label>
+                                                <label for="" class="form_title"><abbr class="necessary" title="為必填(選)欄位,不能為空白。">*</abbr>自設指標標題(千元)</label>
                                                 <div class="form_content">
                                                     <div class="form_grp">
                                                         <div class="form_content flex-3-col">
                                                             <div class="form_grp">
                                                                 <div class="form_content mix-2-col">
                                                                     <div class="form_grp">
-                                                                        <label for="username">全年預估成果：</label>
-                                                                        
-                                                                        <input name="username" type="text" value="2000" placeholder="請輸入" min="1"><span>千元</span>
+                                                                        <label for="add2-1">全年預估成果：</label>                                                                        
+                                                                        <input name="add2-1" type="text" value="2000" placeholder="請輸入" min="1"><span>千元</span>
                                                                     </div>
                                                                     <div class="form_grp">
-                                                                        <label for="username">&nbsp;</label>
-                                                                        <input name="username" type="text" value="25" placeholder="占比" class="this"><span>%</span>
+                                                                        <label for="add2-1p">&nbsp;</label>
+                                                                        <input name="app2-1p" type="text" value="25" placeholder="占比" class="this"><span>%</span>
                                                                         <div class="notic">自設指標不可超過50%</div>
                                                                     </div>
                                                                 </div>
@@ -975,26 +986,26 @@
                                                             <div class="form_grp">
                                                                 <div class="form_content mix-2-col">
                                                                     <div class="form_grp">
-                                                                        <label for="username">期中查核點：</label>
-                                                                        <input name="username" type="text" value="500" placeholder="請輸入" min="1"><span>千元</span>
+                                                                        <label for="add2-2">期中查核點：</label>
+                                                                        <input name="add2-2" type="text" value="500" placeholder="請輸入" min="1"><span>千元</span>
                                                                     </div>
                                                                     <div class="form_grp">
-                                                                        <label for="username">&nbsp;</label>
+                                                                        <label for="add2-2p">&nbsp;</label>
                                                                         <!--計算公式為期中單項佔比要X全年佔比，小數點二位後無條件捨去-->
-                                                                        <input name="username" type="text" value="6.25" placeholder="占比" readonly=""><span>%</span>
+                                                                        <input name="add2-2p" type="text" value="6.25" placeholder="占比" readonly=""><span>%</span>
                                                                     </div>
                                                                 </div>
                                                             </div>
                                                             <div class="form_grp">
                                                                 <div class="form_content mix-2-col">
                                                                     <div class="form_grp">
-                                                                        <label for="username">期末查核點：</label>
+                                                                        <label for="add2-3">期末查核點：</label>
                                                                         <!--自動帶入全年預估所輸入-->
-                                                                        <input name="username" type="text" value="2000" placeholder="input" readonly><span>千元</span>
+                                                                        <input name="add2-3" type="text" value="2000" placeholder="input" readonly><span>千元</span>
                                                                     </div>
                                                                     <div class="form_grp">
-                                                                        <label for="username">&nbsp;</label>
-                                                                        <input name="username" type="text" value="25" placeholder="占比" readonly=""><span>%</span>
+                                                                        <label for="add2-3p">&nbsp;</label>
+                                                                        <input name="add2-3p" type="text" value="25" placeholder="占比" readonly=""><span>%</span>
                                                                     </div>
                                                                 </div>
                                                             </div>
@@ -1003,7 +1014,7 @@
                                                     </div>
                                                 </div>
                                             </div>
-                                            <!--物聯網指標-->
+                                            <!--物聯網指標，若有申請物聯網加值者顯示-->
                                             <div class="form_grp" id="NewFeaturedDefine_010">
                                                 <input name="NewPlanTargetItemId_010" type="hidden" value="38">
                                                 <input name="NewProjectTargetItemId_010" type="hidden">
@@ -1014,13 +1025,13 @@
                                                             <div class="form_grp">
                                                                 <div class="form_content mix-2-col">
                                                                     <div class="form_grp">
-                                                                        <label for="username">全年預估成果：</label>
-                                                                        <input name="NewYearlyValue_010" type="text" placeholder="請輸入" value="0" class="this" onblur="checkPlanTargetItemRule(this, 'NewYearlyValue_001');"><span>家</span>
+                                                                        <label for="IoT1-1">全年預估成果：</label>
+                                                                        <input name="IoT1-1" type="text" placeholder="請輸入" value="0" class="this" onblur="checkPlanTargetItemRule(this, 'NewYearlyValue_001');"><span>家</span>
                                                                         <div class="notic" id="NewYearlyValueWarning_010"></div>
                                                                     </div>
                                                                     <div class="form_grp">
-                                                                        <label for="username">&nbsp;</label>
-                                                                        <input name="NewItemWeight_010" type="text" value="0" placeholder="佔比" onblur="checkSelfDefineWieghtValue(this);"><span>%</span>
+                                                                        <label for="IoT1-1p">&nbsp;</label>
+                                                                        <input name="IoT1-1p" type="text" value="0" placeholder="佔比" onblur="checkSelfDefineWieghtValue(this);"><span>%</span>
                                                                         <div class="notic" id="NewItemWeightWarning_010"></div>
                                                                     </div>
                                                                 </div>
@@ -1028,27 +1039,27 @@
                                                             <div class="form_grp">
                                                                 <div class="form_content mix-2-col">
                                                                     <div class="form_grp">
-                                                                        <label for="username">期中查核點：</label>
-                                                                        <input name="NewMidtermValue_010" type="text" value="0" placeholder="請輸入" onblur="checkItemMidtermValue(this);"><span>家</span>
+                                                                        <label for="IoT1-2">期中查核點：</label>
+                                                                        <input name="IoT1-2" type="text" value="0" placeholder="請輸入" onblur="checkItemMidtermValue(this);"><span>家</span>
                                                                         <div class="notic" id="NewMidtermValueWarning_010"></div>
                                                                     </div>
                                                                     <div class="form_grp">
-                                                                        <label for="username">&nbsp;</label>
+                                                                        <label for="IoT1-2p">&nbsp;</label>
                                                                         <!--計算公式為期中單項佔比要X全年佔比，小數點二位後無條件捨去-->
-                                                                        <input name="NewMidtermPercentage_010" type="text" value="0.00" placeholder="占比" readonly=""><span>%</span>
+                                                                        <input name="IoT1-2p" type="text" value="0.00" placeholder="占比" readonly=""><span>%</span>
                                                                     </div>
                                                                 </div>
                                                             </div>
                                                             <div class="form_grp">
                                                                 <div class="form_content mix-2-col">
                                                                     <div class="form_grp">
-                                                                        <label for="username">期末查核點：</label>
+                                                                        <label for="IoT1-3">期末查核點：</label>
                                                                         <!--自動帶入全年預估所輸入-->
-                                                                        <input name="NewFinalValue_010" type="text" value="0" placeholder="input" readonly=""><span>家</span>
+                                                                        <input name="IoT1-3" type="text" value="0" placeholder="input" readonly=""><span>家</span>
                                                                     </div>
                                                                     <div class="form_grp">
-                                                                        <label for="username">&nbsp;</label>
-                                                                        <input name="NewFinalPercentage_010" type="text" value="0" placeholder="占比" readonly=""><span>%</span>
+                                                                        <label for="IoT1-3p">&nbsp;</label>
+                                                                        <input name="IoT1-3p" type="text" value="0" placeholder="占比" readonly=""><span>%</span>
                                                                     </div>
                                                                 </div>
                                                             </div>
@@ -1067,13 +1078,13 @@
                                                             <div class="form_grp">
                                                                 <div class="form_content mix-2-col">
                                                                     <div class="form_grp">
-                                                                        <label for="username">全年預估成果：</label>
-                                                                        <input name="NewYearlyValue_011" type="text" placeholder="請輸入" value="0" class="this" onblur="checkPlanTargetItemRule(this, 'NewYearlyValue_001');"><span>家</span>
+                                                                        <label for="IoT2-1">全年預估成果：</label>
+                                                                        <input name="IoT2-1" type="text" placeholder="請輸入" value="0" class="this" onblur="checkPlanTargetItemRule(this, 'NewYearlyValue_001');"><span>家</span>
                                                                         <div class="notic" id="NewYearlyValueWarning_011"></div>
                                                                     </div>
                                                                     <div class="form_grp">
-                                                                        <label for="username">&nbsp;</label>
-                                                                        <input name="NewItemWeight_011" type="text" value="0" placeholder="佔比" onblur="checkSelfDefineWieghtValue(this);"><span>%</span>
+                                                                        <label for="IoT2-1p">&nbsp;</label>
+                                                                        <input name="IoT2-1p" type="text" value="0" placeholder="佔比" onblur="checkSelfDefineWieghtValue(this);"><span>%</span>
                                                                         <div class="notic" id="NewItemWeightWarning_011"></div>
                                                                     </div>
                                                                 </div>
@@ -1081,27 +1092,27 @@
                                                             <div class="form_grp">
                                                                 <div class="form_content mix-2-col">
                                                                     <div class="form_grp">
-                                                                        <label for="username">期中查核點：</label>
-                                                                        <input name="NewMidtermValue_011" type="text" value="0" placeholder="請輸入" onblur="checkItemMidtermValue(this);"><span>家</span>
+                                                                        <label for="IoT2-2">期中查核點：</label>
+                                                                        <input name="IoT2-2" type="text" value="0" placeholder="請輸入" onblur="checkItemMidtermValue(this);"><span>家</span>
                                                                         <div class="notic" id="NewMidtermValueWarning_011"></div>
                                                                     </div>
                                                                     <div class="form_grp">
-                                                                        <label for="username">&nbsp;</label>
+                                                                        <label for="IoT2-2p">&nbsp;</label>
                                                                         <!--計算公式為期中單項佔比要X全年佔比，小數點二位後無條件捨去-->
-                                                                        <input name="NewMidtermPercentage_011" type="text" value="0.00" placeholder="占比" readonly=""><span>%</span>
+                                                                        <input name="IoT2-2p" type="text" value="0.00" placeholder="占比" readonly=""><span>%</span>
                                                                     </div>
                                                                 </div>
                                                             </div>
                                                             <div class="form_grp">
                                                                 <div class="form_content mix-2-col">
                                                                     <div class="form_grp">
-                                                                        <label for="username">期末查核點：</label>
+                                                                        <label for="IoT2-3">期末查核點：</label>
                                                                         <!--自動帶入全年預估所輸入-->
-                                                                        <input name="NewFinalValue_011" type="text" value="0" placeholder="input" readonly=""><span>家</span>
+                                                                        <input name="IoT2-3" type="text" value="0" placeholder="input" readonly=""><span>家</span>
                                                                     </div>
                                                                     <div class="form_grp">
-                                                                        <label for="username">&nbsp;</label>
-                                                                        <input name="NewFinalPercentage_011" type="text" value="0" placeholder="占比" readonly=""><span>%</span>
+                                                                        <label for="IoT2-3p">&nbsp;</label>
+                                                                        <input name="IoT2-3p" type="text" value="0" placeholder="占比" readonly=""><span>%</span>
                                                                     </div>
                                                                 </div>
                                                             </div>
@@ -1120,13 +1131,13 @@
                                                             <div class="form_grp">
                                                                 <div class="form_content mix-2-col">
                                                                     <div class="form_grp">
-                                                                        <label for="username">全年預估成果：</label>
-                                                                        <input name="NewYearlyValue_012" type="text" placeholder="請輸入" value="0" class="this" onblur="checkPlanTargetItemRule(this, 'NewYearlyValue_001');"><span>千元</span>
+                                                                        <label for="IoT3-1">全年預估成果：</label>
+                                                                        <input name="IoT3-1" type="text" placeholder="請輸入" value="0" class="this" onblur="checkPlanTargetItemRule(this, 'NewYearlyValue_001');"><span>千元</span>
                                                                         <div class="notic" id="NewYearlyValueWarning_012"></div>
                                                                     </div>
                                                                     <div class="form_grp">
-                                                                        <label for="username">&nbsp;</label>
-                                                                        <input name="NewItemWeight_012" type="text" value="0" placeholder="佔比" onblur="checkSelfDefineWieghtValue(this);"><span>%</span>
+                                                                        <label for="IoT3-1p">&nbsp;</label>
+                                                                        <input name="IoT3-1p" type="text" value="0" placeholder="佔比" onblur="checkSelfDefineWieghtValue(this);"><span>%</span>
                                                                         <div class="notic" id="NewItemWeightWarning_012"></div>
                                                                     </div>
                                                                 </div>
@@ -1134,27 +1145,27 @@
                                                             <div class="form_grp">
                                                                 <div class="form_content mix-2-col">
                                                                     <div class="form_grp">
-                                                                        <label for="username">期中查核點：</label>
-                                                                        <input name="NewMidtermValue_012" type="text" value="0" placeholder="請輸入" onblur="checkItemMidtermValue(this);"><span>千元</span>
+                                                                        <label for="IoT3-2">期中查核點：</label>
+                                                                        <input name="IoT3-2" type="text" value="0" placeholder="請輸入" onblur="checkItemMidtermValue(this);"><span>千元</span>
                                                                         <div class="notic" id="NewMidtermValueWarning_012"></div>
                                                                     </div>
                                                                     <div class="form_grp">
-                                                                        <label for="username">&nbsp;</label>
+                                                                        <label for="IoT3-2p">&nbsp;</label>
                                                                         <!--計算公式為期中單項佔比要X全年佔比，小數點二位後無條件捨去-->
-                                                                        <input name="NewMidtermPercentage_012" type="text" value="0.00" placeholder="占比" readonly=""><span>%</span>
+                                                                        <input name="IoT3-2p" type="text" value="0.00" placeholder="占比" readonly=""><span>%</span>
                                                                     </div>
                                                                 </div>
                                                             </div>
                                                             <div class="form_grp">
                                                                 <div class="form_content mix-2-col">
                                                                     <div class="form_grp">
-                                                                        <label for="username">期末查核點：</label>
+                                                                        <label for="IoT3-3">期末查核點：</label>
                                                                         <!--自動帶入全年預估所輸入-->
-                                                                        <input name="NewFinalValue_012" type="text" value="0" placeholder="input" readonly=""><span>千元</span>
+                                                                        <input name="IoT3-3" type="text" value="0" placeholder="input" readonly=""><span>千元</span>
                                                                     </div>
                                                                     <div class="form_grp">
-                                                                        <label for="username">&nbsp;</label>
-                                                                        <input name="NewFinalPercentage_012" type="text" value="0" placeholder="占比" readonly=""><span>%</span>
+                                                                        <label for="IoT3-3p">&nbsp;</label>
+                                                                        <input name="IoT3-3p" type="text" value="0" placeholder="占比" readonly=""><span>%</span>
                                                                     </div>
                                                                 </div>
                                                             </div>
@@ -1173,13 +1184,13 @@
                                                             <div class="form_grp">
                                                                 <div class="form_content mix-2-col">
                                                                     <div class="form_grp">
-                                                                        <label for="username">全年預估成果：</label>
-                                                                        <input name="NewYearlyValue_013" type="text" placeholder="請輸入" value="0" class="this" onblur="checkPlanTargetItemRule(this, 'NewYearlyValue_001');"><span>件</span>
+                                                                        <label for="IoT4-1">全年預估成果：</label>
+                                                                        <input name="IoT4-1" type="text" placeholder="請輸入" value="0" class="this" onblur="checkPlanTargetItemRule(this, 'NewYearlyValue_001');"><span>件</span>
                                                                         <div class="notic" id="NewYearlyValueWarning_013"></div>
                                                                     </div>
                                                                     <div class="form_grp">
-                                                                        <label for="username">&nbsp;</label>
-                                                                        <input name="NewItemWeight_013" type="text" value="0" placeholder="佔比" onblur="checkSelfDefineWieghtValue(this);"><span>%</span>
+                                                                        <label for="IoT4-1p">&nbsp;</label>
+                                                                        <input name="IoT4-1p" type="text" value="0" placeholder="佔比" onblur="checkSelfDefineWieghtValue(this);"><span>%</span>
                                                                         <div class="notic" id="NewItemWeightWarning_013"></div>
                                                                     </div>
                                                                 </div>
@@ -1187,27 +1198,27 @@
                                                             <div class="form_grp">
                                                                 <div class="form_content mix-2-col">
                                                                     <div class="form_grp">
-                                                                        <label for="username">期中查核點：</label>
-                                                                        <input name="NewMidtermValue_013" type="text" value="0" placeholder="請輸入" onblur="checkItemMidtermValue(this);"><span>件</span>
+                                                                        <label for="IoT4-2">期中查核點：</label>
+                                                                        <input name="IoT4-2" type="text" value="0" placeholder="請輸入" onblur="checkItemMidtermValue(this);"><span>件</span>
                                                                         <div class="notic" id="NewMidtermValueWarning_013"></div>
                                                                     </div>
                                                                     <div class="form_grp">
-                                                                        <label for="username">&nbsp;</label>
+                                                                        <label for="IoT4-2p">&nbsp;</label>
                                                                         <!--計算公式為期中單項佔比要X全年佔比，小數點二位後無條件捨去-->
-                                                                        <input name="NewMidtermPercentage_013" type="text" value="0.00" placeholder="占比" readonly=""><span>%</span>
+                                                                        <input name="IoT4-2p" type="text" value="0.00" placeholder="占比" readonly=""><span>%</span>
                                                                     </div>
                                                                 </div>
                                                             </div>
                                                             <div class="form_grp">
                                                                 <div class="form_content mix-2-col">
                                                                     <div class="form_grp">
-                                                                        <label for="username">期末查核點：</label>
+                                                                        <label for="IoT4-3">期末查核點：</label>
                                                                         <!--自動帶入全年預估所輸入-->
-                                                                        <input name="NewFinalValue_013" type="text" value="0" placeholder="input" readonly=""><span>件</span>
+                                                                        <input name="IoT4-3" type="text" value="0" placeholder="input" readonly=""><span>件</span>
                                                                     </div>
                                                                     <div class="form_grp">
-                                                                        <label for="username">&nbsp;</label>
-                                                                        <input name="NewFinalPercentage_013" type="text" value="0" placeholder="占比" readonly=""><span>%</span>
+                                                                        <label for="IoT4-3p">&nbsp;</label>
+                                                                        <input name="IoT4-3p" type="text" value="0" placeholder="占比" readonly=""><span>%</span>
                                                                     </div>
                                                                 </div>
                                                             </div>
@@ -1226,13 +1237,13 @@
                                                             <div class="form_grp">
                                                                 <div class="form_content mix-2-col">
                                                                     <div class="form_grp">
-                                                                        <label for="username">全年預估成果：</label>
-                                                                        <input name="NewYearlyValue_014" type="text" placeholder="請輸入" value="0" class="this" onblur="checkPlanTargetItemRule(this, 'NewYearlyValue_001');"><span>千元</span>
+                                                                        <label for="IoT5-1">全年預估成果：</label>
+                                                                        <input name="IoT5-1" type="text" placeholder="請輸入" value="0" class="this" onblur="checkPlanTargetItemRule(this, 'NewYearlyValue_001');"><span>千元</span>
                                                                         <div class="notic" id="NewYearlyValueWarning_014"></div>
                                                                     </div>
                                                                     <div class="form_grp">
-                                                                        <label for="username">&nbsp;</label>
-                                                                        <input name="NewItemWeight_014" type="text" value="0" placeholder="佔比" onblur="checkSelfDefineWieghtValue(this);"><span>%</span>
+                                                                        <label for="IoT5-1p">&nbsp;</label>
+                                                                        <input name="IoT5-1p" type="text" value="0" placeholder="佔比" onblur="checkSelfDefineWieghtValue(this);"><span>%</span>
                                                                         <div class="notic" id="NewItemWeightWarning_014"></div>
                                                                     </div>
                                                                 </div>
@@ -1240,27 +1251,27 @@
                                                             <div class="form_grp">
                                                                 <div class="form_content mix-2-col">
                                                                     <div class="form_grp">
-                                                                        <label for="username">期中查核點：</label>
-                                                                        <input name="NewMidtermValue_014" type="text" value="0" placeholder="請輸入" onblur="checkItemMidtermValue(this);"><span>千元</span>
+                                                                        <label for="IoT5-2">期中查核點：</label>
+                                                                        <input name="IoT5-2" type="text" value="0" placeholder="請輸入" onblur="checkItemMidtermValue(this);"><span>千元</span>
                                                                         <div class="notic" id="NewMidtermValueWarning_014"></div>
                                                                     </div>
                                                                     <div class="form_grp">
-                                                                        <label for="username">&nbsp;</label>
+                                                                        <label for="IoT5-2p">&nbsp;</label>
                                                                         <!--計算公式為期中單項佔比要X全年佔比，小數點二位後無條件捨去-->
-                                                                        <input name="NewMidtermPercentage_014" type="text" value="0.00" placeholder="占比" readonly=""><span>%</span>
+                                                                        <input name="IoT5-2p" type="text" value="0.00" placeholder="占比" readonly=""><span>%</span>
                                                                     </div>
                                                                 </div>
                                                             </div>
                                                             <div class="form_grp">
                                                                 <div class="form_content mix-2-col">
                                                                     <div class="form_grp">
-                                                                        <label for="username">期末查核點：</label>
+                                                                        <label for="IoT5-3">期末查核點：</label>
                                                                         <!--自動帶入全年預估所輸入-->
-                                                                        <input name="NewFinalValue_014" type="text" value="0" placeholder="input" readonly=""><span>千元</span>
+                                                                        <input name="IoT5-3" type="text" value="0" placeholder="input" readonly=""><span>千元</span>
                                                                     </div>
                                                                     <div class="form_grp">
-                                                                        <label for="username">&nbsp;</label>
-                                                                        <input name="NewFinalPercentage_014" type="text" value="0" placeholder="占比" readonly=""><span>%</span>
+                                                                        <label for="IoT5-3p">&nbsp;</label>
+                                                                        <input name="IoT5-3p" type="text" value="0" placeholder="占比" readonly=""><span>%</span>
                                                                     </div>
                                                                 </div>
                                                             </div>
@@ -1279,13 +1290,13 @@
                                                             <div class="form_grp">
                                                                 <div class="form_content mix-2-col">
                                                                     <div class="form_grp">
-                                                                        <label for="username">全年預估成果：</label>
-                                                                        <input name="NewYearlyValue_015" type="text" placeholder="請輸入" value="0" class="this" onblur="checkPlanTargetItemRule(this, 'NewYearlyValue_001');"><span>處</span>
+                                                                        <label for="IoT6-1">全年預估成果：</label>
+                                                                        <input name="IoT6-1" type="text" placeholder="請輸入" value="0" class="this" onblur="checkPlanTargetItemRule(this, 'NewYearlyValue_001');"><span>處</span>
                                                                         <div class="notic" id="NewYearlyValueWarning_015"></div>
                                                                     </div>
                                                                     <div class="form_grp">
-                                                                        <label for="username">&nbsp;</label>
-                                                                        <input name="NewItemWeight_015" type="text" value="0" placeholder="佔比" onblur="checkSelfDefineWieghtValue(this);"><span>%</span>
+                                                                        <label for="IoT6-1p">&nbsp;</label>
+                                                                        <input name="IoT6-1p" type="text" value="0" placeholder="佔比" onblur="checkSelfDefineWieghtValue(this);"><span>%</span>
                                                                         <div class="notic" id="NewItemWeightWarning_015"></div>
                                                                     </div>
                                                                 </div>
@@ -1293,27 +1304,27 @@
                                                             <div class="form_grp">
                                                                 <div class="form_content mix-2-col">
                                                                     <div class="form_grp">
-                                                                        <label for="username">期中查核點：</label>
-                                                                        <input name="NewMidtermValue_015" type="text" value="0" placeholder="請輸入" onblur="checkItemMidtermValue(this);"><span>處</span>
+                                                                        <label for="IoT6-2">期中查核點：</label>
+                                                                        <input name="IoT6-2" type="text" value="0" placeholder="請輸入" onblur="checkItemMidtermValue(this);"><span>處</span>
                                                                         <div class="notic" id="NewMidtermValueWarning_015"></div>
                                                                     </div>
                                                                     <div class="form_grp">
-                                                                        <label for="username">&nbsp;</label>
+                                                                        <label for="IoT6-2p">&nbsp;</label>
                                                                         <!--計算公式為期中單項佔比要X全年佔比，小數點二位後無條件捨去-->
-                                                                        <input name="NewMidtermPercentage_015" type="text" value="0.00" placeholder="占比" readonly=""><span>%</span>
+                                                                        <input name="IoT6-2p" type="text" value="0.00" placeholder="占比" readonly=""><span>%</span>
                                                                     </div>
                                                                 </div>
                                                             </div>
                                                             <div class="form_grp">
                                                                 <div class="form_content mix-2-col">
                                                                     <div class="form_grp">
-                                                                        <label for="username">期末查核點：</label>
+                                                                        <label for="IoT6-3">期末查核點：</label>
                                                                         <!--自動帶入全年預估所輸入-->
-                                                                        <input name="NewFinalValue_015" type="text" value="0" placeholder="input" readonly=""><span>處</span>
+                                                                        <input name="IoT6-3" type="text" value="0" placeholder="input" readonly=""><span>處</span>
                                                                     </div>
                                                                     <div class="form_grp">
-                                                                        <label for="username">&nbsp;</label>
-                                                                        <input name="NewFinalPercentage_015" type="text" value="0" placeholder="占比" readonly=""><span>%</span>
+                                                                        <label for="IoT6-3p">&nbsp;</label>
+                                                                        <input name="IoT6-3p" type="text" value="0" placeholder="占比" readonly=""><span>%</span>
                                                                     </div>
                                                                 </div>
                                                             </div>
@@ -1330,18 +1341,18 @@
                                                     <div class="form_grp">
                                                         <div class="form_content mix-3-col">
                                                             <div class="form_grp">
-                                                                <label for="username">合計：</label>
-                                                                <input name="username" type="text" placeholder="總計" value="105" readonly><span>%</span>
+                                                                <label for="year1">合計：</label>
+                                                                <input name="year1" type="text" placeholder="總計" value="105" readonly><span>%</span>
                                                                 <div class="notic">需為100%</div>
                                                             </div>
                                                             <div class="form_grp">
-                                                                <label for="username">期中：</label>
-                                                                <input name="username" type="text" placeholder="總計" value="28.08" readonly><span>%</span>
+                                                                <label for="year2">期中：</label>
+                                                                <input name="year2" type="text" placeholder="總計" value="28.08" readonly><span>%</span>
                                                                 <div class="notic">至少達40%以上</div>
                                                             </div>
                                                             <div class="form_grp">
-                                                                <label for="username">期末：</label>
-                                                                <input name="username" type="text" placeholder="總計" value="105" readonly><span>%</span>
+                                                                <label for="year3">期末：</label>
+                                                                <input name="year3" type="text" placeholder="總計" value="105" readonly><span>%</span>
                                                             </div>
                                                         </div>
                                                         <div class="notice_info">請注意：各指年度合計需為100%，且期中達成率需至少佔比40%(含)以上</div>
@@ -1350,17 +1361,20 @@
                                             </div>
                                         </section>
                                     </section>
+                                </form>
                                     <hr>
                                     <div class="btn_grp">
                                         <button onclick="confirm7();alert7();">延續計畫帶入新增計畫(第一年)已填報項目</button>
+                                        <a href=""javascript:;" id="copy">複製</a><!--不確定為何複製會重整頁面，請參考複製效果-->
                                     </div>
                                     <!-- 2 -->
+                                <form action="" class="form_grid" id="form2">
                                     <section class="fill_in">
                                         <!--延續計畫要存在第二年度-->
                                         <h3 class="title">延續計畫</h3>
                                         <section>
                                             <h4 class="title">模組必設指標 (50%)</h4>
-                                            <!-- input 1 -->
+                                            <!-- input 1 ，copy form第一二input name命名修改-->
                                             <div class="form_grp">
                                                 <label for="" class="form_title"><abbr class="necessary" title="為必填(選)欄位,不能為空白。">*</abbr>建立1個主題式企業加速器(個)</label>
                                                 <div class="form_content">
@@ -1369,39 +1383,39 @@
                                                             <div class="form_grp">
                                                                 <div class="form_content mix-2-col">
                                                                     <div class="form_grp">
-                                                                        <label for="username">全年預估成果：</label>
-                                                                        <input name="username" type="text" value="1" placeholder="請輸入" min="1"><span>個</span>
+                                                                        <label for="a1">全年預估成果：</label>
+                                                                        <input name="a1" type="text" value="1" placeholder="請輸入" min="1"><span>個</span>
                                                                         <div class="notic">至少需1個</div>
                                                                     </div>
                                                                     <div class="form_grp">
-                                                                        <label for="username">&nbsp;</label>
-                                                                        <input name="username" type="text" value="10" placeholder="占比" readonly=""><span>%</span>
+                                                                        <label for="a1p">&nbsp;</label>
+                                                                        <input name="a1p" type="text" value="10" placeholder="占比" readonly=""><span>%</span>
                                                                     </div>
                                                                 </div>
                                                             </div>
                                                             <div class="form_grp">
                                                                 <div class="form_content mix-2-col">
                                                                     <div class="form_grp">
-                                                                        <label for="username">期中查核點：</label>
-                                                                        <input name="username" type="text" value="0" placeholder="請輸入" min="0"><span>個</span>
+                                                                        <label for="a2">期中查核點：</label>
+                                                                        <input name="a2" type="text" value="0" placeholder="請輸入" min="0"><span>個</span>
                                                                     </div>
                                                                     <div class="form_grp">
-                                                                        <label for="username">&nbsp;</label>
+                                                                        <label for="a2p">&nbsp;</label>
                                                                         <!--計算公式為期中單項佔比要X全年佔比，小數點二位後無條件捨去-->
-                                                                        <input name="username" type="text" value="0" placeholder="占比" readonly=""><span>%</span>
+                                                                        <input name="a2p" type="text" value="0" placeholder="占比" readonly=""><span>%</span>
                                                                     </div>
                                                                 </div>
                                                             </div>
                                                             <div class="form_grp">
                                                                 <div class="form_content mix-2-col">
                                                                     <div class="form_grp">
-                                                                        <label for="username">期末查核點：</label>
+                                                                        <label for="a3">期末查核點：</label>
                                                                         <!--自動帶入全年預估所輸入-->
-                                                                        <input name="username" type="text" value="1" placeholder="input" readonly><span>個</span>
+                                                                        <input name="a3" type="text" value="1" placeholder="input" readonly><span>個</span>
                                                                     </div>
                                                                     <div class="form_grp">
-                                                                        <label for="username">&nbsp;</label>
-                                                                        <input name="username" type="text" value="10" placeholder="占比" readonly=""><span>%</span>
+                                                                        <label for="a3p">&nbsp;</label>
+                                                                        <input name="a3p" type="text" value="10" placeholder="占比" readonly=""><span>%</span>
                                                                     </div>
                                                                 </div>
                                                             </div>
@@ -1418,38 +1432,38 @@
                                                             <div class="form_grp">
                                                                 <div class="form_content mix-2-col">
                                                                     <div class="form_grp">
-                                                                        <label for="username">全年預估成果：</label>
-                                                                        <input name="username" type="text" value="8" placeholder="請輸入" min="5"><span>式</span>
+                                                                        <label for="b1">全年預估成果：</label>
+                                                                        <input name="b1" type="text" value="8" placeholder="請輸入" min="5"><span>式</span>
                                                                     </div>
                                                                     <div class="form_grp">
-                                                                        <label for="username">&nbsp;</label>
-                                                                        <input name="username" type="text" value="10" placeholder="占比" readonly=""><span>%</span>
+                                                                        <label for="b1p">&nbsp;</label>
+                                                                        <input name="b1p" type="text" value="10" placeholder="占比" readonly=""><span>%</span>
                                                                     </div>
                                                                 </div>
                                                             </div>
                                                             <div class="form_grp">
                                                                 <div class="form_content mix-2-col">
                                                                     <div class="form_grp">
-                                                                        <label for="username">期中查核點：</label>
-                                                                        <input name="username" type="text" value="4" placeholder="請輸入" min="1"><span>式</span>
+                                                                        <label for="b2">期中查核點：</label>
+                                                                        <input name="b2" type="text" value="4" placeholder="請輸入" min="1"><span>式</span>
                                                                     </div>
                                                                     <div class="form_grp">
-                                                                        <label for="username">&nbsp;</label>
+                                                                        <label for="b2p">&nbsp;</label>
                                                                         <!--計算公式為期中單項佔比要X全年佔比，小數點二位後無條件捨去-->
-                                                                        <input name="username" type="text" value="5.00" placeholder="占比" readonly=""><span>%</span>
+                                                                        <input name="b2p" type="text" value="5.00" placeholder="占比" readonly=""><span>%</span>
                                                                     </div>
                                                                 </div>
                                                             </div>
                                                             <div class="form_grp">
                                                                 <div class="form_content mix-2-col">
                                                                     <div class="form_grp">
-                                                                        <label for="username">期末查核點：</label>
+                                                                        <label for="b3">期末查核點：</label>
                                                                         <!--自動帶入全年預估所輸入-->
-                                                                        <input name="username" type="text" value="8" placeholder="input" readonly><span>式</span>
+                                                                        <input name="b3" type="text" value="8" placeholder="input" readonly><span>式</span>
                                                                     </div>
                                                                     <div class="form_grp">
-                                                                        <label for="username">&nbsp;</label>
-                                                                        <input name="username" type="text" value="10" placeholder="占比" readonly=""><span>%</span>
+                                                                        <label for="b3p">&nbsp;</label>
+                                                                        <input name="b3p" type="text" value="10" placeholder="占比" readonly=""><span>%</span>
                                                                     </div>
                                                                 </div>
                                                             </div>
@@ -1458,8 +1472,8 @@
                                                     </div>
                                                 </div>
                                             </div>
-                                            <!-- input 3 ，警示效果只以紅字提示 -->
-                                            <div class="form_grp"><!-- warn"--><!--添加warn於標題警示效果移除-->
+                                            <!-- input 3 ，警示效果以紅字notice提示 -->
+                                            <div class="form_grp"><!-- warn"--><!--添加warn於標題警示效果移除，以紅字顯示提示文案-->
                                                 <label for="" class="form_title"><abbr class="necessary" title="為必填(選)欄位,不能為空白。">*</abbr>導入企業投資基金(自有或鏈結)金額(千元)</label>
                                                 <div class="form_content">
                                                     <div class="form_grp">
@@ -1467,39 +1481,39 @@
                                                             <div class="form_grp">
                                                                 <div class="form_content mix-2-col">
                                                                     <div class="form_grp">
-                                                                        <label for="username">全年預估成果：</label>
-                                                                        <input name="username" type="text" placeholder="請輸入" value="0"><!--class="this"--><span>千元</span>
+                                                                        <label for="c1">全年預估成果：</label>
+                                                                        <input name="c1" type="text" placeholder="請輸入" value="0"><!--class="this"--><span>千元</span>
                                                                         <div class="notic">必須 >= 1</div>
                                                                     </div>
                                                                     <div class="form_grp">
-                                                                        <label for="username">&nbsp;</label>
-                                                                        <input name="username" type="text" value="10" placeholder="佔比" readonly=""><span>%</span>
+                                                                        <label for="c1p">&nbsp;</label>
+                                                                        <input name="c1p" type="text" value="10" placeholder="佔比" readonly=""><span>%</span>
                                                                     </div>
                                                                 </div>
                                                             </div>
                                                             <div class="form_grp">
                                                                 <div class="form_content mix-2-col">
                                                                     <div class="form_grp">
-                                                                        <label for="username">期中查核點：</label>
-                                                                        <input name="username" type="text" value="0" placeholder="請輸入" min="0"><span>千元</span>
+                                                                        <label for="c2">期中查核點：</label>
+                                                                        <input name="c2" type="text" value="0" placeholder="請輸入" min="0"><span>千元</span>
                                                                     </div>
                                                                     <div class="form_grp">
-                                                                        <label for="username">&nbsp;</label>
+                                                                        <label for="c2p">&nbsp;</label>
                                                                         <!--計算公式為期中單項佔比要X全年佔比，小數點二位後無條件捨去-->
-                                                                        <input name="username" type="text" value="0.00" placeholder="占比" readonly=""><span>%</span>
+                                                                        <input name="c2p" type="text" value="0.00" placeholder="占比" readonly=""><span>%</span>
                                                                     </div>
                                                                 </div>
                                                             </div>
                                                             <div class="form_grp">
                                                                 <div class="form_content mix-2-col">
                                                                     <div class="form_grp">
-                                                                        <label for="username">期末查核點：</label>
+                                                                        <label for="c3">期末查核點：</label>
                                                                         <!--自動帶入全年預估所輸入-->
-                                                                        <input name="username" type="text" value="0" placeholder="input" readonly><span>千元</span>
+                                                                        <input name="c3" type="text" value="0" placeholder="input" readonly><span>千元</span>
                                                                     </div>
                                                                     <div class="form_grp">
-                                                                        <label for="username">&nbsp;</label>
-                                                                        <input name="username" type="text" value="10" placeholder="占比" readonly=""><span>%</span>
+                                                                        <label for="c3p">&nbsp;</label>
+                                                                        <input name="c3p" type="text" value="10" placeholder="占比" readonly=""><span>%</span>
                                                                     </div>
                                                                 </div>
                                                             </div>
@@ -1508,7 +1522,7 @@
                                                     </div>
                                                 </div>
                                             </div>
-                                            <!--有幾組指標要依所選擇的模組的指標條件-->
+                                            <!-- input 4 ，有幾組指標要依所選擇的模組的指標條件-->
                                             <div class="form_grp">
                                                 <label for="" class="form_title"><abbr class="necessary" title="為必填(選)欄位,不能為空白。">*</abbr>以入選即投資或贊助模式，策略性投資新創企業至少5家(家)</label>
                                                 <div class="form_content">
@@ -1517,38 +1531,38 @@
                                                             <div class="form_grp">
                                                                 <div class="form_content mix-2-col">
                                                                     <div class="form_grp">
-                                                                        <label for="username">全年預估成果：</label>
-                                                                        <input name="username" type="text" value="10" placeholder="請輸入" min="5"><span>家</span>
+                                                                        <label for="d1">全年預估成果：</label>
+                                                                        <input name="d1" type="text" value="10" placeholder="請輸入" min="5"><span>家</span>
                                                                     </div>
                                                                     <div class="form_grp">
-                                                                        <label for="username">&nbsp;</label>
-                                                                        <input name="username" type="text" value="10" placeholder="占比" readonly=""><span>%</span>
+                                                                        <label for="d1p">&nbsp;</label>
+                                                                        <input name="d1p" type="text" value="10" placeholder="占比" readonly=""><span>%</span>
                                                                     </div>
                                                                 </div>
                                                             </div>
                                                             <div class="form_grp">
                                                                 <div class="form_content mix-2-col">
                                                                     <div class="form_grp">
-                                                                        <label for="username">期中查核點：</label>
-                                                                        <input name="username" type="text" value="3" placeholder="請輸入" min="0"><span>家</span>
+                                                                        <label for="d2">期中查核點：</label>
+                                                                        <input name="d2" type="text" value="3" placeholder="請輸入" min="0"><span>家</span>
                                                                     </div>
                                                                     <div class="form_grp">
-                                                                        <label for="username">&nbsp;</label>
+                                                                        <label for="d2p">&nbsp;</label>
                                                                         <!--計算公式為期中單項佔比要X全年佔比，小數點二位後無條件捨去-->
-                                                                        <input name="username" type="text" value="3.00" placeholder="占比" readonly=""><span>%</span>
+                                                                        <input name="d2p" type="text" value="3.00" placeholder="占比" readonly=""><span>%</span>
                                                                     </div>
                                                                 </div>
                                                             </div>
                                                             <div class="form_grp">
                                                                 <div class="form_content mix-2-col">
                                                                     <div class="form_grp">
-                                                                        <label for="username">期末查核點：</label>
+                                                                        <label for="d3">期末查核點：</label>
                                                                         <!--自動帶入全年預估所輸入-->
-                                                                        <input name="username" type="text" value="10" placeholder="input" readonly><span>家</span>
+                                                                        <input name="d3" type="text" value="10" placeholder="input" readonly><span>家</span>
                                                                     </div>
                                                                     <div class="form_grp">
-                                                                        <label for="username">&nbsp;</label>
-                                                                        <input name="username" type="text" value="10" placeholder="占比" readonly=""><span>%</span>
+                                                                        <label for="d3p">&nbsp;</label>
+                                                                        <input name="d3p" type="text" value="10" placeholder="占比" readonly=""><span>%</span>
                                                                     </div>
                                                                 </div>
                                                             </div>
@@ -1557,6 +1571,7 @@
                                                     </div>
                                                 </div>
                                             </div>
+                                            <!-- input 5 -->
                                             <div class="form_grp">
                                                 <label for="" class="form_title"><abbr class="necessary" title="為必填(選)欄位,不能為空白。">*</abbr>辦理企業加速器廣宣作業1式(式)</label>
                                                 <div class="form_content">
@@ -1565,38 +1580,38 @@
                                                             <div class="form_grp">
                                                                 <div class="form_content mix-2-col">
                                                                     <div class="form_grp">
-                                                                        <label for="username">全年預估成果：</label>
-                                                                        <input name="username" type="text" value="2" placeholder="請輸入" min="1"><span>式</span>
+                                                                        <label for="e1">全年預估成果：</label>
+                                                                        <input name="e1" type="text" value="2" placeholder="請輸入" min="1"><span>式</span>
                                                                     </div>
                                                                     <div class="form_grp">
-                                                                        <label for="username">&nbsp;</label>
-                                                                        <input name="username" type="text" value="10" placeholder="占比" readonly=""><span>%</span>
+                                                                        <label for="e1p">&nbsp;</label>
+                                                                        <input name="e1p" type="text" value="10" placeholder="占比" readonly=""><span>%</span>
                                                                     </div>
                                                                 </div>
                                                             </div>
                                                             <div class="form_grp">
                                                                 <div class="form_content mix-2-col">
                                                                     <div class="form_grp">
-                                                                        <label for="username">期中查核點：</label>
-                                                                        <input name="username" type="text" value="1" placeholder="請輸入" min="0"><span>式</span>
+                                                                        <label for="e2">期中查核點：</label>
+                                                                        <input name="e2" type="text" value="1" placeholder="請輸入" min="0"><span>式</span>
                                                                     </div>
                                                                     <div class="form_grp">
-                                                                        <label for="username">&nbsp;</label>
+                                                                        <label for="e2p">&nbsp;</label>
                                                                         <!--計算公式為期中單項佔比要X全年佔比，小數點二位後無條件捨去-->
-                                                                        <input name="username" type="text" value="5.00" placeholder="占比" readonly=""><span>%</span>
+                                                                        <input name="e2p" type="text" value="5.00" placeholder="占比" readonly=""><span>%</span>
                                                                     </div>
                                                                 </div>
                                                             </div>
                                                             <div class="form_grp">
                                                                 <div class="form_content mix-2-col">
                                                                     <div class="form_grp">
-                                                                        <label for="username">期末查核點：</label>
+                                                                        <label for="e3">期末查核點：</label>
                                                                         <!--自動帶入全年預估所輸入-->
-                                                                        <input name="username" type="text" value="2" placeholder="input" readonly><span>式</span>
+                                                                        <input name="e3" type="text" value="2" placeholder="input" readonly><span>式</span>
                                                                     </div>
                                                                     <div class="form_grp">
-                                                                        <label for="username">&nbsp;</label>
-                                                                        <input name="username" type="text" value="10" placeholder="占比" readonly=""><span>%</span>
+                                                                        <label for="e3p">&nbsp;</label>
+                                                                        <input name="e3p" type="text" value="10" placeholder="占比" readonly=""><span>%</span>
                                                                     </div>
                                                                 </div>
                                                             </div>
@@ -1610,7 +1625,7 @@
                                             <!--當模組有圈選物聯網特色加值時，自設指標需自動出現物聯網指標-->
 
                                             <!--自設指標至少一組，佔比與物聯網共用；自訂指標的位置在物聯網上方-->
-                                            <!--自設指標樣式一，先新增一組指標與單位，再開始填寫-->
+                                            <!--自設指標樣式一，先新增一組指標與單位，再開始填寫。至少一組最多十組-->
                                             <div class="form_grp">
                                                 <label for="" class="form_title"><abbr class="necessary" title="為必填(選)欄位,不能為空白。">*</abbr>請輸入指標與指標單位</label>
                                                 <div class="form_content">
@@ -1619,7 +1634,7 @@
                                                             <div class="form_grp">
                                                                 <div class="form_content mix-1-col">
                                                                     <div class="form_grp">
-                                                                        <input name="username" type="text" placeholder="請輸入指標名稱" class="this">
+                                                                        <input name="addonename" type="text" placeholder="請輸入指標名稱" class="this">
                                                                         <div class="notic">自設指標至少需要一組</div>
                                                                     </div>
                                                                 </div>
@@ -1627,13 +1642,14 @@
                                                             <div class="form_grp">
                                                                 <div class="form_content mix-1-col">
                                                                     <div class="form_grp">
-                                                                        <input name="username" type="text" placeholder="請輸入指標單位" class="" class="this">
+                                                                        <input name="addoneunit" type="text" placeholder="請輸入指標單位" class="" class="this">
                                                                     </div>
                                                                 </div>
                                                             </div>
                                                             <button type="button" class="btn btn-addition">新增一組</button>
                                                         </div>
                                                         <div class="notice_info">
+                                                            <!--調整文案內容-->
                                                             請依推動機制、工作項目內容、鏈結資源及申請金額自設績效指標。<br>
                                                             請注意，自設指標至少需要一組。請先輸入指標名稱與計量單位(例如：家／千元)後、點選新增一組<br>
                                                             指標名稱限60字以內、指標單位限3字以內
@@ -1641,47 +1657,47 @@
                                                     </div>
                                                 </div>
                                             </div>
+                                            <!--自訂 1-->
                                             <div class="form_grp">
-                                                <label for="" class="form_title"><abbr class="necessary" title="為必填(選)欄位,不能為空白。">*</abbr>用戶所輸入的自設指標標題(家<!--用戶輸入的單位-->)</label>
+                                                <label for="" class="form_title"><abbr class="necessary" title="為必填(選)欄位,不能為空白。">*</abbr>顯示自設指標標題(家)<!--用戶輸入的名稱和單位--></label>
                                                 <div class="form_content">
                                                     <div class="form_grp">
                                                         <div class="form_content flex-3-col">
                                                             <div class="form_grp">
                                                                 <div class="form_content mix-2-col">
                                                                     <div class="form_grp">
-                                                                        <label for="username">全年預估成果：</label>
-                                                                        <!--需請設計師改成number，目前number會跑版-->
-                                                                        <input name="username" type="text" value="10" placeholder="請輸入" min="1"><span>家</span>
+                                                                        <label for="add1-1">全年預估成果：</label>
+                                                                        <input name="add1-1" type="text" value="10" placeholder="請輸入" min="1"><span>家</span>
                                                                     </div>
                                                                     <div class="form_grp">
-                                                                        <label for="username">&nbsp;</label>
-                                                                        <input name="username" type="text" value="30" placeholder="占比"><span>%</span>
+                                                                        <label for="add1-1p">&nbsp;</label>
+                                                                        <input name="add1-1p" type="text" value="30" placeholder="占比"><span>%</span>
                                                                     </div>
                                                                 </div>
                                                             </div>
                                                             <div class="form_grp">
                                                                 <div class="form_content mix-2-col">
                                                                     <div class="form_grp">
-                                                                        <label for="username">期中查核點：</label>
-                                                                        <input name="username" type="text" value="2" placeholder="請輸入" min="1"><span>家</span>
+                                                                        <label for="add1-2">期中查核點：</label>
+                                                                        <input name="add1-2" type="text" value="2" placeholder="請輸入" min="1"><span>家</span>
                                                                     </div>
                                                                     <div class="form_grp">
-                                                                        <label for="username">&nbsp;</label>
+                                                                        <label for="add1-2p">&nbsp;</label>
                                                                         <!--計算公式為期中單項佔比要X全年佔比，小數點二位後無條件捨去-->
-                                                                        <input name="username" type="text" value="6.00" placeholder="占比" readonly=""><span>%</span>
+                                                                        <input name="add1-2p" type="text" value="6.00" placeholder="占比" readonly=""><span>%</span>
                                                                     </div>
                                                                 </div>
                                                             </div>
                                                             <div class="form_grp">
                                                                 <div class="form_content mix-2-col">
                                                                     <div class="form_grp">
-                                                                        <label for="username">期末查核點：</label>
+                                                                        <label for="add1-3">期末查核點：</label>
                                                                         <!--自動帶入全年預估所輸入-->
-                                                                        <input name="username" type="text" value="1" placeholder="input" readonly><span>家</span>
+                                                                        <input name="add1-3" type="text" value="1" placeholder="input" readonly><span>家</span>
                                                                     </div>
                                                                     <div class="form_grp">
-                                                                        <label for="username">&nbsp;</label>
-                                                                        <input name="username" type="text" value="30" placeholder="占比" readonly=""><span>%</span>
+                                                                        <label for="add1-3p">&nbsp;</label>
+                                                                        <input name="add1-3p" type="text" value="30" placeholder="占比" readonly=""><span>%</span>
                                                                     </div>
                                                                 </div>
                                                             </div>
@@ -1690,21 +1706,21 @@
                                                     </div>
                                                 </div>
                                             </div>
+                                            <!--自訂 2-->
                                             <div class="form_grp">
-                                                <label for="" class="form_title"><abbr class="necessary" title="為必填(選)欄位,不能為空白。">*</abbr>用戶所輸入的自設指標標題(千元<!--用戶輸入的單位-->)</label>
+                                                <label for="" class="form_title"><abbr class="necessary" title="為必填(選)欄位,不能為空白。">*</abbr>自設指標標題(千元)</label>
                                                 <div class="form_content">
                                                     <div class="form_grp">
                                                         <div class="form_content flex-3-col">
                                                             <div class="form_grp">
                                                                 <div class="form_content mix-2-col">
                                                                     <div class="form_grp">
-                                                                        <label for="username">全年預估成果：</label>
-                                                                        
-                                                                        <input name="username" type="text" value="2000" placeholder="請輸入" min="1"><span>千元</span>
+                                                                        <label for="add2-1">全年預估成果：</label>                                                                        
+                                                                        <input name="add2-1" type="text" value="2000" placeholder="請輸入" min="1"><span>千元</span>
                                                                     </div>
                                                                     <div class="form_grp">
-                                                                        <label for="username">&nbsp;</label>
-                                                                        <input name="username" type="text" value="25" placeholder="占比" class="this"><span>%</span>
+                                                                        <label for="add2-1p">&nbsp;</label>
+                                                                        <input name="app2-1p" type="text" value="25" placeholder="占比" class="this"><span>%</span>
                                                                         <div class="notic">自設指標不可超過50%</div>
                                                                     </div>
                                                                 </div>
@@ -1712,26 +1728,26 @@
                                                             <div class="form_grp">
                                                                 <div class="form_content mix-2-col">
                                                                     <div class="form_grp">
-                                                                        <label for="username">期中查核點：</label>
-                                                                        <input name="username" type="text" value="500" placeholder="請輸入" min="1"><span>千元</span>
+                                                                        <label for="add2-2">期中查核點：</label>
+                                                                        <input name="add2-2" type="text" value="500" placeholder="請輸入" min="1"><span>千元</span>
                                                                     </div>
                                                                     <div class="form_grp">
-                                                                        <label for="username">&nbsp;</label>
+                                                                        <label for="add2-2p">&nbsp;</label>
                                                                         <!--計算公式為期中單項佔比要X全年佔比，小數點二位後無條件捨去-->
-                                                                        <input name="username" type="text" value="6.25" placeholder="占比" readonly=""><span>%</span>
+                                                                        <input name="add2-2p" type="text" value="6.25" placeholder="占比" readonly=""><span>%</span>
                                                                     </div>
                                                                 </div>
                                                             </div>
                                                             <div class="form_grp">
                                                                 <div class="form_content mix-2-col">
                                                                     <div class="form_grp">
-                                                                        <label for="username">期末查核點：</label>
+                                                                        <label for="add2-3">期末查核點：</label>
                                                                         <!--自動帶入全年預估所輸入-->
-                                                                        <input name="username" type="text" value="2000" placeholder="input" readonly><span>千元</span>
+                                                                        <input name="add2-3" type="text" value="2000" placeholder="input" readonly><span>千元</span>
                                                                     </div>
                                                                     <div class="form_grp">
-                                                                        <label for="username">&nbsp;</label>
-                                                                        <input name="username" type="text" value="25" placeholder="占比" readonly=""><span>%</span>
+                                                                        <label for="add2-3p">&nbsp;</label>
+                                                                        <input name="add2-3p" type="text" value="25" placeholder="占比" readonly=""><span>%</span>
                                                                     </div>
                                                                 </div>
                                                             </div>
@@ -1740,7 +1756,7 @@
                                                     </div>
                                                 </div>
                                             </div>
-                                            <!--物聯網指標-->
+                                            <!--物聯網指標，若有申請物聯網加值者顯示-->
                                             <div class="form_grp" id="NewFeaturedDefine_010">
                                                 <input name="NewPlanTargetItemId_010" type="hidden" value="38">
                                                 <input name="NewProjectTargetItemId_010" type="hidden">
@@ -1751,13 +1767,13 @@
                                                             <div class="form_grp">
                                                                 <div class="form_content mix-2-col">
                                                                     <div class="form_grp">
-                                                                        <label for="username">全年預估成果：</label>
-                                                                        <input name="NewYearlyValue_010" type="text" placeholder="請輸入" value="0" class="this" onblur="checkPlanTargetItemRule(this, 'NewYearlyValue_001');"><span>家</span>
+                                                                        <label for="IoT1-1">全年預估成果：</label>
+                                                                        <input name="IoT1-1" type="text" placeholder="請輸入" value="0" class="this" onblur="checkPlanTargetItemRule(this, 'NewYearlyValue_001');"><span>家</span>
                                                                         <div class="notic" id="NewYearlyValueWarning_010"></div>
                                                                     </div>
                                                                     <div class="form_grp">
-                                                                        <label for="username">&nbsp;</label>
-                                                                        <input name="NewItemWeight_010" type="text" value="0" placeholder="佔比" onblur="checkSelfDefineWieghtValue(this);"><span>%</span>
+                                                                        <label for="IoT1-1p">&nbsp;</label>
+                                                                        <input name="IoT1-1p" type="text" value="0" placeholder="佔比" onblur="checkSelfDefineWieghtValue(this);"><span>%</span>
                                                                         <div class="notic" id="NewItemWeightWarning_010"></div>
                                                                     </div>
                                                                 </div>
@@ -1765,27 +1781,27 @@
                                                             <div class="form_grp">
                                                                 <div class="form_content mix-2-col">
                                                                     <div class="form_grp">
-                                                                        <label for="username">期中查核點：</label>
-                                                                        <input name="NewMidtermValue_010" type="text" value="0" placeholder="請輸入" onblur="checkItemMidtermValue(this);"><span>家</span>
+                                                                        <label for="IoT1-2">期中查核點：</label>
+                                                                        <input name="IoT1-2" type="text" value="0" placeholder="請輸入" onblur="checkItemMidtermValue(this);"><span>家</span>
                                                                         <div class="notic" id="NewMidtermValueWarning_010"></div>
                                                                     </div>
                                                                     <div class="form_grp">
-                                                                        <label for="username">&nbsp;</label>
+                                                                        <label for="IoT1-2p">&nbsp;</label>
                                                                         <!--計算公式為期中單項佔比要X全年佔比，小數點二位後無條件捨去-->
-                                                                        <input name="NewMidtermPercentage_010" type="text" value="0.00" placeholder="占比" readonly=""><span>%</span>
+                                                                        <input name="IoT1-2p" type="text" value="0.00" placeholder="占比" readonly=""><span>%</span>
                                                                     </div>
                                                                 </div>
                                                             </div>
                                                             <div class="form_grp">
                                                                 <div class="form_content mix-2-col">
                                                                     <div class="form_grp">
-                                                                        <label for="username">期末查核點：</label>
+                                                                        <label for="IoT1-3">期末查核點：</label>
                                                                         <!--自動帶入全年預估所輸入-->
-                                                                        <input name="NewFinalValue_010" type="text" value="0" placeholder="input" readonly=""><span>家</span>
+                                                                        <input name="IoT1-3" type="text" value="0" placeholder="input" readonly=""><span>家</span>
                                                                     </div>
                                                                     <div class="form_grp">
-                                                                        <label for="username">&nbsp;</label>
-                                                                        <input name="NewFinalPercentage_010" type="text" value="0" placeholder="占比" readonly=""><span>%</span>
+                                                                        <label for="IoT1-3p">&nbsp;</label>
+                                                                        <input name="IoT1-3p" type="text" value="0" placeholder="占比" readonly=""><span>%</span>
                                                                     </div>
                                                                 </div>
                                                             </div>
@@ -1804,13 +1820,13 @@
                                                             <div class="form_grp">
                                                                 <div class="form_content mix-2-col">
                                                                     <div class="form_grp">
-                                                                        <label for="username">全年預估成果：</label>
-                                                                        <input name="NewYearlyValue_011" type="text" placeholder="請輸入" value="0" class="this" onblur="checkPlanTargetItemRule(this, 'NewYearlyValue_001');"><span>家</span>
+                                                                        <label for="IoT2-1">全年預估成果：</label>
+                                                                        <input name="IoT2-1" type="text" placeholder="請輸入" value="0" class="this" onblur="checkPlanTargetItemRule(this, 'NewYearlyValue_001');"><span>家</span>
                                                                         <div class="notic" id="NewYearlyValueWarning_011"></div>
                                                                     </div>
                                                                     <div class="form_grp">
-                                                                        <label for="username">&nbsp;</label>
-                                                                        <input name="NewItemWeight_011" type="text" value="0" placeholder="佔比" onblur="checkSelfDefineWieghtValue(this);"><span>%</span>
+                                                                        <label for="IoT2-1p">&nbsp;</label>
+                                                                        <input name="IoT2-1p" type="text" value="0" placeholder="佔比" onblur="checkSelfDefineWieghtValue(this);"><span>%</span>
                                                                         <div class="notic" id="NewItemWeightWarning_011"></div>
                                                                     </div>
                                                                 </div>
@@ -1818,27 +1834,27 @@
                                                             <div class="form_grp">
                                                                 <div class="form_content mix-2-col">
                                                                     <div class="form_grp">
-                                                                        <label for="username">期中查核點：</label>
-                                                                        <input name="NewMidtermValue_011" type="text" value="0" placeholder="請輸入" onblur="checkItemMidtermValue(this);"><span>家</span>
+                                                                        <label for="IoT2-2">期中查核點：</label>
+                                                                        <input name="IoT2-2" type="text" value="0" placeholder="請輸入" onblur="checkItemMidtermValue(this);"><span>家</span>
                                                                         <div class="notic" id="NewMidtermValueWarning_011"></div>
                                                                     </div>
                                                                     <div class="form_grp">
-                                                                        <label for="username">&nbsp;</label>
+                                                                        <label for="IoT2-2p">&nbsp;</label>
                                                                         <!--計算公式為期中單項佔比要X全年佔比，小數點二位後無條件捨去-->
-                                                                        <input name="NewMidtermPercentage_011" type="text" value="0.00" placeholder="占比" readonly=""><span>%</span>
+                                                                        <input name="IoT2-2p" type="text" value="0.00" placeholder="占比" readonly=""><span>%</span>
                                                                     </div>
                                                                 </div>
                                                             </div>
                                                             <div class="form_grp">
                                                                 <div class="form_content mix-2-col">
                                                                     <div class="form_grp">
-                                                                        <label for="username">期末查核點：</label>
+                                                                        <label for="IoT2-3">期末查核點：</label>
                                                                         <!--自動帶入全年預估所輸入-->
-                                                                        <input name="NewFinalValue_011" type="text" value="0" placeholder="input" readonly=""><span>家</span>
+                                                                        <input name="IoT2-3" type="text" value="0" placeholder="input" readonly=""><span>家</span>
                                                                     </div>
                                                                     <div class="form_grp">
-                                                                        <label for="username">&nbsp;</label>
-                                                                        <input name="NewFinalPercentage_011" type="text" value="0" placeholder="占比" readonly=""><span>%</span>
+                                                                        <label for="IoT2-3p">&nbsp;</label>
+                                                                        <input name="IoT2-3p" type="text" value="0" placeholder="占比" readonly=""><span>%</span>
                                                                     </div>
                                                                 </div>
                                                             </div>
@@ -1857,13 +1873,13 @@
                                                             <div class="form_grp">
                                                                 <div class="form_content mix-2-col">
                                                                     <div class="form_grp">
-                                                                        <label for="username">全年預估成果：</label>
-                                                                        <input name="NewYearlyValue_012" type="text" placeholder="請輸入" value="0" class="this" onblur="checkPlanTargetItemRule(this, 'NewYearlyValue_001');"><span>千元</span>
+                                                                        <label for="IoT3-1">全年預估成果：</label>
+                                                                        <input name="IoT3-1" type="text" placeholder="請輸入" value="0" class="this" onblur="checkPlanTargetItemRule(this, 'NewYearlyValue_001');"><span>千元</span>
                                                                         <div class="notic" id="NewYearlyValueWarning_012"></div>
                                                                     </div>
                                                                     <div class="form_grp">
-                                                                        <label for="username">&nbsp;</label>
-                                                                        <input name="NewItemWeight_012" type="text" value="0" placeholder="佔比" onblur="checkSelfDefineWieghtValue(this);"><span>%</span>
+                                                                        <label for="IoT3-1p">&nbsp;</label>
+                                                                        <input name="IoT3-1p" type="text" value="0" placeholder="佔比" onblur="checkSelfDefineWieghtValue(this);"><span>%</span>
                                                                         <div class="notic" id="NewItemWeightWarning_012"></div>
                                                                     </div>
                                                                 </div>
@@ -1871,27 +1887,27 @@
                                                             <div class="form_grp">
                                                                 <div class="form_content mix-2-col">
                                                                     <div class="form_grp">
-                                                                        <label for="username">期中查核點：</label>
-                                                                        <input name="NewMidtermValue_012" type="text" value="0" placeholder="請輸入" onblur="checkItemMidtermValue(this);"><span>千元</span>
+                                                                        <label for="IoT3-2">期中查核點：</label>
+                                                                        <input name="IoT3-2" type="text" value="0" placeholder="請輸入" onblur="checkItemMidtermValue(this);"><span>千元</span>
                                                                         <div class="notic" id="NewMidtermValueWarning_012"></div>
                                                                     </div>
                                                                     <div class="form_grp">
-                                                                        <label for="username">&nbsp;</label>
+                                                                        <label for="IoT3-2p">&nbsp;</label>
                                                                         <!--計算公式為期中單項佔比要X全年佔比，小數點二位後無條件捨去-->
-                                                                        <input name="NewMidtermPercentage_012" type="text" value="0.00" placeholder="占比" readonly=""><span>%</span>
+                                                                        <input name="IoT3-2p" type="text" value="0.00" placeholder="占比" readonly=""><span>%</span>
                                                                     </div>
                                                                 </div>
                                                             </div>
                                                             <div class="form_grp">
                                                                 <div class="form_content mix-2-col">
                                                                     <div class="form_grp">
-                                                                        <label for="username">期末查核點：</label>
+                                                                        <label for="IoT3-3">期末查核點：</label>
                                                                         <!--自動帶入全年預估所輸入-->
-                                                                        <input name="NewFinalValue_012" type="text" value="0" placeholder="input" readonly=""><span>千元</span>
+                                                                        <input name="IoT3-3" type="text" value="0" placeholder="input" readonly=""><span>千元</span>
                                                                     </div>
                                                                     <div class="form_grp">
-                                                                        <label for="username">&nbsp;</label>
-                                                                        <input name="NewFinalPercentage_012" type="text" value="0" placeholder="占比" readonly=""><span>%</span>
+                                                                        <label for="IoT3-3p">&nbsp;</label>
+                                                                        <input name="IoT3-3p" type="text" value="0" placeholder="占比" readonly=""><span>%</span>
                                                                     </div>
                                                                 </div>
                                                             </div>
@@ -1910,13 +1926,13 @@
                                                             <div class="form_grp">
                                                                 <div class="form_content mix-2-col">
                                                                     <div class="form_grp">
-                                                                        <label for="username">全年預估成果：</label>
-                                                                        <input name="NewYearlyValue_013" type="text" placeholder="請輸入" value="0" class="this" onblur="checkPlanTargetItemRule(this, 'NewYearlyValue_001');"><span>件</span>
+                                                                        <label for="IoT4-1">全年預估成果：</label>
+                                                                        <input name="IoT4-1" type="text" placeholder="請輸入" value="0" class="this" onblur="checkPlanTargetItemRule(this, 'NewYearlyValue_001');"><span>件</span>
                                                                         <div class="notic" id="NewYearlyValueWarning_013"></div>
                                                                     </div>
                                                                     <div class="form_grp">
-                                                                        <label for="username">&nbsp;</label>
-                                                                        <input name="NewItemWeight_013" type="text" value="0" placeholder="佔比" onblur="checkSelfDefineWieghtValue(this);"><span>%</span>
+                                                                        <label for="IoT4-1p">&nbsp;</label>
+                                                                        <input name="IoT4-1p" type="text" value="0" placeholder="佔比" onblur="checkSelfDefineWieghtValue(this);"><span>%</span>
                                                                         <div class="notic" id="NewItemWeightWarning_013"></div>
                                                                     </div>
                                                                 </div>
@@ -1924,27 +1940,27 @@
                                                             <div class="form_grp">
                                                                 <div class="form_content mix-2-col">
                                                                     <div class="form_grp">
-                                                                        <label for="username">期中查核點：</label>
-                                                                        <input name="NewMidtermValue_013" type="text" value="0" placeholder="請輸入" onblur="checkItemMidtermValue(this);"><span>件</span>
+                                                                        <label for="IoT4-2">期中查核點：</label>
+                                                                        <input name="IoT4-2" type="text" value="0" placeholder="請輸入" onblur="checkItemMidtermValue(this);"><span>件</span>
                                                                         <div class="notic" id="NewMidtermValueWarning_013"></div>
                                                                     </div>
                                                                     <div class="form_grp">
-                                                                        <label for="username">&nbsp;</label>
+                                                                        <label for="IoT4-2p">&nbsp;</label>
                                                                         <!--計算公式為期中單項佔比要X全年佔比，小數點二位後無條件捨去-->
-                                                                        <input name="NewMidtermPercentage_013" type="text" value="0.00" placeholder="占比" readonly=""><span>%</span>
+                                                                        <input name="IoT4-2p" type="text" value="0.00" placeholder="占比" readonly=""><span>%</span>
                                                                     </div>
                                                                 </div>
                                                             </div>
                                                             <div class="form_grp">
                                                                 <div class="form_content mix-2-col">
                                                                     <div class="form_grp">
-                                                                        <label for="username">期末查核點：</label>
+                                                                        <label for="IoT4-3">期末查核點：</label>
                                                                         <!--自動帶入全年預估所輸入-->
-                                                                        <input name="NewFinalValue_013" type="text" value="0" placeholder="input" readonly=""><span>件</span>
+                                                                        <input name="IoT4-3" type="text" value="0" placeholder="input" readonly=""><span>件</span>
                                                                     </div>
                                                                     <div class="form_grp">
-                                                                        <label for="username">&nbsp;</label>
-                                                                        <input name="NewFinalPercentage_013" type="text" value="0" placeholder="占比" readonly=""><span>%</span>
+                                                                        <label for="IoT4-3p">&nbsp;</label>
+                                                                        <input name="IoT4-3p" type="text" value="0" placeholder="占比" readonly=""><span>%</span>
                                                                     </div>
                                                                 </div>
                                                             </div>
@@ -1963,13 +1979,13 @@
                                                             <div class="form_grp">
                                                                 <div class="form_content mix-2-col">
                                                                     <div class="form_grp">
-                                                                        <label for="username">全年預估成果：</label>
-                                                                        <input name="NewYearlyValue_014" type="text" placeholder="請輸入" value="0" class="this" onblur="checkPlanTargetItemRule(this, 'NewYearlyValue_001');"><span>千元</span>
+                                                                        <label for="IoT5-1">全年預估成果：</label>
+                                                                        <input name="IoT5-1" type="text" placeholder="請輸入" value="0" class="this" onblur="checkPlanTargetItemRule(this, 'NewYearlyValue_001');"><span>千元</span>
                                                                         <div class="notic" id="NewYearlyValueWarning_014"></div>
                                                                     </div>
                                                                     <div class="form_grp">
-                                                                        <label for="username">&nbsp;</label>
-                                                                        <input name="NewItemWeight_014" type="text" value="0" placeholder="佔比" onblur="checkSelfDefineWieghtValue(this);"><span>%</span>
+                                                                        <label for="IoT5-1p">&nbsp;</label>
+                                                                        <input name="IoT5-1p" type="text" value="0" placeholder="佔比" onblur="checkSelfDefineWieghtValue(this);"><span>%</span>
                                                                         <div class="notic" id="NewItemWeightWarning_014"></div>
                                                                     </div>
                                                                 </div>
@@ -1977,27 +1993,27 @@
                                                             <div class="form_grp">
                                                                 <div class="form_content mix-2-col">
                                                                     <div class="form_grp">
-                                                                        <label for="username">期中查核點：</label>
-                                                                        <input name="NewMidtermValue_014" type="text" value="0" placeholder="請輸入" onblur="checkItemMidtermValue(this);"><span>千元</span>
+                                                                        <label for="IoT5-2">期中查核點：</label>
+                                                                        <input name="IoT5-2" type="text" value="0" placeholder="請輸入" onblur="checkItemMidtermValue(this);"><span>千元</span>
                                                                         <div class="notic" id="NewMidtermValueWarning_014"></div>
                                                                     </div>
                                                                     <div class="form_grp">
-                                                                        <label for="username">&nbsp;</label>
+                                                                        <label for="IoT5-2p">&nbsp;</label>
                                                                         <!--計算公式為期中單項佔比要X全年佔比，小數點二位後無條件捨去-->
-                                                                        <input name="NewMidtermPercentage_014" type="text" value="0.00" placeholder="占比" readonly=""><span>%</span>
+                                                                        <input name="IoT5-2p" type="text" value="0.00" placeholder="占比" readonly=""><span>%</span>
                                                                     </div>
                                                                 </div>
                                                             </div>
                                                             <div class="form_grp">
                                                                 <div class="form_content mix-2-col">
                                                                     <div class="form_grp">
-                                                                        <label for="username">期末查核點：</label>
+                                                                        <label for="IoT5-3">期末查核點：</label>
                                                                         <!--自動帶入全年預估所輸入-->
-                                                                        <input name="NewFinalValue_014" type="text" value="0" placeholder="input" readonly=""><span>千元</span>
+                                                                        <input name="IoT5-3" type="text" value="0" placeholder="input" readonly=""><span>千元</span>
                                                                     </div>
                                                                     <div class="form_grp">
-                                                                        <label for="username">&nbsp;</label>
-                                                                        <input name="NewFinalPercentage_014" type="text" value="0" placeholder="占比" readonly=""><span>%</span>
+                                                                        <label for="IoT5-3p">&nbsp;</label>
+                                                                        <input name="IoT5-3p" type="text" value="0" placeholder="占比" readonly=""><span>%</span>
                                                                     </div>
                                                                 </div>
                                                             </div>
@@ -2016,13 +2032,13 @@
                                                             <div class="form_grp">
                                                                 <div class="form_content mix-2-col">
                                                                     <div class="form_grp">
-                                                                        <label for="username">全年預估成果：</label>
-                                                                        <input name="NewYearlyValue_015" type="text" placeholder="請輸入" value="0" class="this" onblur="checkPlanTargetItemRule(this, 'NewYearlyValue_001');"><span>處</span>
+                                                                        <label for="IoT6-1">全年預估成果：</label>
+                                                                        <input name="IoT6-1" type="text" placeholder="請輸入" value="0" class="this" onblur="checkPlanTargetItemRule(this, 'NewYearlyValue_001');"><span>處</span>
                                                                         <div class="notic" id="NewYearlyValueWarning_015"></div>
                                                                     </div>
                                                                     <div class="form_grp">
-                                                                        <label for="username">&nbsp;</label>
-                                                                        <input name="NewItemWeight_015" type="text" value="0" placeholder="佔比" onblur="checkSelfDefineWieghtValue(this);"><span>%</span>
+                                                                        <label for="IoT6-1p">&nbsp;</label>
+                                                                        <input name="IoT6-1p" type="text" value="0" placeholder="佔比" onblur="checkSelfDefineWieghtValue(this);"><span>%</span>
                                                                         <div class="notic" id="NewItemWeightWarning_015"></div>
                                                                     </div>
                                                                 </div>
@@ -2030,27 +2046,27 @@
                                                             <div class="form_grp">
                                                                 <div class="form_content mix-2-col">
                                                                     <div class="form_grp">
-                                                                        <label for="username">期中查核點：</label>
-                                                                        <input name="NewMidtermValue_015" type="text" value="0" placeholder="請輸入" onblur="checkItemMidtermValue(this);"><span>處</span>
+                                                                        <label for="IoT6-2">期中查核點：</label>
+                                                                        <input name="IoT6-2" type="text" value="0" placeholder="請輸入" onblur="checkItemMidtermValue(this);"><span>處</span>
                                                                         <div class="notic" id="NewMidtermValueWarning_015"></div>
                                                                     </div>
                                                                     <div class="form_grp">
-                                                                        <label for="username">&nbsp;</label>
+                                                                        <label for="IoT6-2p">&nbsp;</label>
                                                                         <!--計算公式為期中單項佔比要X全年佔比，小數點二位後無條件捨去-->
-                                                                        <input name="NewMidtermPercentage_015" type="text" value="0.00" placeholder="占比" readonly=""><span>%</span>
+                                                                        <input name="IoT6-2p" type="text" value="0.00" placeholder="占比" readonly=""><span>%</span>
                                                                     </div>
                                                                 </div>
                                                             </div>
                                                             <div class="form_grp">
                                                                 <div class="form_content mix-2-col">
                                                                     <div class="form_grp">
-                                                                        <label for="username">期末查核點：</label>
+                                                                        <label for="IoT6-3">期末查核點：</label>
                                                                         <!--自動帶入全年預估所輸入-->
-                                                                        <input name="NewFinalValue_015" type="text" value="0" placeholder="input" readonly=""><span>處</span>
+                                                                        <input name="IoT6-3" type="text" value="0" placeholder="input" readonly=""><span>處</span>
                                                                     </div>
                                                                     <div class="form_grp">
-                                                                        <label for="username">&nbsp;</label>
-                                                                        <input name="NewFinalPercentage_015" type="text" value="0" placeholder="占比" readonly=""><span>%</span>
+                                                                        <label for="IoT6-3p">&nbsp;</label>
+                                                                        <input name="IoT6-3p" type="text" value="0" placeholder="占比" readonly=""><span>%</span>
                                                                     </div>
                                                                 </div>
                                                             </div>
@@ -2067,18 +2083,18 @@
                                                     <div class="form_grp">
                                                         <div class="form_content mix-3-col">
                                                             <div class="form_grp">
-                                                                <label for="username">合計：</label>
-                                                                <input name="username" type="text" placeholder="總計" value="105" readonly><span>%</span>
+                                                                <label for="year1">合計：</label>
+                                                                <input name="year1" type="text" placeholder="總計" value="105" readonly><span>%</span>
                                                                 <div class="notic">需為100%</div>
                                                             </div>
                                                             <div class="form_grp">
-                                                                <label for="username">期中：</label>
-                                                                <input name="username" type="text" placeholder="總計" value="28.08" readonly><span>%</span>
+                                                                <label for="year2">期中：</label>
+                                                                <input name="year2" type="text" placeholder="總計" value="28.08" readonly><span>%</span>
                                                                 <div class="notic">至少達40%以上</div>
                                                             </div>
                                                             <div class="form_grp">
-                                                                <label for="username">期末：</label>
-                                                                <input name="username" type="text" placeholder="總計" value="105" readonly><span>%</span>
+                                                                <label for="year3">期末：</label>
+                                                                <input name="year3" type="text" placeholder="總計" value="105" readonly><span>%</span>
                                                             </div>
                                                         </div>
                                                         <div class="notice_info">請注意：各指年度合計需為100%，且期中達成率需至少佔比40%(含)以上</div>
@@ -2090,7 +2106,7 @@
                                 </form>
                             </div>
 
-                            <h2 class="tabItem active"><a href="#">4. 創育聯盟(共同執行)</a></h2>
+                            <h2 class="tabItem"><a href="#">4. 創育聯盟(共同執行)</a></h2>
                             <div class="tabContent"><!--頁籤四，共同執行單位，此頁籤只有申請創育聯盟者會出現-->
                                 <h3>創育聯盟(共同執行)資訊</h3>
                                 <form action="" class="form_grid">
