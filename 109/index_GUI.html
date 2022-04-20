@@ -1,0 +1,276 @@
+<!doctype html>
+<html lang="zh-Hant" class="no-js">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>中小企創育中心</title>
+    <!--[if lt IE 9]>
+    <script src="../js/html5shiv.js"></script>
+    <script src="../js/respond.min.js"></script>
+    <![endif]-->
+    <!-- hyUI -->
+    <link rel="stylesheet" href="../css/hyui.css">
+    <style>
+        .demo_wrap {
+            max-width: 1000px;
+            margin: 0em auto 1em;
+            padding: 15px 15px 3em;
+            clear: both;
+            background: #FFF
+        }
+        .demo_wrap h1 {
+            display: block;
+            margin: 0px auto;
+            max-width: 300px;
+            float: left;
+            margin-right: 1em;
+            margin-bottom: 1em;
+        }
+        @media screen and (max-width:545px) {
+            .demo_wrap h1 {
+                max-width: 100%;
+                float: none;
+                text-align: center
+            }
+        }
+        .demo_wrap h1 img { width: 260px }
+        .num { width: 12% }
+        body { counter-reset: num }
+        table { margin-bottom: 1em }
+        table caption {
+            text-align: left;
+            font-weight: bold;
+            font-size: 1.25em;
+            padding: .5em 0;
+            color: #ff5050
+        }
+        tbody tr td:first-child:before {
+            counter-increment: num;
+            display: block;
+            text-align: center;
+            content: counters(num, ".") " "
+        }
+        tbody tr td:nth-child(2) { width: 35% }
+        .btn_grp{ text-align: right; }
+
+        @media screen and (max-width:545px) {
+           .btn_grp{ text-align: center; } 
+        }
+    </style>
+</head>
+<body>
+    <div class="demo_wrap">
+        <h1><img src="../images/logo-moe.png" alt=""></h1>
+        <!-- <div class="btn_grp">
+            <a href="#" class="btn">切版檔案請按此下載</a>
+        </div> -->
+        <hr>
+        <div class="table_wrapper">
+            <!-- hyUI 標準頁面 -->
+            <table>
+                <thead>
+                    <tr>
+                        <th class="num">編號</th>
+                        <th>頁面名稱</th>
+                        <th>檔案名稱</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td></td>
+                        <td>登入（RWD、無障礙）</td>
+                        <td><a href="login.html" target="_blank"></a></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>註冊（RWD、無障礙）</td>
+                        <td><a href="register.html" target="_blank"></a></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>會員端</td>
+                        <td><a href="sp1.html" target="_blank"></a></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>計畫申請（step1）</td>
+                        <td><a href="sp2.html" target="_blank"></a></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>計畫申請 – 計畫欄位</td>
+                        <td><a href="sp3.html" target="_blank"></a></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>管理端 – 初審</td>
+                        <td><a href="sp4.html" target="_blank"></a></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>分派委員lightbox</td>
+                        <td><a href="" target="_blank"></a></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>管理端：案件管理</td>
+                        <td><a href="sp5.html" target="_blank"></a></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>頁籤塞進收合選單</td>
+                        <td><a href="sp6.html" target="_blank"></a></td>
+                    </tr>
+
+                    <!-- <tr>
+                        <td></td>
+                        <td>首頁</td>
+                        <td><a href="mp_template.htm"></a></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>列表頁</td>
+                        <td><a href="lp_template.htm"></a></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>列表頁-表格</td>
+                        <td><a href="lp_table_template.htm"></a></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>列表頁-相簿</td>
+                        <td><a href="lp_album_template.htm"></a></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>內容頁</td>
+                        <td><a href="cp_template.htm"></a></td>
+                    </tr>
+                     <tr>
+                        <td></td>
+                        <td>內容頁-照片</td>
+                        <td><a href="cp_photo_template.htm"></a></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>節點頁</td>
+                        <td><a href="np_template.htm"></a></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>轉寄友人</td>
+                        <td><a href="fp_template.htm"></a></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>意見信箱</td>
+                        <td><a href="qp_template.htm"></a></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>網站地圖</td>
+                        <td><a href="sitemap_template.htm"></a></td>
+                    </tr>
+                     <tr>
+                        <td></td>
+                        <td>404 網站錯誤</td>
+                        <td><a href="404.htm"></a></td>
+                    </tr> -->
+                </tbody>
+            </table>
+            <!-- 淇淇 -->
+            <table>
+              <caption>GUI調整頁面</caption>
+                <thead>
+                    <tr>
+                        <th class="num">編號</th>
+                        <th>頁面名稱</th>
+                        <th>檔案名稱</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td></td>
+                        <td>登入前頁面</td>
+                        <td>
+                          1-1. 會員登入（RWD、無障礙）：<a href="loginNew.html" target="_blank"></a><br>
+                          1-2. 會員註冊（RWD、無障礙）：<a href="registerNew.html" target="_blank"></a><br>
+                          1-3. 忘記密碼：<a href="forgetPW.html" target="_blank"></a> | <a href="resetPW.html" target="_blank"></a><br>
+                          1-4. 驗證啟動成功頁：<a href="registerDone.html" target="_blank"></a> (驗證成功/密碼變更成功)<br>
+                          1-5. 帳號驗證啟動信：<a href="mailTemp_register.html" target="_blank"></a><br>
+                          1-6. 404頁：<a href="404.htm" target="_blank"></a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>會員端</td>
+                        <td>
+                          2-1. 計畫清單（登入後首頁）：<a href="member_pList.html" target="_blank"></a><br>
+                          2-2. 新增計畫申請（step1）：<a href="member_pAdd.html" target="_blank"></a><br>
+                          2-3. 新增計畫申請（step2）-頁籤計畫欄位：<a href="member_pAddstep2.html" target="_blank"></a> | <a href="member_pAddend.html" target="_blank"></a><br>
+                          2-4. 計畫管理（草稿/檢視/補件）：<a href="member_pEdit.html" target="_blank"></a><br>
+                          2-5. 帳號管理：<a href="member_accountEdit.html" target="_blank"></a><br>
+                          2-6. 審核結果/補件通知信
+                        </td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>管理端 – 初審</td>
+                        <td>
+                          3-0. 管理端登入：<a href="loginAdmin.html" target="_blank"></a><br>
+                          3-1. 初審清單：<a href="admin_preliminaryList.html" target="_blank"></a><br>
+                          3-2. 初審詳目：<a href="admin_preliminaryEdit.html" target="_blank"></a>
+                        </td>
+                    </tr>
+                   <tr>
+                        <td></td>
+                        <td>管理端 – 案件管理</td>
+                        <td>
+                          4-1. 案件清單：<a href="admin_projectList.html" target="_blank"></a><br>
+                          4-2. 案件詳目：<a href="admin_projectEdit.html" target="_blank"></a><br>
+                          4-3. 案件匯出範本：<a href="Template/projectExport_template.xlsx" target="_blank"></a><br>
+                          <b>*待確認 4-4. 申請人查詢<br>
+                          4-5. 申請人匯出範本</b>
+                        </td>
+                    </tr>
+                   <tr>
+                        <td></td>
+                        <td>管理端 – 系統管理</td>
+                        <td>
+                          5-1. 審查委員資料庫（清單/管理）：<a href="admin_judgesList.html" target="_blank"></a> | <a href="admin_judgesEdit.html" target="_blank"></a><br>
+                          5-2. 帳號/權限管理（清單/管理）：<a href="admin_accountList.html" target="_blank"></a> | <a href="admin_accountEdit.html" target="_blank"></a><br>
+                          5-3. 個人帳號設定（一般/委員）：<a href="admin_myAccountEdit.html" target="_blank"></a>
+                        </td>
+                    </tr>
+                   <tr>
+                        <td></td>
+                        <td>管理端 – 線上評審</td>
+                        <td>
+                          6-1. 線上評審清單：<a href="admin_scoreList.html" target="_blank"></a><br>
+                          6-2. 線上評審詳目：<a href="admin_scoreEdit.html" target="_blank"></a><br>
+                          6-3. 分派案件評審通知信：<a href="mailTemp_toJudes.html" target="_blank"></a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <a href="javascript:;" class="scrollToTop" >回頁首</a>
+    <script src="../js/jquery-3.3.1.min.js"></script>
+    <script src="../vendor/jquery.easing.min.js"></script>
+    <script src="../js/hyui.js"></script>
+    <script src="../js/customize.js"></script>
+    <script>
+    $(function() {
+        $('tbody').find('a').each(function(index, el) {
+            var Link = $(this).attr('href');
+            $(this).text(Link);
+        });
+    })
+    </script>
+</body>
+
+</html>
