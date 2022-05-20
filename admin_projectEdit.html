@@ -1311,7 +1311,12 @@
                             <h4 class="title">複審(預審)資訊</h4>
                             <!-- table -->
                             <table>
-                                    <tr>
+                                <!--增加一列顯示：線上評分是否通過的結果-->
+                                <tr>
+                                    <th>書審結果</th>
+                                    <td colspan="3">審核通過</td>
+                                </tr>
+                                <tr>
                                         <th>複審核定方式</th>
                                         <td>簡報審查</td>
                                         <th>是否需繳交複審資料</th>
@@ -1341,7 +1346,7 @@
                                                 <li>
                                                     <span class="date">2022/09/30 11:11</span>
                                                     <span class="user">AdminUser1122</span>
-                                                    <span class="status">狀態：審核通過</span>
+                                                    <span class="status">狀態：審核通過(進入複審)</span>
                                                 </li>
                                             </ol>
                                         </td>
@@ -1575,6 +1580,7 @@
                                     </select>
                                 </div>
                             </div>
+                            <!--只有在地青年創育坊的標竿組要出現此項。核定轉組者，隔年延續計畫需變更為轉組後身分，包括對應欄位條件。-->
                             <div class="form_grp">
                                 <legend class="form_title">創育坊是否核定轉組</legend>
                                 <div class="form_content">
@@ -1583,7 +1589,24 @@
                                         <label><input type="radio" name="sampleRadio9" value="">否</label>
                                     </div>
                                 </div>
-                                <!--只有在地青年創育坊的標竿組要出現此項。核定轉組者，隔年延續計畫需變更為轉組後身分，包括對應欄位條件。-->
+                            </div>
+                            <!--標竿組不同意轉組者。-->
+                            <div class="form_grp">
+                                <legend class="form_title">創育坊是否核定轉組</legend>
+                                <div class="form_content">
+                                    <div class="radio_grp form_inline">                                        
+                                        為申請標竿組，但不同意轉組
+                                    </div>
+                                </div>
+                            </div>
+                            <!--新銳組無同意轉組設定。-->
+                            <div class="form_grp">
+                                <legend class="form_title">創育坊是否核定轉組</legend>
+                                <div class="form_content">
+                                    <div class="radio_grp form_inline">                                        
+                                        為申請新銳組，無須轉組
+                                    </div>
+                                </div>
                             </div>
                             <div class="form_grp">
                                 <legend class="form_title">申請單位身分變更</legend>
