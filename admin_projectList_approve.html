@@ -211,7 +211,7 @@
                         <!--勾選資料時批次核定enabled-->
                         <input type="button" class="btn btn-branch" id="openModal" value="批次核定">
                         <input type="button" class="btn btn-export" value="匯出核定結果" onclick="window.open('https://drive.google.com/drive/folders/1dML2Cflbfa_CyUG11rlAq2XtaZE4mEX1')">
-                        <input id='fileid' type='file' hidden onchange="confirm4();alert4();">
+                        <input id='fileid' type='file' hidden accept=".xls, .xlsx" onchange="confirm4();alert4();">
                         <input type="button" class="btn btn-branch" value="匯入核定結果" id='buttonid'>
                         <script>
                             document.getElementById('buttonid').addEventListener('click', openDialog);
