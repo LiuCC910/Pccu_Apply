@@ -21,6 +21,34 @@
 </head>
 
 <body>
+    <!--批次核定跳窗-->
+    <div id="modal1" class="modal tiny">
+        <section>
+            <h2>批次核定</h2>
+            <div class="datepick">
+                <div class="notice_info">批次核定僅可針對「核定暫存」狀態的資料。批次核定與匯入資料後皆無法回復，執行前請務必仔細確認資料正確性。</div>  
+                <p>已勾選核定資料：</p>
+                <ol>
+                    <li>C220919101 / 在地青年創育坊｜新銳組 / 公司完整名稱公司名稱</li>
+                    <li>C220919101 / 在地青年創育坊｜新銳組 / 公司完整名稱公司名稱</li>
+                    <li>C220919101 / 在地青年創育坊｜新銳組 / 公司完整名稱公司名稱</li>
+                    <li>C220919101 / 在地青年創育坊｜新銳組 / 公司完整名稱公司名稱</li>
+                    <li>C220919101 / 在地青年創育坊｜新銳組 / 公司完整名稱公司名稱</li>
+                    <li>C220919101 / 在地青年創育坊｜新銳組 / 公司完整名稱公司名稱</li>
+                    <li>C220919101 / 在地青年創育坊｜新銳組 / 公司完整名稱公司名稱</li>
+                    <li>C220919101 / 在地青年創育坊｜新銳組 / 公司完整名稱公司名稱</li>
+                    <li>C220919101 / 在地青年創育坊｜新銳組 / 公司完整名稱公司名稱</li>
+                    <li>C220919101 / 在地青年創育坊｜新銳組 / 公司完整名稱公司名稱</li>
+                </ol>
+            </div>
+            
+            <div class="btn_grp">
+                <input type="button" class="btn btn-primary" value="確定核定" onclick="confirm3();alert3();javascript:location.href='admin_projectList_approve.html'"">
+                <input type="button" class="btn btn-secondary" value="取消">
+            </div>
+        </section>
+        </form>
+    </div>
     <div class="wrapper">
         <!-- header Start -->
         <header class="header">
@@ -160,7 +188,8 @@
                                 <li><a href="#" class="processing">複審資料審核不通過<span>10</span></a></li>
                                 <li><a href="#" class="draft branch">未進入複審(書審不通過)<span>28</span></a></li><br>
                                 <li><a href="#" class="processing">待複審(預審已完成)<span>11</span></a></li>
-                                <li><a href="#" class="processing checked">待核定<span>21</span></a></li>
+                                <li><a href="#" class="processing">待核定<span>6</span></a></li>
+                                <li><a href="#" class="processing checked">核定暫存<span>21</span></a></li>
                                 <li><a href="#" class="processing">已核定<span>0</span></a></li>
                                 <li><a href="#" class="draft branch">(會員端)草稿<span>58</span></a></li>
                                 
@@ -169,35 +198,46 @@
                         <!--先暫時兩個按鈕，後續看是否需請設計師改成下拉-->
                         <div class="btn_grp">
                             <!--label>匯出：</label-->
-                            <input type="button" class="btn btn-export" value="案件清單匯出" onclick="window.open('https://drive.google.com/file/d/1B3SwCdFwN0fmVQ1d0CGzGrsw1RHlIkP7/view?usp=sharing')">
+                            <input type="button" class="btn btn-export" value="案件清單匯出" onclick="window.open('https://drive.google.com/drive/folders/1dML2Cflbfa_CyUG11rlAq2XtaZE4mEX1')">
                             <input type="button" class="btn btn-export" value="下載計畫附件" onclick="confirm1();alert1();">
-                            <input type="button" class="btn btn-export" value="下載複審資料" onclick="">
-                            <input type="button" class="btn btn-export" value="評審結果 by案件" onclick="javascript:location.href='匯出報表1_ by案件彙整委員意見_update.xlsx'">
-                            <input type="button" class="btn btn-export" value="評審結果 by委員" onclick="javascript:location.href='匯出報表2_ by委員 彙整案件_1023update.xlsx'">
-
-                            <script>
-                                function alert1() {
-                                alert("附件打包檔產生中，完成後會透過mail通知並提供下載連結(需本人帳號登入後方可下載");
-                                }
-                                function confirm1() {
-                                confirm("確定要匯出條列計畫的所有附件？點選確定開始執行下載檔打包作業，點選取消放棄");
-                                }
-                           </script>
-                        
+                            <input type="button" class="btn btn-export" value="下載複審資料" onclick="confirm2();alert2();">
+                            <input type="button" class="btn btn-export" value="評審結果 by案件" onclick="window.open('https://drive.google.com/drive/folders/1dML2Cflbfa_CyUG11rlAq2XtaZE4mEX1')">
+                            <input type="button" class="btn btn-export" value="評審結果 by委員" onclick="window.open('https://drive.google.com/drive/folders/1dML2Cflbfa_CyUG11rlAq2XtaZE4mEX1')">
                         </div>
                     </section>
 
                     <div class="btn_grp" style="text-align: left;">
                         <!--label>匯出：</label-->
                         <!--勾選資料時批次核定enabled-->
-                        <input type="button" class="btn btn-branch" value="批次核定" onclick="">
-                        <input type="button" class="btn btn-export" value="匯出複審結果" onclick="">
-                        <input type="button" class="btn btn-branch" value="匯入複審結果" onclick="">
-                        <input type="button" class="btn btn-export" value="匯出核定結果" onclick="">
+                        <input type="button" class="btn btn-branch" id="openModal" value="批次核定">
+                        <input type="button" class="btn btn-export" value="匯出核定結果" onclick="window.open('https://drive.google.com/drive/folders/1dML2Cflbfa_CyUG11rlAq2XtaZE4mEX1')">
                         <input type="button" class="btn btn-branch" value="匯入核定結果" onclick="">
-                        <div class="notice_info">批次核定僅可針對「待核定」狀態的資料。批次核定與匯入資料後皆無法回復，執行前請務必仔細確認資料正確性。</div>
+                        <input type="button" class="btn btn-export" value="匯出複審結果" onclick="window.open('https://drive.google.com/drive/folders/1dML2Cflbfa_CyUG11rlAq2XtaZE4mEX1')">
+                        <input type="button" class="btn btn-branch" value="匯入複審結果" onclick="">
+                        <div class="notice_info">批次核定僅可針對「核定暫存」狀態的資料。批次核定與匯入資料後皆無法回復，執行前請務必仔細確認資料正確性。</div>
                     </div>
 
+                            <script>
+                                function alert1() {
+                                alert("附件打包檔產生中，完成後會透過mail通知並提供下載連結(需本人帳號登入後方可下載");
+                                }
+                                function confirm1() {
+                                confirm("確定要匯出條列計畫的所有附件檔案？點選確定開始執行下載檔打包作業，點選取消放棄");
+                                }
+                                function alert2() {
+                                alert("附件打包檔產生中，完成後會透過mail通知並提供下載連結(需本人帳號登入後方可下載");
+                                }
+                                function confirm2() {
+                                confirm("確定要匯出條列計畫的所有複審檔案？點選確定開始執行下載檔打包作業，點選取消放棄");
+                                }
+                                function alert3() {
+                                alert("批次核定作業完成。本次核定共勾選10筆，成功8筆、失敗2筆(C220919101, C220919102)");
+                                }
+                                function confirm3() {
+                                confirm("確定要核定所勾選的計畫？點選確定執行批次核定作業，點選取消放棄");
+                                }
+                           </script>
+                        
                     <table>
                         <tr>
                             <th><!--提供當頁全選功能-->
@@ -215,13 +255,13 @@
                             <th>操作</th>
                         </tr>
                         <tr>
-                            <!--只有待核定狀態的checkbox才enabled-->
+                            <!--只有核定暫存狀態的checkbox才enabled-->
                             <td><input type="checkbox" id="select-all" name="approve"></td>
                             <td>C220919101</td>
                             <td>在地青年創育坊｜新銳組</td>
                             <td>公司完整名稱公司名稱</td>
                             <td>2022/9/19 19:13</td>
-                            <td><span class="processing">待核定</span></td>
+                            <td><span class="processing">核定暫存</span></td>
                             <td></td>
                             <td>
                                 <div class="btn_grp">
@@ -235,7 +275,7 @@
                             <td>在地青年創育坊｜標竿組</td>
                             <td>公司完整名稱公司名稱</td>
                             <td>2022/9/19 19:13</td>
-                            <td><span class="processing">待核定</span></td>
+                            <td><span class="processing">核定暫存</span></td>
                             <td></td>
                             <td>
                                 <div class="btn_grp">
@@ -249,7 +289,7 @@
                             <td>主題式國際創育加速器(FISA)</td>
                             <td>公司完整名稱公司名稱</td>
                             <td>2022/7/21 19:22</td>
-                            <td><span class="processing">待核定</span></td>
+                            <td><span class="processing">核定暫存</span></td>
                             <td></td>
                             <td>
                                 <div class="btn_grp">
@@ -263,7 +303,7 @@
                             <td>技術創業放大器(TEA)</td>
                             <td>公司完整名稱公司完整名稱公司完整名稱</td>
                             <td>2022/7/19 17:22</td>
-                            <td><span class="processing">待核定</span></td>
+                            <td><span class="processing">核定暫存</span></td>
                             <td></td>
                             <td>
                                 <div class="btn_grp">
@@ -277,7 +317,7 @@
                             <td>在地青年創育坊｜標竿組</td>
                             <td>公司完整名稱公司名稱</td>
                             <td>2022/7/19 19:13</td>
-                            <td><span class="processing">待核定</span></td>
+                            <td><span class="processing">核定暫存</span></td>
                             <td></td>
                             <td>
                                 <div class="btn_grp">
@@ -291,7 +331,7 @@
                             <td>國際創育加速器(ISA)</td>
                             <td>公司完整名稱公司名稱</td>
                             <td>2022/7/14 19:22</td>
-                            <td><span class="processing">待核定</span></td>
+                            <td><span class="processing">核定暫存</span></td>
                             <td></td>
                             <td>
                                 <div class="btn_grp">
@@ -305,7 +345,7 @@
                             <td>在地企業創新器(LEI)</td>
                             <td>公司完整名稱公司完整名稱公司完整名稱</td>
                             <td>2022/7/11 17:22</td>
-                            <td><span class="processing">待核定</span></td>
+                            <td><span class="processing">核定暫存</span></td>
                             <td></td>
                             <td>
                                 <div class="btn_grp">
