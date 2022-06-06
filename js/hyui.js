@@ -739,8 +739,8 @@ $(function() {
         $('.modal_overlay').hide();                                                        //隱藏透明底
         // 資訊視窗（ #openInfo 打開 #modal_info / .tiny）
         $('#modal_info').hide();                                                            //先隱藏視窗
-        $('.tiny').after('<div class="modal_overlay"></div>');                              //新增透明底
-        $('.tiny').prepend('<button type="button" class="close">關閉</button>');            //新增關閉按鈕
+        //$('.tiny').after('<div class="modal_overlay"></div>');                              //新增透明底
+        //$('.tiny').prepend('<button type="button" class="close">關閉</button>');            //新增關閉按鈕
         $('.modal_overlay').hide();                                                        //隱藏透明底
 
 
