@@ -22,7 +22,7 @@
 
 <body>
     <!--批次核定跳窗-->
-    <div id="modal1" class="modal tiny">
+    <div id="modal_info" class="modal tiny">
         <section>
             <h2>批次核定</h2>
             <div class="datepick">
@@ -211,7 +211,14 @@
                         <!--勾選資料時批次核定enabled-->
                         <input type="button" class="btn btn-branch" id="openModal" value="批次核定">
                         <input type="button" class="btn btn-export" value="匯出核定結果" onclick="window.open('https://drive.google.com/drive/folders/1dML2Cflbfa_CyUG11rlAq2XtaZE4mEX1')">
-                        <input type="button" class="btn btn-branch" value="匯入核定結果" onclick="">
+                        <input id='fileid' type='file' hidden onchange="confirm4();alert4();">
+                        <input type="button" class="btn btn-branch" value="匯入核定結果" id='buttonid'>
+                        <script>
+                            document.getElementById('buttonid').addEventListener('click', openDialog);
+                            function openDialog() {
+                            document.getElementById('fileid').click();
+                            }
+                        </script>
                         <input type="button" class="btn btn-export" value="匯出複審結果" onclick="window.open('https://drive.google.com/drive/folders/1dML2Cflbfa_CyUG11rlAq2XtaZE4mEX1')">
                         <input type="button" class="btn btn-branch" value="匯入複審結果" onclick="">
                         <div class="notice_info">批次核定僅可針對「核定暫存」狀態的資料。批次核定與匯入資料後皆無法回復，執行前請務必仔細確認資料正確性。</div>
@@ -236,8 +243,14 @@
                                 function confirm3() {
                                 confirm("確定要核定所勾選的計畫？點選確定執行批次核定作業，點選取消放棄");
                                 }
+                                function alert4() {
+                                alert("核定匯入作業完成。本次匯入共30筆，成功27筆、失敗3筆\n失敗資料：#3-C220919101, #5-C220919102, #11-空值)");
+                                }
+                                function confirm4() {
+                                confirm("確定要匯入所選擇的檔案？點選確定執行核定匯入作業，點選取消放棄");
+                                }
                            </script>
-                        
+
                     <table>
                         <tr>
                             <th><!--提供當頁全選功能-->
