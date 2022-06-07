@@ -22,7 +22,7 @@
 
 <body>
     <!--批次核定跳窗-->
-    <div id="modal_info" class="modal tiny">
+    <div id="modal_result" class="modal tiny">
         <section>
             <h2>批次核定</h2>
             <div class="datepick">
@@ -43,12 +43,32 @@
             </div>
             
             <div class="btn_grp">
-                <input type="button" class="btn btn-primary" value="確定核定" onclick="confirm3();alert3();javascript:location.href='admin_projectList_approve.html'"">
+                <input type="button" class="btn btn-primary" value="確定核定" id="openInfo" onclick="confirm3();">
+                <!--input type="button" class="btn btn-primary" value="確定核定" onclick="confirm3();alert3();javascript:location.href='admin_projectList_approve.html'""-->
                 <input type="button" class="btn btn-secondary" value="取消">
             </div>
         </section>
         </form>
     </div>
+    <div id="modal_info" class="tiny">
+        <section>
+            <h2>批次核定結果</h2>
+            <div class="datepick">
+                <div class="notice_info">批次核定作業完成。本次核定共勾選10筆，成功8筆、失敗2筆</div>  
+                <p>失敗資料：</p>
+                <ol>
+                    <li>C220919101 / 在地青年創育坊｜新銳組 / 公司完整名稱公司名稱</li>
+                    <li>C220919102 / 企業加速器｜公司完整名稱公司名稱</li>
+                </ol>
+            </div>
+            
+            <div class="btn_grp">
+                <input type="button" class="btn btn-secondary" value="關閉" onclick="javascript:location.href='admin_projectList_approve.html'">
+            </div>
+        </section>
+        </form>
+    </div>
+
     <div class="wrapper">
         <!-- header Start -->
         <header class="header">
@@ -209,7 +229,7 @@
                     <div class="btn_grp" style="text-align: left;">
                         <!--label>匯出：</label-->
                         <!--勾選資料時批次核定enabled-->
-                        <input type="button" class="btn btn-branch" id="openModal" value="批次核定">
+                        <input type="button" class="btn btn-branch" id="openresult" value="批次核定">
                         <input type="button" class="btn btn-export" value="匯出核定結果" onclick="window.open('https://drive.google.com/drive/folders/1dML2Cflbfa_CyUG11rlAq2XtaZE4mEX1')">
                         <input id='fileid' type='file' hidden accept=".xls, .xlsx" onchange="confirm4();alert4();">
                         <input type="button" class="btn btn-branch" value="匯入核定結果" id='buttonid'>
@@ -232,7 +252,7 @@
                                 confirm("確定要匯出條列計畫的所有附件檔案？點選確定開始執行下載檔打包作業，點選取消放棄");
                                 }
                                 function alert2() {
-                                alert("附件打包檔產生中，完成後會透過mail通知並提供下載連結(需本人帳號登入後方可下載");
+                                alert("複審資料打包檔產生中，完成後會透過mail通知並提供下載連結(需本人帳號登入後方可下載");
                                 }
                                 function confirm2() {
                                 confirm("確定要匯出條列計畫的所有複審檔案？點選確定開始執行下載檔打包作業，點選取消放棄");
@@ -435,4 +455,5 @@
     <script src="js/hyui.js"></script>
     <!-- 客製js -->
     <script src="js/customize.js"></script>
+
 </body>
