@@ -68,6 +68,20 @@
         </section>
         </form>
     </div>
+    <div id="modal_PDF" class="PDF tiny">
+        <section>
+            <h2>核定/複審匯入結果</h2>
+            <div class="datepick">
+                <div class="notice_info">核定/複審匯入作業完成。本次核定共匯入30筆，成功27筆、失敗3筆</div>  
+                <p>失敗資料：#3-C220919101, #5-C220919102, #11-空值</p>
+            </div>
+            
+            <div class="btn_grp">
+                <input type="button" class="btn btn-secondary" value="關閉" onclick="javascript:location.href='admin_projectList_approve.html'">
+            </div>
+        </section>
+        </form>
+    </div>
 
     <div class="wrapper">
         <!-- header Start -->
@@ -232,7 +246,7 @@
                         <input type="button" class="btn btn-branch" id="openresult" value="批次核定">
                         <input type="button" class="btn btn-export" value="匯出核定結果" onclick="window.open('https://drive.google.com/drive/folders/1dML2Cflbfa_CyUG11rlAq2XtaZE4mEX1')">
                         <input id='fileid' type='file' hidden accept=".xls, .xlsx" onchange="confirm4();alert4();">
-                        <input type="button" class="btn btn-branch" value="匯入核定結果" id='buttonid'>
+                        <input type="button" class="btn btn-branch" value="匯入核定結果" id="buttonid">
                         <script>
                             document.getElementById('buttonid').addEventListener('click', openDialog);
                             function openDialog() {
@@ -240,34 +254,36 @@
                             }
                         </script>
                         <input type="button" class="btn btn-export" value="匯出複審結果" onclick="window.open('https://drive.google.com/drive/folders/1dML2Cflbfa_CyUG11rlAq2XtaZE4mEX1')">
-                        <input type="button" class="btn btn-branch" value="匯入複審結果" onclick="">
+                        <input type="button" class="btn btn-branch" value="匯入複審結果" id="openPDF">
                         <div class="notice_info">批次核定僅可針對「核定暫存」狀態的資料。批次核定與匯入資料後皆無法回復，執行前請務必仔細確認資料正確性。</div>
                     </div>
 
                             <script>
-                                function alert1() {
-                                alert("附件打包檔產生中，完成後會透過mail通知並提供下載連結(需本人帳號登入後方可下載");
-                                }
                                 function confirm1() {
                                 confirm("確定要匯出條列計畫的所有附件檔案？點選確定開始執行下載檔打包作業，點選取消放棄");
                                 }
-                                function alert2() {
-                                alert("複審資料打包檔產生中，完成後會透過mail通知並提供下載連結(需本人帳號登入後方可下載");
+                                function alert1() {
+                                alert("附件打包檔產生中，完成後會透過mail通知並提供下載連結(需本人帳號登入後方可下載");
                                 }
                                 function confirm2() {
                                 confirm("確定要匯出條列計畫的所有複審檔案？點選確定開始執行下載檔打包作業，點選取消放棄");
                                 }
-                                function alert3() {
-                                alert("批次核定作業完成。本次核定共勾選10筆，成功8筆、失敗2筆(C220919101, C220919102)");
+                                function alert2() {
+                                alert("複審資料打包檔產生中，完成後會透過mail通知並提供下載連結(需本人帳號登入後方可下載");
                                 }
+                                //批次核定
                                 function confirm3() {
                                 confirm("確定要核定所勾選的計畫？點選確定執行批次核定作業，點選取消放棄");
                                 }
-                                function alert4() {
-                                alert("核定匯入作業完成。本次匯入共30筆，成功27筆、失敗3筆\n失敗資料：#3-C220919101, #5-C220919102, #11-空值)");
+                                function alert3() {
+                                alert("批次核定作業完成。本次核定共勾選10筆，成功8筆、失敗2筆(C220919101, C220919102)");
                                 }
+                                //複審、核定匯入
                                 function confirm4() {
                                 confirm("確定要匯入所選擇的檔案？點選確定執行核定匯入作業，點選取消放棄");
+                                }
+                                function alert4() {
+                                alert("核定匯入作業完成。本次匯入共30筆，成功27筆、失敗3筆\n失敗資料：#3-C220919101, #5-C220919102, #11-空值)");
                                 }
                            </script>
 
