@@ -125,17 +125,17 @@ $(function() {
 
     // tab 裡面的開合表單
     // 預設全展開、不然 tab 高度撐不開
-    $('.fill_in').on('click','h3.title',function(){
-        if($(this).hasClass('closed')){
-            $(this).removeClass('closed');
-            $(this).next('section').stop(true, false).slideDown(600);
-        }else{
-            $(this).addClass('closed');
-            $(this).next('section').stop(true, false).slideUp(600);
-        }
-        //$('h2.active > a').click();
-    });
-
+    // $('.fill_in').on('click','h3.title',function(){
+    //     if($(this).hasClass('closed')){
+    //         $(this).removeClass('closed');
+    //         $(this).next('section').stop(true, false).slideDown(600);
+    //     }else{
+    //         $(this).addClass('closed');
+    //         $(this).next('section').stop(true, false).slideUp(600);
+    //     }
+    //     //alert("check!");
+    //     //$('h2.active > a').click();
+    // });
 
     //開合表單點選後點選頁籤重算高度
     //$('h3.title').click(function () {
