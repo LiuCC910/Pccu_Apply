@@ -739,8 +739,18 @@ $(function() {
         $('.modal_overlay').hide();                                                        //隱藏透明底
         // 資訊視窗（ #openInfo 打開 #modal_result / .tiny）
         $('#modal_result').hide();                                                            //先隱藏視窗
-        $('.modal').after('<div class="modal_overlay"></div>');                              //新增透明底
-        $('.modal').prepend('<button type="button" class="close">關閉</button>');            //新增關閉按鈕
+        $('#modal_result').after('<div class="modal_overlay"></div>');                              //新增透明底
+        $('#modal_result').prepend('<button type="button" class="close">關閉</button>');            //新增關閉按鈕
+        $('.modal_overlay').hide();                                                        //隱藏透明底
+        // 資訊視窗（ #openInfo 打開 #modal_result / .tiny）
+        $('#modal_import').hide();                                                            //先隱藏視窗
+        $('#modal_import').after('<div class="modal_overlay"></div>');                              //新增透明底
+        $('#modal_import').prepend('<button type="button" class="close">關閉</button>');            //新增關閉按鈕
+        $('.modal_overlay').hide();                                                        //隱藏透明底
+        // 資訊視窗（ #openInfo 打開 #modal_result / .tiny）
+        $('#modal_batch').hide();                                                            //先隱藏視窗
+        $('#modal_batch').after('<div class="modal_overlay"></div>');                              //新增透明底
+        $('#modal_batch').prepend('<button type="button" class="close">關閉</button>');            //新增關閉按鈕
         $('.modal_overlay').hide();                                                        //隱藏透明底
 
 
@@ -768,22 +778,38 @@ $(function() {
         });
         // 資訊視窗
         $('#openresult').click(function(e) {
-            $('.modal').next('.modal_overlay').fadeIn(100);
-            $('.modal').fadeIn(100);
+            $('#modal_result').next('.modal_overlay').fadeIn(100);
+            $('#modal_result').fadeIn(100);
+            $('body').addClass('noscroll');
+            e.preventDefault();
+        });
+        // 資訊視窗
+        $('#openimport').click(function(e) {
+            $('#modal_import').next('.modal_overlay').fadeIn(100);
+            $('#modal_import').fadeIn(100);
             $('body').addClass('noscroll');
             e.preventDefault();
         });
 
+        // 資訊視窗
+        $('#openbatch').click(function(e) {
+            $('#modal_batch').next('.modal_overlay').fadeIn(100);
+            $('#modal_batch').fadeIn(100);
+            $('body').addClass('noscroll');
+            e.preventDefault();
+        });
         //關閉function  ---------------------------------------------------------------
         function closeModal(){
             // 第一個跳窗
-            $('#modal1').hide();
+            $('#modal').hide();
             // PDF跳窗
             $('#modal_PDF').hide();
             // 資訊視窗
             $('#modal_info').hide();
             // 資訊視窗
             $('#modal_result').hide();
+            $('#modal_import').hide();
+            $('#modal_batch').hide();
 
             $('.modal_overlay').hide();
             $('body').removeClass('noscroll');
