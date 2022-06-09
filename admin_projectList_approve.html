@@ -22,7 +22,7 @@
 
 <body>
     <!--批次核定跳窗-->
-    <div id="modal_result" class="modal tiny">
+    <div id="modal_result" class="tiny">
         <section>
             <h2>批次核定</h2>
             <div class="datepick">
@@ -43,14 +43,14 @@
             </div>
             
             <div class="btn_grp">
-                <input type="button" class="btn btn-primary" value="確定核定" id="openInfo" onclick="confirm3();">
+                <input type="button" class="btn btn-primary" value="確定核定" id="openbatch" onclick="confirm3();">
                 <!--input type="button" class="btn btn-primary" value="確定核定" onclick="confirm3();alert3();javascript:location.href='admin_projectList_approve.html'""-->
                 <input type="button" class="btn btn-secondary" value="取消">
             </div>
         </section>
         </form>
     </div>
-    <div id="modal_info" class="tiny">
+    <div id="modal_batch" class="tiny">
         <section>
             <h2>批次核定結果</h2>
             <div class="datepick">
@@ -68,7 +68,7 @@
         </section>
         </form>
     </div>
-    <div id="modal_PDF" class="PDF tiny">
+    <div id="modal_import" class="tiny">
         <section>
             <h2>核定/複審匯入結果</h2>
             <div class="datepick">
@@ -254,7 +254,7 @@
                             }
                         </script>
                         <input type="button" class="btn btn-export" value="匯出複審結果" onclick="window.open('https://drive.google.com/drive/folders/1dML2Cflbfa_CyUG11rlAq2XtaZE4mEX1')">
-                        <input type="button" class="btn btn-branch" value="匯入複審結果" id="openPDF">
+                        <input type="button" class="btn btn-branch" value="匯入複審結果" id="openimport">
                         <div class="notice_info">批次核定僅可針對「核定暫存」狀態的資料。批次核定與匯入資料後皆無法回復，執行前請務必仔細確認資料正確性。</div>
                     </div>
 
