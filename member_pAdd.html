@@ -90,11 +90,13 @@
                             <legend class="form_title"><abbr class="necessary" title="為必填(選)欄位,不能為空白。">*</abbr>計畫類型</legend>
                             <div class="form_content">
                                 <div class="radio_grp form_inline">
-                                    <label><input type="radio" name="sampleRadio5" value="M1" onclick="show1();">技術創業放大器(TEA)</label>
+                                    <!--label><input type="radio" name="sampleRadio5" value="M1" onclick="show1();">技術創業放大器(TEA)</label>
                                     <label><input type="radio" name="sampleRadio5" value="M2" onclick="show1();">在地企業創新器(LEI)</label>
                                     <label><input type="radio" name="sampleRadio5" value="M3" onclick="show1();">國際創育加速器(ISA)</label>
-                                    <label><input type="radio" name="sampleRadio5" value="M4" onclick="show1();">主題式國際創育加速器(FISA)</label>
-                                    <label><input type="radio" name="sampleRadio5" value="M6" checked="" onclick="show1();">企業加速器</label><!--新增企業加速器模組-->
+                                    <label><input type="radio" name="sampleRadio5" value="M4" onclick="show1();">主題式國際創育加速器(FISA)</label-->
+                                    <!--新增企業加速器模組-->
+                                    <label><input type="radio" name="sampleRadio5" value="M6" onclick="show1();">產業加速器</label>
+                                    <label><input type="radio" name="sampleRadio5" value="M7" checked onclick="show1();">企業加速器</label>
                                     <label><input type="radio" name="sampleRadio5" value="M5" onclick="show2();">在地青年創育坊</label>
                                 </div>
                                 <!--青創坊擴充子模組，點選青創坊後才出現-->
@@ -118,7 +120,7 @@
                             <div class="form_content">
                                 <div class="radio_grp form_inline">
                                     <label><input type="radio" name="sampleRadio6" value="" checked>公司</label>
-                                    <label><input type="radio" name="sampleRadio6" value="">法人</label>
+                                    <label><input type="radio" name="sampleRadio6" value="" disabled>法人</label>
                                     <label><input type="radio" name="sampleRadio6" value="" disabled>學校</label>
                                 </div>
                             </div>
@@ -129,23 +131,49 @@
                             <div class="form_content">
                                 <div class="radio_grp form_inline">
                                     <label><input type="radio" name="sampleRadio7" value="" checked>個別申請</label>
-                                    <label><input type="radio" name="sampleRadio7" value="">創育聯盟</label>
+                                    <label><input type="radio" name="sampleRadio7" value="">聯合申請</label>
                                 </div>
                             </div>
                         </div>
                         <!--申請特色加值項目-物聯網設定，需判斷第二步加值經費是否需填寫，預設否-->
                         <!--註：新增計畫核定時、若設定加值審核不通過者，則延續計畫新增時，此選項需變更為否-->
-                        <div class="form_grp">
+                        <!--111年更新：112年模組都不允許申請加值；如果可以、隱藏此項目(或用CSS隱藏)-->
+                        <div class="form_grp" style="display:none">
                             <legend class="form_title">申請特色加值項目-物聯網</legend>
                             <div class="form_content">
                                 <div class="radio_grp form_inline">
                                     <label><input type="radio" name="sampleRadio9" value="" checked>否</label>
-                                    <label><input type="radio" name="sampleRadio9" value="">是</label>
+                                    <label><input type="radio" name="sampleRadio9" value="" disabled>是</label>
                                 </div>
                             </div>
                         </div>
+                        <!--新增協作單位申請欄位-->
+                        <div class="form_grp">
+                            <legend class="form_title">是否採協作申請</legend>
+                            <div class="form_content">
+                                <div class="radio_grp form_inline">
+                                    <label><input type="radio" name="sampleRadioM7" value="" onclick="show3();" checked>否</label>
+                                    <label><input type="radio" name="sampleRadioM7" value="" onclick="show4();">是</label>
+                                    <!--非企業加速器不允許選擇-->
+                                </div>
+                                <!--青創坊擴充子模組，點選青創坊後才出現-->
+                                <div class="radio_grp form_inline diving" id="ifM7" style="display:none">
+                                    <label><input type="radio" name="sampleRadio7-2" value="" checked>公司</label>
+                                    <label><input type="radio" name="sampleRadio7-2" value="">法人</label>
+                                    <label><input type="radio" name="sampleRadio7-2" value="">學校</label>
+                                </div>
+                                <script type="text/javascript">
+                                    function show3(){
+                                    document.getElementById('ifM7').style.display ='none';
+                                    }
+                                    function show4(){
+                                    document.getElementById('ifM7').style.display = 'block';
+                                    }
+                            </script>
+                        </div>
+                        </div>
                         <div class="btn_grp">
-                            <input type="button" class="btn btn-primary" value="繼續填寫" onclick="javascript:location.href='member_pAddstep2_alliance.html'">
+                            <input type="button" class="btn btn-primary" value="繼續填寫" onclick="javascript:location.href='member_pAddstep2_alliance1.html'">
                             <input type="button" class="btn btn-normal" value="放棄">
                         </div>
                     </form>
