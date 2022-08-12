@@ -1861,9 +1861,10 @@
                                 <div class="notice_warning">如以創育聯盟申請，其主導單位與共同執行單位皆須符合該類型申請資格，並須檢附各項資格文件。每一檔案大小請勿超過 20M。</div>
                                 <form action="" class="form_grid">
                                 <section class="fill_in">
-                                    <h3 class="title">主導單位與計畫附件</h3>
+                                    <h3 class="title">主導單位與計畫附件(公司)</h3>
                                     <section>
                                         <div class="form_grid">
+                                            <!--主導單位才有計畫申請書-->
                                             <div class="form_grp"><!--計畫申請書(計畫書摘要表+本文)-->
                                                 <label for="selectSample" class="form_title"><abbr class="necessary" title="為必填(選)欄位,不能為空白。">*</abbr>計畫申請書(計畫書摘要表+本文，PDF 格式)</label>
                                                 <div class="form_content">
@@ -1909,11 +1910,11 @@
                                                         <input class="" type="text" value="123.jpg" autocomplete="off">
                                                         <input class="delet_btn" type="button" value="移除">
                                                     </div> -->
-                                                    <div class="notice_info">僅接受PDF格式，身分為法人/公司者需檢附。<!--創育聯盟提案者，須檢附主導/共同執行單位之佐證資料--><!--創育聯盟這段文字判斷是否創育聯盟再出現--></div>
+                                                    <div class="notice_info">僅接受PDF格式，身分為法人/公司者需檢附。</div>
                                                 </div>
                                             </div>
                                             <div class="form_grp"><!--營利事業所得稅結算申報書-->
-                                                <label for="selectSample" class="form_title"><abbr class="necessary" title="為必填(選)欄位,不能為空白。">*</abbr>營利事業所得稅結算申報書</label>
+                                                <label for="selectSample" class="form_title"><abbr class="necessary" title="為必填(選)欄位,不能為空白。">*</abbr>營利事業所得稅結算申報書(未滿一年以營業稅申報書替代)</label>
                                                 <div class="form_content">
                                                     <div class="upload_grp">
                                                         <div class="upload_btn">
@@ -1921,7 +1922,7 @@
                                                             <input type="file" class="check_file" />
                                                         </div>
                                                     </div>
-                                                    <div class="notice_info">僅接受PDF格式，身分為公司者需檢附。未滿一年以營業稅申報書替代。創育聯盟提案者，須檢附主導/共同執行單位之佐證資料</div>
+                                                    <div class="notice_info">僅接受PDF格式，身分為公司者需檢附。未滿一年以營業稅申報書替代。</div>
                                                 </div>
                                             </div>
                                             <div class="form_grp"><!--營利事業無欠稅證明-->
@@ -1937,7 +1938,7 @@
                                                         <input class="" type="text" value="123.jpg" autocomplete="off">
                                                         <input class="delet_btn" type="button" value="移除">
                                                     </div> -->
-                                                    <div class="notice_info">僅接受PDF格式。創育聯盟提案者，須檢附主導/共同執行單位之佐證資料</div><!--有提示訊息時出現-->
+                                                    <div class="notice_info">僅接受PDF格式。</div><!--有提示訊息時出現-->
                                                 </div>
                                             </div>
                                             <div class="form_grp"><!--廠商信用證明-->
@@ -1949,11 +1950,11 @@
                                                             <input type="file" class="check_file" />
                                                         </div>
                                                     </div>
-                                                    <div class="notice_info">僅接受PDF格式，身分為公司者需檢附。請檢附金融機構出具之信用證明文件。創育聯盟提案者，須檢附主導/共同執行單位之佐證資料</div><!--有提示訊息時出現-->
+                                                    <div class="notice_info">僅接受PDF格式，身分為公司者需檢附。請檢附金融機構出具之信用證明文件。</div>
                                                 </div>
                                             </div>
-                                            <div class="form_grp"><!--計畫主持人申請單位聘僱資料-->
-                                                <label for="selectSample" class="form_title"><abbr class="necessary" title="為必填(選)欄位,不能為空白。">*</abbr>計畫主持人申請單位聘僱資料</label>
+                                            <div class="form_grp"><!--公司淨值(股東權益)證明文件-->
+                                                <label for="selectSample" class="form_title"><abbr class="necessary" title="為必填(選)欄位,不能為空白。">*</abbr>公司淨值(股東權益)證明文件</label>
                                                 <div class="form_content">
                                                     <div class="upload_grp">
                                                         <div class="upload_btn">
@@ -1961,11 +1962,15 @@
                                                             <input type="file" class="check_file" />
                                                         </div>
                                                     </div>
-                                                    <div class="notice_info">僅接受PDF格式</div>
+                                                    <!-- <div class="upload_delet_grp">
+                                                        <input class="" type="text" value="123.jpg" autocomplete="off">
+                                                        <input class="delet_btn" type="button" value="移除">
+                                                    </div> -->
+                                                    <div class="notice_info">僅接受PDF格式。</div><!--有提示訊息時出現-->
                                                 </div>
                                             </div>
-                                            <div class="form_grp"><!--計畫主持人身分證影本-->
-                                                <label for="selectSample" class="form_title"><abbr class="necessary" title="為必填(選)欄位,不能為空白。">*</abbr>計畫主持人身分證影本</label>
+                                            <div class="form_grp"><!--最近一期勞保繳費清單之投保人數資料-->
+                                                <label for="selectSample" class="form_title"><abbr class="necessary" title="為必填(選)欄位,不能為空白。">*</abbr>最近一期勞保繳費清單之投保人數資料</label>
                                                 <div class="form_content">
                                                     <div class="upload_grp">
                                                         <div class="upload_btn">
@@ -1973,31 +1978,7 @@
                                                             <input type="file" class="check_file" />
                                                         </div>
                                                     </div>
-                                                    <div class="notice_info">僅接受PDF格式，需須為本國國籍並年滿20 歲至45 歲之個人</div>
-                                                </div>
-                                            </div>
-                                            <div class="form_grp"><!--實體培育空間之擁有或取得授權證明文件-->
-                                                <label for="selectSample" class="form_title"><abbr class="necessary" title="為必填(選)欄位,不能為空白。">*</abbr>實體培育空間之擁有或取得授權證明文件</label>
-                                                <div class="form_content">
-                                                    <div class="upload_grp">
-                                                        <div class="upload_btn">
-                                                            <span>上傳檔案</span>
-                                                            <input type="file" class="check_file" />
-                                                        </div>
-                                                    </div>
-                                                    <div class="notice_info">僅接受PDF格式。</div>
-                                                </div>
-                                            </div>
-                                            <div class="form_grp"><!--輔導中小企業實績佐證資料，申請「標竿組」需檢附至少5家輔導所在縣市中小企業實績相關佐證資料-->
-                                                <label for="selectSample" class="form_title"><abbr class="necessary" title="為必填(選)欄位,不能為空白。">*</abbr>輔導中小企業實績佐證資料</label>
-                                                <div class="form_content">
-                                                    <div class="upload_grp">
-                                                        <div class="upload_btn">
-                                                            <span>上傳檔案</span>
-                                                            <input type="file" class="check_file" />
-                                                        </div>
-                                                    </div>
-                                                    <div class="notice_info">僅接受PDF格式。申請「標竿組」需檢附至少5家輔導所在縣市中小企業實績相關佐證資料</div>
+                                                    <div class="notice_info">僅接受PDF格式。</div><!--有提示訊息時出現-->
                                                 </div>
                                             </div>
                                             <div class="form_grp"><!--計畫切結書-->
@@ -2009,11 +1990,11 @@
                                                             <input type="file" class="check_file" />
                                                         </div>
                                                     </div>
-                                                    <div class="notice_info">僅接受PDF格式。創育聯盟提案者，須檢附主導/共同執行單位之佐證資料</div><!--有提示訊息時出現-->
+                                                    <div class="notice_info">僅接受PDF格式。</div>
                                                 </div>
                                             </div>
                                             <div class="form_grp"><!--個資同意書-->
-                                                <label for="selectSample" class="form_title"><abbr class="necessary" title="為必填(選)欄位,不能為空白。">*</abbr>個資同意書</label>
+                                                <label for="selectSample" class="form_title"><abbr class="necessary" title="為必填(選)欄位,不能為空白。">*</abbr>個人資料同意書</label>
                                                 <div class="form_content">
                                                     <div class="upload_grp">
                                                         <div class="upload_btn">
@@ -2021,7 +2002,7 @@
                                                             <input type="file" class="check_file" />
                                                         </div>
                                                     </div>
-                                                    <div class="notice_info">僅接受PDF格式。創育聯盟提案者，須檢附主導/共同執行單位之佐證資料</div><!--有提示訊息時出現-->
+                                                    <div class="notice_info">僅接受PDF格式。</div>
                                                 </div>
                                             </div>
                                             <div class="form_grp"><!--創育聯盟合作協議書-->
@@ -2054,7 +2035,7 @@
                                 </section>
                                 <!--當有申請協作單位時，新增一整組協作單位的附件區-->
                                 <section class="fill_in">
-                                    <h3 class="title">協作單位附件</h3>
+                                    <h3 class="title">協作單位附件(法人)</h3>
                                     <section>
                                         <div class="form_grid">
                                             <div class="form_grp"><!--公司登記、商業登記等證明文件-->
@@ -2070,95 +2051,7 @@
                                                         <input class="" type="text" value="123.jpg" autocomplete="off">
                                                         <input class="delet_btn" type="button" value="移除">
                                                     </div> -->
-                                                    <div class="notice_info">僅接受PDF格式，身分為法人/公司者需檢附。<!--創育聯盟提案者，須檢附主導/共同執行單位之佐證資料--><!--創育聯盟這段文字判斷是否創育聯盟再出現--></div>
-                                                </div>
-                                            </div>
-                                            <div class="form_grp"><!--營利事業所得稅結算申報書-->
-                                                <label for="selectSample" class="form_title"><abbr class="necessary" title="為必填(選)欄位,不能為空白。">*</abbr>營利事業所得稅結算申報書</label>
-                                                <div class="form_content">
-                                                    <div class="upload_grp">
-                                                        <div class="upload_btn">
-                                                            <span>上傳檔案</span>
-                                                            <input type="file" class="check_file" />
-                                                        </div>
-                                                    </div>
-                                                    <div class="notice_info">僅接受PDF格式，身分為公司者需檢附。未滿一年以營業稅申報書替代。創育聯盟提案者，須檢附主導/共同執行單位之佐證資料</div>
-                                                </div>
-                                            </div>
-                                            <div class="form_grp"><!--營利事業無欠稅證明-->
-                                                <label for="selectSample" class="form_title"><abbr class="necessary" title="為必填(選)欄位,不能為空白。">*</abbr>營利事業無欠稅證明</label>
-                                                <div class="form_content">
-                                                    <div class="upload_grp">
-                                                        <div class="upload_btn">
-                                                            <span>上傳檔案</span>
-                                                            <input type="file" class="check_file" />
-                                                        </div>
-                                                    </div>
-                                                    <!-- <div class="upload_delet_grp">
-                                                        <input class="" type="text" value="123.jpg" autocomplete="off">
-                                                        <input class="delet_btn" type="button" value="移除">
-                                                    </div> -->
-                                                    <div class="notice_info">僅接受PDF格式。創育聯盟提案者，須檢附主導/共同執行單位之佐證資料</div><!--有提示訊息時出現-->
-                                                </div>
-                                            </div>
-                                            <div class="form_grp"><!--廠商信用證明-->
-                                                <label for="selectSample" class="form_title"><abbr class="necessary" title="為必填(選)欄位,不能為空白。">*</abbr>廠商信用證明</label>
-                                                <div class="form_content">
-                                                    <div class="upload_grp">
-                                                        <div class="upload_btn">
-                                                            <span>上傳檔案</span>
-                                                            <input type="file" class="check_file" />
-                                                        </div>
-                                                    </div>
-                                                    <div class="notice_info">僅接受PDF格式，身分為公司者需檢附。請檢附金融機構出具之信用證明文件。創育聯盟提案者，須檢附主導/共同執行單位之佐證資料</div><!--有提示訊息時出現-->
-                                                </div>
-                                            </div>
-                                            <div class="form_grp"><!--計畫主持人申請單位聘僱資料-->
-                                                <label for="selectSample" class="form_title"><abbr class="necessary" title="為必填(選)欄位,不能為空白。">*</abbr>計畫主持人申請單位聘僱資料</label>
-                                                <div class="form_content">
-                                                    <div class="upload_grp">
-                                                        <div class="upload_btn">
-                                                            <span>上傳檔案</span>
-                                                            <input type="file" class="check_file" />
-                                                        </div>
-                                                    </div>
-                                                    <div class="notice_info">僅接受PDF格式</div>
-                                                </div>
-                                            </div>
-                                            <div class="form_grp"><!--計畫主持人身分證影本-->
-                                                <label for="selectSample" class="form_title"><abbr class="necessary" title="為必填(選)欄位,不能為空白。">*</abbr>計畫主持人身分證影本</label>
-                                                <div class="form_content">
-                                                    <div class="upload_grp">
-                                                        <div class="upload_btn">
-                                                            <span>上傳檔案</span>
-                                                            <input type="file" class="check_file" />
-                                                        </div>
-                                                    </div>
-                                                    <div class="notice_info">僅接受PDF格式，需須為本國國籍並年滿20 歲至45 歲之個人</div>
-                                                </div>
-                                            </div>
-                                            <div class="form_grp"><!--實體培育空間之擁有或取得授權證明文件-->
-                                                <label for="selectSample" class="form_title"><abbr class="necessary" title="為必填(選)欄位,不能為空白。">*</abbr>實體培育空間之擁有或取得授權證明文件</label>
-                                                <div class="form_content">
-                                                    <div class="upload_grp">
-                                                        <div class="upload_btn">
-                                                            <span>上傳檔案</span>
-                                                            <input type="file" class="check_file" />
-                                                        </div>
-                                                    </div>
-                                                    <div class="notice_info">僅接受PDF格式。</div>
-                                                </div>
-                                            </div>
-                                            <div class="form_grp"><!--輔導中小企業實績佐證資料，申請「標竿組」需檢附至少5家輔導所在縣市中小企業實績相關佐證資料-->
-                                                <label for="selectSample" class="form_title"><abbr class="necessary" title="為必填(選)欄位,不能為空白。">*</abbr>輔導中小企業實績佐證資料</label>
-                                                <div class="form_content">
-                                                    <div class="upload_grp">
-                                                        <div class="upload_btn">
-                                                            <span>上傳檔案</span>
-                                                            <input type="file" class="check_file" />
-                                                        </div>
-                                                    </div>
-                                                    <div class="notice_info">僅接受PDF格式。申請「標竿組」需檢附至少5家輔導所在縣市中小企業實績相關佐證資料</div>
+                                                    <div class="notice_info">僅接受PDF格式，身分為法人/公司者需檢附。</div>
                                                 </div>
                                             </div>
                                             <div class="form_grp"><!--計畫切結書-->
@@ -2170,11 +2063,11 @@
                                                             <input type="file" class="check_file" />
                                                         </div>
                                                     </div>
-                                                    <div class="notice_info">僅接受PDF格式。創育聯盟提案者，須檢附主導/共同執行單位之佐證資料</div><!--有提示訊息時出現-->
+                                                    <div class="notice_info">僅接受PDF格式。</div>
                                                 </div>
                                             </div>
                                             <div class="form_grp"><!--個資同意書-->
-                                                <label for="selectSample" class="form_title"><abbr class="necessary" title="為必填(選)欄位,不能為空白。">*</abbr>個資同意書</label>
+                                                <label for="selectSample" class="form_title"><abbr class="necessary" title="為必填(選)欄位,不能為空白。">*</abbr>個人資料同意書</label>
                                                 <div class="form_content">
                                                     <div class="upload_grp">
                                                         <div class="upload_btn">
@@ -2182,11 +2075,11 @@
                                                             <input type="file" class="check_file" />
                                                         </div>
                                                     </div>
-                                                    <div class="notice_info">僅接受PDF格式。創育聯盟提案者，須檢附主導/共同執行單位之佐證資料</div><!--有提示訊息時出現-->
+                                                    <div class="notice_info">僅接受PDF格式。</div>
                                                 </div>
                                             </div>
-                                            <div class="form_grp"><!--創育聯盟合作協議書-->
-                                                <label for="selectSample" class="form_title"><abbr class="necessary" title="為必填(選)欄位,不能為空白。">*</abbr>創育聯盟合作協議書</label>
+                                            <div class="form_grp"><!--協作單位協議書-->
+                                                <label for="selectSample" class="form_title"><abbr class="necessary" title="為必填(選)欄位,不能為空白。">*</abbr>協作申請協議書</label>
                                                 <div class="form_content">
                                                     <div class="upload_grp">
                                                         <div class="upload_btn">
@@ -2194,7 +2087,8 @@
                                                             <input type="file" class="check_file" />
                                                         </div>
                                                     </div>
-                                                    <div class="notice_info">僅接受PDF格式，以創育聯盟方式提出申請者，應檢附「創育聯盟合作協議書」</div>
+                                                    <div class="notice_info">僅接受PDF格式，企業加速器模組有協作申請者，應檢附「協作申請協議書」"
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
@@ -2213,16 +2107,15 @@
                                                             <input type="file" class="check_file" />
                                                         </div>
                                                     </div>
-                                                    <!--選擇檔案後顯示已選擇檔案位置-->
-                                                    <div class="upload_delet_grp">
+                                                    <!--選擇檔案後顯示已選擇檔案位置--><!-- <div class="upload_delet_grp">
                                                         <input class="" type="text" value="123.jpg" autocomplete="off">
                                                         <input class="delet_btn" type="button" value="移除">
-                                                    </div>
-                                                    <div class="notice_info">僅接受PDF格式，身分為法人/公司者需檢附。<!--創育聯盟提案者，須檢附主導/共同執行單位之佐證資料--><!--創育聯盟這段文字判斷是否創育聯盟再出現--></div>
+                                                    </div> -->
+                                                    <div class="notice_info">僅接受PDF格式，身分為法人/公司者需檢附。</div>
                                                 </div>
                                             </div>
                                             <div class="form_grp"><!--營利事業所得稅結算申報書-->
-                                                <label for="selectSample" class="form_title"><abbr class="necessary" title="為必填(選)欄位,不能為空白。">*</abbr>營利事業所得稅結算申報書</label>
+                                                <label for="selectSample" class="form_title"><abbr class="necessary" title="為必填(選)欄位,不能為空白。">*</abbr>營利事業所得稅結算申報書(未滿一年以營業稅申報書替代)</label>
                                                 <div class="form_content">
                                                     <div class="upload_grp">
                                                         <div class="upload_btn">
@@ -2230,7 +2123,7 @@
                                                             <input type="file" class="check_file" />
                                                         </div>
                                                     </div>
-                                                    <div class="notice_info">僅接受PDF格式，身分為公司者需檢附。未滿一年以營業稅申報書替代。創育聯盟提案者，須檢附主導/共同執行單位之佐證資料</div>
+                                                    <div class="notice_info">僅接受PDF格式，身分為公司者需檢附。未滿一年以營業稅申報書替代。</div>
                                                 </div>
                                             </div>
                                             <div class="form_grp"><!--營利事業無欠稅證明-->
@@ -2242,7 +2135,11 @@
                                                             <input type="file" class="check_file" />
                                                         </div>
                                                     </div>
-                                                    <div class="notice_info">僅接受PDF格式。創育聯盟提案者，須檢附主導/共同執行單位之佐證資料</div><!--有提示訊息時出現-->
+                                                    <!-- <div class="upload_delet_grp">
+                                                        <input class="" type="text" value="123.jpg" autocomplete="off">
+                                                        <input class="delet_btn" type="button" value="移除">
+                                                    </div> -->
+                                                    <div class="notice_info">僅接受PDF格式。</div><!--有提示訊息時出現-->
                                                 </div>
                                             </div>
                                             <div class="form_grp"><!--廠商信用證明-->
@@ -2254,11 +2151,11 @@
                                                             <input type="file" class="check_file" />
                                                         </div>
                                                     </div>
-                                                    <div class="notice_info">僅接受PDF格式，身分為公司者需檢附。請檢附金融機構出具之信用證明文件。創育聯盟提案者，須檢附主導/共同執行單位之佐證資料</div><!--有提示訊息時出現-->
+                                                    <div class="notice_info">僅接受PDF格式，身分為公司者需檢附。請檢附金融機構出具之信用證明文件。</div>
                                                 </div>
                                             </div>
-                                            <div class="form_grp"><!--公司淨值(股東權益)證明文件-->
-                                                <label for="selectSample" class="form_title"><abbr class="necessary" title="為必填(選)欄位,不能為空白。">*</abbr>公司淨值(股東權益)證明文件</label>
+                                            <div class="form_grp"><!--公司淨值(股東權益)證明文件-->
+                                                <label for="selectSample" class="form_title"><abbr class="necessary" title="為必填(選)欄位,不能為空白。">*</abbr>公司淨值(股東權益)證明文件</label>
                                                 <div class="form_content">
                                                     <div class="upload_grp">
                                                         <div class="upload_btn">
@@ -2266,7 +2163,23 @@
                                                             <input type="file" class="check_file" />
                                                         </div>
                                                     </div>
-                                                    <div class="notice_info">僅接受PDF格式。創育聯盟提案者，須檢附主導/共同執行單位之佐證資料</div>
+                                                    <!-- <div class="upload_delet_grp">
+                                                        <input class="" type="text" value="123.jpg" autocomplete="off">
+                                                        <input class="delet_btn" type="button" value="移除">
+                                                    </div> -->
+                                                    <div class="notice_info">僅接受PDF格式。</div><!--有提示訊息時出現-->
+                                                </div>
+                                            </div>
+                                            <div class="form_grp"><!--最近一期勞保繳費清單之投保人數資料-->
+                                                <label for="selectSample" class="form_title"><abbr class="necessary" title="為必填(選)欄位,不能為空白。">*</abbr>最近一期勞保繳費清單之投保人數資料</label>
+                                                <div class="form_content">
+                                                    <div class="upload_grp">
+                                                        <div class="upload_btn">
+                                                            <span>上傳檔案</span>
+                                                            <input type="file" class="check_file" />
+                                                        </div>
+                                                    </div>
+                                                    <div class="notice_info">僅接受PDF格式。</div><!--有提示訊息時出現-->
                                                 </div>
                                             </div>
                                             <div class="form_grp"><!--計畫切結書-->
@@ -2278,11 +2191,11 @@
                                                             <input type="file" class="check_file" />
                                                         </div>
                                                     </div>
-                                                    <div class="notice_info">僅接受PDF格式。創育聯盟提案者，須檢附主導/共同執行單位之佐證資料</div><!--有提示訊息時出現-->
+                                                    <div class="notice_info">僅接受PDF格式。</div>
                                                 </div>
                                             </div>
                                             <div class="form_grp"><!--個資同意書-->
-                                                <label for="selectSample" class="form_title"><abbr class="necessary" title="為必填(選)欄位,不能為空白。">*</abbr>個資同意書</label>
+                                                <label for="selectSample" class="form_title"><abbr class="necessary" title="為必填(選)欄位,不能為空白。">*</abbr>個人資料同意書</label>
                                                 <div class="form_content">
                                                     <div class="upload_grp">
                                                         <div class="upload_btn">
@@ -2290,33 +2203,28 @@
                                                             <input type="file" class="check_file" />
                                                         </div>
                                                     </div>
-                                                    <div class="notice_info">僅接受PDF格式。創育聯盟提案者，須檢附主導/共同執行單位之佐證資料</div><!--有提示訊息時出現-->
+                                                    <div class="notice_info">僅接受PDF格式。</div>
+                                                </div>
+                                            </div>
+                                            <div class="form_grp"><!--創育聯盟合作協議書-->
+                                                <label for="selectSample" class="form_title"><abbr class="necessary" title="為必填(選)欄位,不能為空白。">*</abbr>聯合申請協議書</label>
+                                                <div class="form_content">
+                                                    <div class="upload_grp">
+                                                        <div class="upload_btn">
+                                                            <span>上傳檔案</span>
+                                                            <input type="file" class="check_file" />
+                                                        </div>
+                                                    </div>
+                                                    <div class="notice_info">僅接受PDF格式，以聯盟方式提出申請者，應檢附「聯合申請協議書」</div>
                                                 </div>
                                             </div>
                                         </div>
                                     </section>
                                 </section>
                                 <section class="fill_in">
-                                    <h3 class="title">聯盟 #2(法人) 附件</h3>
+                                    <h3 class="title">聯盟 #2(學校) 附件</h3>
                                     <section>
                                         <div class="form_grid">
-                                            <div class="form_grp"><!--公司登記、商業登記等證明文件-->
-                                                <label for="selectSample" class="form_title"><abbr class="necessary" title="為必填(選)欄位,不能為空白。">*</abbr>公司/商業登記、其他經我國法律登記證明文件</label>
-                                                <div class="form_content">
-                                                    <div class="upload_grp">
-                                                        <div class="upload_btn">
-                                                            <span>上傳檔案</span>
-                                                            <input type="file" class="check_file" />
-                                                        </div>
-                                                    </div>
-                                                    <!--選擇檔案後顯示已選擇檔案位置-->
-                                                    <div class="upload_delet_grp">
-                                                        <input class="" type="text" value="123.jpg" autocomplete="off">
-                                                        <input class="delet_btn" type="button" value="移除">
-                                                    </div>
-                                                    <div class="notice_info">僅接受PDF格式，身分為法人/公司者需檢附。<!--創育聯盟提案者，須檢附主導/共同執行單位之佐證資料--><!--創育聯盟這段文字判斷是否創育聯盟再出現--></div>
-                                                </div>
-                                            </div>
                                             <div class="form_grp"><!--計畫切結書-->
                                                 <label for="selectSample" class="form_title"><abbr class="necessary" title="為必填(選)欄位,不能為空白。">*</abbr>計畫切結書</label>
                                                 <div class="form_content">
@@ -2326,11 +2234,11 @@
                                                             <input type="file" class="check_file" />
                                                         </div>
                                                     </div>
-                                                    <div class="notice_info">僅接受PDF格式。創育聯盟提案者，須檢附主導/共同執行單位之佐證資料</div><!--有提示訊息時出現-->
+                                                    <div class="notice_info">僅接受PDF格式。</div>
                                                 </div>
                                             </div>
                                             <div class="form_grp"><!--個資同意書-->
-                                                <label for="selectSample" class="form_title"><abbr class="necessary" title="為必填(選)欄位,不能為空白。">*</abbr>個資同意書</label>
+                                                <label for="selectSample" class="form_title"><abbr class="necessary" title="為必填(選)欄位,不能為空白。">*</abbr>個人資料同意書</label>
                                                 <div class="form_content">
                                                     <div class="upload_grp">
                                                         <div class="upload_btn">
@@ -2338,7 +2246,19 @@
                                                             <input type="file" class="check_file" />
                                                         </div>
                                                     </div>
-                                                    <div class="notice_info">僅接受PDF格式。創育聯盟提案者，須檢附主導/共同執行單位之佐證資料</div><!--有提示訊息時出現-->
+                                                    <div class="notice_info">僅接受PDF格式。</div>
+                                                </div>
+                                            </div>
+                                            <div class="form_grp"><!--創育聯盟合作協議書-->
+                                                <label for="selectSample" class="form_title"><abbr class="necessary" title="為必填(選)欄位,不能為空白。">*</abbr>聯合申請協議書</label>
+                                                <div class="form_content">
+                                                    <div class="upload_grp">
+                                                        <div class="upload_btn">
+                                                            <span>上傳檔案</span>
+                                                            <input type="file" class="check_file" />
+                                                        </div>
+                                                    </div>
+                                                    <div class="notice_info">僅接受PDF格式，以聯盟方式提出申請者，應檢附「聯合申請協議書」</div>
                                                 </div>
                                             </div>
                                         </div>
