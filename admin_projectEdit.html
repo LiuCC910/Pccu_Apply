@@ -24,7 +24,7 @@
     <div id="modal_PDF" class="PDF">
         <h3>檢視計畫附檔</h3>
         <input type="button" class="btn btn-position" value="下載PDF">
-        <div class="iframe"><iframe src="SampleFile.pdf" width="100%" height="100%"></iframe></div>
+        <div class="iframe"><iframe src="工作進度表.pdf" width="100%" height="100%"></iframe></div>
     </div>
     <!--分派評審委員跳窗-->
     <div id="modal1" class="modal">
@@ -280,12 +280,15 @@
                     </table>
                     
                     <!--Tab-->
-                    <div class="tabSet">
+                        <!--Tab-->
+                        <div class="tabSet">
                             <section class="tabs example-1">
                                 <h2 class="tabItem active"><a href="#">主導單位資訊</a></h2>
                                 <!--選到的頁籤項目 active-->
-                                <div class="tabContent"><!--頁籤一，申請單位-->
+                                <div class="tabContent"><!--頁籤一，申請單位資訊，同既有-->
+
                                     <table class="">
+                                        <caption>主導單位資訊</caption>
                                         <!--tr>
                                             <th>系統號</th>
                                             <td>10901A030</td>
@@ -300,7 +303,7 @@
                                         </tr-->
                                         <tr>
                                             <th>計畫名稱</th>
-                                            <td colspan="3">110年度中小企業創育機構發展補助計畫(新增計畫)</td>
+                                            <td colspan="3">111年度中小企業創育機構發展補助計畫(新增計畫)</td>
                                         </tr>
                                         <tr>
                                             <th>申請單位</th>
@@ -335,12 +338,58 @@
                                             <td colspan="3">新竹縣 竹北市 302 台元一街8號5樓之6
                                             </td>
                                         </tr>
-                                        <!--移除
                                         <tr>
-                                            <th>其他地址資訊</th>
+                                            <th>人力資源</th>
+                                            <td colspan="3">專案經理：<em>1</em> 人｜
+                                                專任助理：<em>1</em> 人｜
+                                                其他專任：<em>1</em> 人｜
+                                                專任人力數：<em>3</em> 人
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th>創育培育空間</th>
+                                            <td colspan="3">總培育空間：<em>10</em> 間<br>
+                                                獨立培育室：<em>3</em> 間｜
+                                                創客空間：<em>3</em> 間｜
+                                                實驗室：<em>4</em> 間
+                                            </td>
+                                        </tr>
+                                    </table>
+                                    <table class="">
+                                        <caption>協作單位資訊</caption>
+                                        <tr>
+                                            <th>申請名稱</th>
+                                            <td>凌網科技(協作單位)</td>
+                                            <th>單位類型</th>
+                                            <td>公司</td>
+                                        </tr>
+                                        <tr>
+                                            <th>計畫主持人</th>
+                                            <td>劉佳淇, 凌網科技, 職稱</td>
+                                            <th>聯絡資訊</th>
+                                            <td>03-5601296, liucc@hyweb.com.tw</td>
+                                        </tr>
+                                        <tr>
+                                            <th>創育機構主管</th>
+                                            <td>劉佳淇, 凌網科技, 職稱</td>
+                                            <th>聯絡資訊</th>
+                                            <td>03-5601296, liucc@hyweb.com.tw</td>
+                                        </tr>
+                                        <tr>
+                                            <th>計畫聯絡人</th>
+                                            <td>劉佳淇, 凌網科技, 職稱</td>
+                                            <th>聯絡資訊</th>
+                                            <td>03-5601296, liucc@hyweb.com.tw</td>
+                                        </tr>
+                                        <tr>
+                                            <th>單位地址(寄送公文使用)</th>
+                                            <td colspan="3">新竹縣 竹北市 302 台元一街8號5樓之6</td>
+                                        </tr>
+                                        <tr>
+                                            <th>培育空間地址</th>
                                             <td colspan="3">新竹縣 竹北市 302 台元一街8號5樓之6
-                                            <div class="notice_info">單位地址與母組織不同者，其他申請單位培育空間地址</div></td>
-                                        </tr>-->
+                                            </td>
+                                        </tr>
                                         <tr>
                                             <th>人力資源</th>
                                             <td colspan="3">專案經理：<em>1</em> 人｜
@@ -360,7 +409,7 @@
                                     </table>
                                 </div>
                                 <h2 class="tabItem"><a href="#">申請計畫資訊</a></h2>
-                                <div class="tabContent"><!--頁籤二，計畫資訊，調整計畫基本資訊顯示、同資格審-->
+                                <div class="tabContent"><!--頁籤二，計畫資訊-->
                                     <table>
                                         <tr>
                                             <th>執行期間</th>
@@ -368,8 +417,9 @@
                                         </tr>
                                         <tr>
                                             <th>聚焦產業領域</th>
-                                            <td colspan="3">生技醫藥業</td>
+                                            <td colspan="3">生技醫藥</td>
                                         </tr>
+                                        <!--轉組與投入設定為在地青年創育坊專屬-->
                                         <!--tr>
                                             <th>轉組意願</th>
                                             <td colspan="3">是</td>
@@ -407,7 +457,7 @@
                                                 </section>
                                             </td>
                                         </tr>
-                                        <tr>
+                                        <!--tr>
                                             <th>延續計畫經費</th>
                                             <td colspan="3">
                                                 <section class="funds">
@@ -446,7 +496,7 @@
                                                     </div>
                                                 </section>
                                             </td>
-                                        </tr>
+                                        </tr-->
                                         <tr>
                                             <th>計畫摘要</th>
                                             <td colspan="3">
@@ -456,9 +506,11 @@
                                             </td>
                                         </tr>
                                     </table>
+                                    <div>
+                                    </div>
                                 </div>
                                 <h2 class="tabItem"><a href="#">工作進度表</a></h2>
-                                <div class="tabContent"><!--新增頁籤-->
+                                <div class="tabContent"><!--新增頁籤，依模組顯示指標項目-->
                                     <table>
                                         <tbody>
                                             <tr>
@@ -468,22 +520,22 @@
                                                     <section class="funds horizontal">
                                                         <div>
                                                             <div class="box">
-                                                                <p><b>建立1個主題式企業加速器：</b></p>
+                                                                <p><b>遴選及培育至少24家新創企業：</b></p>
                                                             </div>
                                                             <div class="box">
                                                                 <p><b>全年預估成果：</b></p>
-                                                                <p class="value">1 個</p>
-                                                                <p class="value">15%</p>
+                                                                <p class="value">24 家</p>
+                                                                <p class="value">8%</p>
                                                             </div>
                                                             <div class="box">
                                                                 <p><b>期中查核點：</b></p>
-                                                                <p class="value">0 個</p>
+                                                                <p class="value">0 家</p>
                                                                 <p class="value">0%</p>
                                                             </div>
                                                             <div class="box">
                                                                 <p><b>期中查核點：</b></p>
-                                                                <p class="value">1 個</p>
-                                                                <p class="value">15%</p>
+                                                                <p class="value">24 家</p>
+                                                                <p class="value">8%</p>
                                                             </div>
                                                         </div>
                                                         <div>
@@ -547,7 +599,7 @@
                                                             </div>
                                                         </div>
                                                     </section>
-                                                    <h4 class="">其他自設指標 (40%)</h4>
+                                                    <h4 class="">自設指標 (40%)</h4>
                                                     <section class="funds horizontal">
                                                         <div>
                                                             <section class="inner">
@@ -609,9 +661,105 @@
                                                             </div>
                                                         </div>
                                                     </section>
+                                                    <hr>
+                                                    <h4 class="">其他指標（將列入審查參考，惟不列入基末執行進度查核範籌)）</h4>
+                                                    <section class="funds horizontal">
+                                                        <div>
+                                                            <section class="inner">
+                                                                <div class="box">
+                                                                    <p><b>培育企業營業額（仟元）</b></p>
+                                                                </div>
+                                                                <div class="box">
+                                                                    <p class="value">1000 仟元</p>
+                                                                </div>
+                                                                <div class="box"></div>
+                                                                <div class="box"></div>
+                                                            </section>
+                                                            <section class="inner">
+                                                                <div class="box">
+                                                                    <p><b>專業諮詢次數</b></p>
+                                                                </div>
+                                                                <div class="box">
+                                                                    <p class="value">10 次</p>
+                                                                </div>
+                                                                <div class="box"></div>
+                                                                <div class="box"></div>
+                                                            </section>
+                                                            <section class="inner">
+                                                                <div class="box">
+                                                                    <p><b>培育企業每年維持就業機會人數</b></p>
+                                                                </div>
+                                                                <div class="box">
+                                                                    <p class="value">100 人</p>
+                                                                </div>
+                                                                <div class="box"></div>
+                                                                <div class="box"></div>
+                                                            </section>
+                                                            <section class="inner">
+                                                                <div class="box">
+                                                                    <p><b>培育企業每年創造就業機會人數</b></p>
+                                                                </div>
+                                                                <div class="box">
+                                                                    <p class="value">100 人</p>
+                                                                </div>
+                                                                <div class="box"></div>
+                                                                <div class="box"></div>
+                                                            </section>
+                                                            <section class="inner">
+                                                                <div class="box">
+                                                                    <p><b>協助申請政府資源件數</b></p>
+                                                                </div>
+                                                                <div class="box">
+                                                                    <p class="value">10 件</p>
+                                                                </div>
+                                                                <div class="box"></div>
+                                                                <div class="box"></div>
+                                                            </section>
+                                                            <section class="inner">
+                                                                <div class="box">
+                                                                    <p><b>協助取得政府資源件數</b></p>
+                                                                </div>
+                                                                <div class="box">
+                                                                    <p class="value">10 件</p>
+                                                                </div>
+                                                                <div class="box"></div>
+                                                                <div class="box"></div>
+                                                            </section>
+                                                            <section class="inner">
+                                                                <div class="box">
+                                                                    <p><b>協助取得政府資源金額（仟元）</b></p>
+                                                                </div>
+                                                                <div class="box">
+                                                                    <p class="value">1000 仟元</p>
+                                                                </div>
+                                                                <div class="box"></div>
+                                                                <div class="box"></div>
+                                                            </section>
+                                                            <section class="inner">
+                                                                <div class="box">
+                                                                    <p><b>協助取得專利件數</b></p>
+                                                                </div>
+                                                                <div class="box">
+                                                                    <p class="value">10 件</p>
+                                                                </div>
+                                                                <div class="box"></div>
+                                                                <div class="box"></div>
+                                                            </section>
+                                                            <section class="inner">
+                                                                <div class="box">
+                                                                    <p><b>協助簽訂技轉件數</b></p>
+                                                                </div>
+                                                                <div class="box">
+                                                                    <p class="value">10 件</p>
+                                                                </div>
+                                                                <div class="box"></div>
+                                                                <div class="box"></div>
+                                                            </section>
+                                                        </div>
+                                                    </section>
                                                 </td>
                                             </tr>
-                                            <tr>
+                                            <!--tr>
                                                 <th>延續計畫</th>
                                                 <td colspan="3">
                                                     <h4 class="">各模組必設指標 (60%)</h4>
@@ -760,24 +908,24 @@
                                                         </div>
                                                     </section>
                                                 </td>
-                                            </tr>
+                                            </tr-->
                                             <tr>
                                                 <th>以PDF檢視／下載</th>
                                                 <td colspan="3">工作進度表：<a href="#" id="openPDF">工作進度表PDF檔</a></td>
                                             </tr>
                                         </tbody>
                                     </table>
-                            </div>
+                                </div>
                                 <h2 class="tabItem"><a href="#">創育聯盟(共同執行)</a></h2>
                                 <div class="tabContent"><!--頁籤三，共同執行單位，此頁籤只有申請創育聯盟者會出現-->
                                     <h4 class="title">共同執行單位#1</h4>
                                     <table class="">
                                         <tr>
-                                                <!--聯盟單位擴充身分設定-->
-                                                <th>單位名稱</th>
-                                                <td>聯盟1凌網科技</td>
-                                                <th>單位類型</th>
-                                                <td>公司</td>
+                                            <!--聯盟單位擴充身分設定-->
+                                            <th>單位名稱</th>
+                                            <td>聯盟凌網科技</td>
+                                            <th>單位類型</th>
+                                            <td>公司</td>
                                         </tr>
                                         <tr>
                                             <th>計畫主持人</th>
@@ -826,11 +974,11 @@
                                     <h4 class="title">共同執行單位#2</h4>
                                     <table class="">
                                         <tr>
-                                                <!--聯盟單位擴充身分設定-->
-                                                <th>單位名稱</th>
-                                                <td>聯盟2凌網科技</td>
-                                                <th>單位類型</th>
-                                                <td>公司</td>
+                                            <!--聯盟單位擴充身分設定-->
+                                            <th>單位名稱</th>
+                                            <td>聯盟2凌網科技</td>
+                                            <th>單位類型</th>
+                                            <td>公司</td>
                                         </tr>
                                         <tr>
                                             <th>計畫主持人</th>
@@ -878,71 +1026,67 @@
                                     </table>
                                 </div>
                                 <h2 class="tabItem"><a href="#">計畫附件</a></h2>
-                                <div class="tabContent"><!--頁籤四，計畫附件上傳-->
-                                    <h4 class="title">計畫附件</h4>
+                                <div class="tabContent"><!--頁籤四，計畫附件上傳，擴充聯盟獨立上傳附件-->
+                                    <h4 class="title">主導與計畫附件</h4>
                                     <table>
                                         <tr>
                                             <th>計畫申請書(計畫書摘要表+本文)</th>
                                             <td>
                                                 <a href="#">計畫申請書(計畫書摘要表+本文).pdf</a>
                                             </td>
-                                            <td>
-                                                <div class="form_content">
-                                                    <input type="checkbox" name="" value=""> 補件時允許編修
-                                                </div>
-                                            </td>
+                                            
                                         </tr>
                                         <tr>
                                             <th>公司登記、商業登記等證明文件</th>
                                             <td>
                                                 <a href="#">公司登記、商業登記.pdf</a>
                                             </td>
-                                            <td>
-                                                <div class="form_content">
-                                                <label>
-                                                    <input type="checkbox" name="" value=""> 補件時允許編修
-                                                </label>
-                                                </div>
-                                            </td>
+                                            
                                         </tr>
                                         <tr>
                                             <th>營利事業所得稅結算申報書</th>
                                             <td>
                                                 <a href="#">上傳檔名點選另開下載.pdf</a>
                                             </td>
-                                            <td>
-                                                <div class="form_content">
-                                                <label>
-                                                    <input type="checkbox" name="" value=""> 補件時允許編修
-                                                </label>
-                                                </div>
-                                            </td>
+                                            
                                         </tr>
                                         <tr>
                                             <th>營利事業無欠稅證明</th>
                                             <td>
                                                 <a href="#">計畫申請書本文10頁以內.pdf</a>
                                             </td>
-                                            <td>
-                                                <div class="form_content">
-                                                <label>
-                                                    <input type="checkbox" name="" value=""> 補件時允許編修
-                                                </label>
-                                                </div>
-                                            </td>
+                                            
                                         </tr>
                                         <tr>
                                             <th>營輔導中小企業實績佐證資料</th>
                                             <td>
                                                 <a href="#">附件檔名.pdf</a>
                                             </td>
+                                            
+                                        </tr>
+                                    </table>
+                                    <h4 class="title">協作單位附件</h4>
+                                    <table>
+                                        <tr>
+                                            <th>公司登記、商業登記等證明文件</th>
                                             <td>
-                                                <div class="form_content">
-                                                <label>
-                                                    <input type="checkbox" name="" value=""> 補件時允許編修
-                                                </label>
-                                                </div>
+                                                <a href="#">公司登記、商業登記.pdf</a>
                                             </td>
+                                            
+                                        </tr>
+                                        <tr>
+                                            <th>營利事業所得稅結算申報書</th>
+                                            <td>
+                                                <a href="#">上傳檔名點選另開下載.pdf</a>
+                                            </td>
+                                            
+                                        </tr>
+                                        <tr>
+                                            <th>營利事業無欠稅證明</th>
+                                            <td>
+                                                <a href="#">計畫申請書本文10頁以內.pdf</a>
+                                            </td>
+                                            
                                         </tr>
                                     </table>
                                     <h4 class="title">共同執行單位#1附件</h4>
@@ -952,39 +1096,21 @@
                                             <td>
                                                 <a href="#">公司登記、商業登記.pdf</a>
                                             </td>
-                                            <td>
-                                                <div class="form_content">
-                                                <label>
-                                                    <input type="checkbox" name="" value=""> 補件時允許編修
-                                                </label>
-                                                </div>
-                                            </td>
+                                            
                                         </tr>
                                         <tr>
                                             <th>營利事業所得稅結算申報書</th>
                                             <td>
                                                 <a href="#">上傳檔名點選另開下載.pdf</a>
                                             </td>
-                                            <td>
-                                                <div class="form_content">
-                                                <label>
-                                                    <input type="checkbox" name="" value=""> 補件時允許編修
-                                                </label>
-                                                </div>
-                                            </td>
+                                            
                                         </tr>
                                         <tr>
                                             <th>營利事業無欠稅證明</th>
                                             <td>
                                                 <a href="#">計畫申請書本文10頁以內.pdf</a>
                                             </td>
-                                            <td>
-                                                <div class="form_content">
-                                                <label>
-                                                    <input type="checkbox" name="" value=""> 補件時允許編修
-                                                </label>
-                                                </div>
-                                            </td>
+                                            
                                         </tr>
                                     </table>
                                     <h4 class="title">共同執行單位#2附件</h4>
@@ -994,45 +1120,27 @@
                                             <td>
                                                 <a href="#">公司登記、商業登記.pdf</a>
                                             </td>
-                                            <td>
-                                                <div class="form_content">
-                                                <label>
-                                                    <input type="checkbox" name="" value=""> 補件時允許編修
-                                                </label>
-                                                </div>
-                                            </td>
+                                            
                                         </tr>
                                         <tr>
                                             <th>營利事業所得稅結算申報書</th>
                                             <td>
                                                 <a href="#">上傳檔名點選另開下載.pdf</a>
                                             </td>
-                                            <td>
-                                                <div class="form_content">
-                                                <label>
-                                                    <input type="checkbox" name="" value=""> 補件時允許編修
-                                                </label>
-                                                </div>
-                                            </td>
+                                            
                                         </tr>
                                         <tr>
                                             <th>營利事業無欠稅證明</th>
                                             <td>
                                                 <a href="#">計畫申請書本文10頁以內.pdf</a>
                                             </td>
-                                            <td>
-                                                <div class="form_content">
-                                                <label>
-                                                    <input type="checkbox" name="" value=""> 補件時允許編修
-                                                </label>
-                                                </div>
-                                            </td>
+                                            
                                         </tr>
                                     </table>
-                            </div>
+                                </div>
                             </section>
-                        </div>
-                    </section>
+                    </div>
+                </section>
                 </div>
                 <!-- 2 -->
                 <div class="filter_box">
