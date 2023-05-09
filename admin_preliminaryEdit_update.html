@@ -589,8 +589,9 @@
                         <table>
                             <tbody>
                                 <tr>
-                                    <th>系統號</th>
-                                    <td>11101A030</td>
+                                    <!--112年變更顯示欄位，系統號位置改撈單位名稱-->
+                                    <th>主導單位</th>
+                                    <td>申請單位公司名稱凌網科技</td>
                                     <th>計畫類型</th>
                                     <td>企業加速器</td>
                                     <th>建立日期</th>
@@ -598,7 +599,9 @@
                                 </tr>
                                 <tr>
                                     <th>申請方式</th>
-                                    <td>聯盟申請</td>
+                                    <td>聯盟申請 <label><input type="checkbox">補件允許編修</label>
+                                        <!--112年新增補件可編修Step.1是否聯盟申請控制-->
+                                    </td>
                                     <th>申請加值</th>
                                     <td>是</td>
                                     <th>申請日期</th>
@@ -606,16 +609,22 @@
                                 </tr>
                                 <tr>
                                     <th>申請者身分</th>
-                                    <td>公司</td>
+                                    <td>公司 <label><input type="checkbox" onchange="alert1()">補件允許編修</label>
+                                        <!--112年移動補件可編修Step.1身分控制的位置，去年只有一個勾選，勾選後Step.1也只允許編修身分-->
+                                    </td>
                                     <th>申請者帳號</th>
                                     <td>liucc910｜liucc910hyweb@gmail.com</td>
                                     <th>申請協作</th>
-                                    <td>是</td>
+                                    <td>
+                                        是 <label><input type="checkbox">補件允許編修</label>
+                                        <!--112年新增補件可編修Step.1是否申請協作控制-->
+                                    </td>
                                 </tr>
                             </tbody>
                         </table>
                         <div class="checkbox">
-                            <label><input type="checkbox" onchange="alert1()">補件時允許編修(補件編修只會允許編修「申請者身分」，並請注意相關頁籤與附件請允許編修)</label>
+                            請注意，補件時可允許編修「申請者身分」、「是否聯合申請」以及「是否申請協作」，並請注意相關頁籤與附件請勾選允許編修
+                            <!--112年修改文案-->
                         </div>
                         
                         <!--Tab-->
@@ -640,8 +649,11 @@
                                                 <td>否</td>
                                             </tr-->
                                             <tr>
+                                                <th>系統號</th>
+                                                <td>11101A030</td>
+                                                <!--112年調整系統號放置位置-->
                                                 <th>計畫名稱</th>
-                                                <td colspan="3">111年度中小企業創育機構發展補助計畫(新增計畫)</td>
+                                                <td>111年度中小企業創育機構發展補助計畫(新增計畫)</td>
                                             </tr>
                                             <tr>
                                                 <th>申請單位</th>
@@ -778,7 +790,7 @@
                                                 <td colspan="3">六都：臺北市</td>
                                             </tr-->
                                             <tr>
-                                                <th>新增計畫經費</th>
+                                                <th>延續計畫經費</th>
                                                 <td colspan="3">
                                                     <section class="funds">
                                                         <div>

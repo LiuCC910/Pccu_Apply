@@ -69,6 +69,136 @@
         <hr>
         <div class="table_wrapper">
             <table>
+                <tr>
+                    <th></th>
+                    <th style="width: 20%;">產業加速器</th>
+                    <th style="width: 20%;">企業加速器</th>
+                    <th style="width: 20%;">在地青年創育坊</th>
+                </tr>
+                <tr>
+                    <th>申請類別(身分別)</th>
+                    <td>公司／法人／學校</td>
+                    <td>公司</td>
+                    <td>公司／法人</td>
+                </tr>
+                <tr>
+                    <th>是否採聯盟申請</th>
+                    <td>個別申請／聯合申請</td>
+                    <td>個別申請／聯合申請</td>
+                    <td>個別申請</td>
+                </tr>
+                <tr>
+                    <th>是否採協作申請</th>
+                    <td>－</td>
+                    <td>否／是</td>
+                    <td>－</td>
+                </tr>
+                <tr>
+                    <th>延續計畫採協作申請複製</th>
+                    <td>－</td>
+                    <td>複製項目：<br/>
+                    1. 申請單位資訊＞協作單位資訊<br/>
+                    2. 申請計畫資訊＞協作申請金額<br/>
+                    3. 計畫附件＞協作單位附件
+                    </td>
+                    <td>－</td>
+                </tr>
+                <tr>
+                    <th>111年新增計畫是否需填寫第二年經費</th>
+                    <td>否</td>
+                    <td>否</td>
+                    <td>是</td>
+                </tr>
+                <tr>
+                    <th>延續計畫第二年經費複製</th>
+                    <td>第一年</td>
+                    <td>第一年</td>
+                    <td><font color="red">第二年</font></td>
+                </tr>
+                <tr>
+                    <th>111年新增計畫是否填寫第二年工作進度表</th>
+                    <td>否</td>
+                    <td>否</td>
+                    <td>否</td>
+                </tr>
+                <tr>
+                    <th>延續計畫第二年工作進度表複製</th>
+                    <td>第一年：所有指標，含自訂與其它(審查參考)</td>
+                    <td>第一年：所有指標，含自訂與其它(審查參考)</td>
+                    <td>第一年</td>
+                </tr>
+                <tr>
+                    <th>其他備註事項：</th>
+                    <td colspan="3">1. 今年同時會有新增和延續的申請<br/>
+                        2. 產業加速器模組：延續計畫會需要客制多一個加值項目<br/>
+                        3. 延續計畫複製指標後，會要再比去年多一個共通指標</td>
+                </tr>
+            </table>
+            <table>
+              <caption>112年需求擴充調整項</caption>
+                <thead>
+                    <tr>
+                        <th class="num">編號</th>
+                        <th>頁面名稱</th>
+                        <th>檔案名稱</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td></td>
+                        <td>資格審管理：補件時允許修改Step.1</td>
+                        <td>
+                            原資格審只有一個勾選項目，勾選後允許變更申請身分；需要擴充為分別勾選。補件時允許修改申請基本資訊-包括：身分/申請方式/協作申請可分別勾選
+                            <ul>
+                                <li>管理端＞資格審：<a href="admin_preliminaryEdit_update.html">編修詳目頁</a></li>
+                                <li>會員端＞補件編修：計畫編修（允許編修第一步，複製經費與工作進度表指標）
+                                    <ol>
+                                        <li>產業加速器 IAP：<br/><a href="member_pAddstep1-IAP.html">step.1</a>｜<a href="member_pAddstep2_IAP.html">step.2</a></li>
+                                        <li>企業加速器 CAP：<br/><a href="member_pAddstep1-CAP.html">step.1</a>｜<a href="member_pAddstep2_CAP.html">step.2</a></li>
+                                        <li>在地青年創育坊：<br/><a href="member_pAddstep1-Local.html">step.1</a>｜<a href="member_pAddstep2_Local.html">step.2</a></li>
+                                    </ol>
+                                </li>
+                            </ul>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>委員評分依模組顯示文案</td>
+                        <td>
+                            <ul>
+                                <li>管理端＞委員線上評分
+                                    <ol>
+                                        <li>產業加速器 IAP：<a href="admin_scoreEdit_IAP.html"></a></li>
+                                        <li>企業加速器 CAP：<a href="admin_scoreEdit_CAP.html"></a></li>
+                                        <li>在地青年創育坊：<a href="admin_scoreEdit_Local.html"></a></li>
+                                    </ol>
+                                </li>
+                                <li>委員評分通知郵件函：
+                                    <ol>
+                                        <li>(既有)分派案件評審通知信：改撈取委員評分日期起日統一通知 <a href="mailTemp_toJudes.html"></a></li>
+                                        <li>審核即將到期通知信：撈取委員評分日期迄日、且尚未評分案件進行通知 <a href="mailTemp_toJudesdue.html"></a></li>
+                                    </ol>
+                                </li>
+                            </ul>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>新增會員端操作紀錄檢視查詢</td>
+                        <td>
+                            新增系統作業日誌：管理端擴充相關活動日誌功能,可以看到會員之log資訊<br/>
+                            包括:會員端包含"登入"、"暫存"、"上傳"、"送出"等行為操作紀錄
+                            <ul>
+                                <li>操作紀錄： <a href="admin_logList.html"></a></li>
+                            </ul>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="table_wrapper">
+            <table>
               <caption>**111年在地機構模組申請需求變更</caption>
                 <thead>
                     <tr>
